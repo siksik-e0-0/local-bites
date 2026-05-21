@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-05-21T15:13:47.064Z",
+  "places": [
+    {
+      "id": "pending:5130R7qr",
+      "shortUrl": "https://naver.me/5130R7qr",
+      "naverMapUrl": "https://naver.me/5130R7qr",
+      "name": "(데이터 갱신 필요)",
+      "category": "기타",
+      "naverCategory": null,
+      "address": null,
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": null,
+      "fetchedAt": "2026-05-21T15:13:28.183Z",
+      "source": "seed"
+    },
+    {
+      "id": "pending:FyAteQQN",
+      "shortUrl": "https://naver.me/FyAteQQN",
+      "naverMapUrl": "https://naver.me/FyAteQQN",
+      "name": "(데이터 갱신 필요)",
+      "category": "기타",
+      "naverCategory": null,
+      "address": null,
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": null,
+      "fetchedAt": "2026-05-21T15:13:37.135Z",
+      "source": "seed"
+    },
+    {
+      "id": "pending:FBe2MAkT",
+      "shortUrl": "https://naver.me/FBe2MAkT",
+      "naverMapUrl": "https://naver.me/FBe2MAkT",
+      "name": "(데이터 갱신 필요)",
+      "category": "기타",
+      "naverCategory": null,
+      "address": null,
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": null,
+      "fetchedAt": "2026-05-21T15:13:46.162Z",
+      "source": "seed"
+    }
+  ]
+}

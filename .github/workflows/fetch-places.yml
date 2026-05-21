@@ -1,0 +1,56 @@
+name: Fetch places
+
+on:
+  push:
+    paths:
+      - "share_link"
+      - "scripts/fetch-places.ts"
+      - "lib/naver.ts"
+      - ".github/workflows/fetch-places.yml"
+  workflow_dispatch:
+    inputs:
+      force_refetch:
+        description: "캐시 무시하고 전부 재수집"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-places-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run fetcher
+        env:
+          FORCE_REFETCH: ${{ inputs.force_refetch && '1' || '' }}
+        run: npm run fetch:places
+
+      - name: Commit updated places.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data/places.json)" ]; then
+            git add data/places.json
+            git commit -m "chore(data): refresh places.json [skip ci]"
+            git push
+          else
+            echo "No changes to places.json"
+          fi
