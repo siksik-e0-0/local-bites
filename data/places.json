@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T15:22:28.954Z",
+  "generatedAt": "2026-05-21T15:57:15.976Z",
   "places": [
     {
       "id": "1480142748",
@@ -191,6 +191,22 @@
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200714_120%2F1594710093425P2TNf_JPEG%2F8yWy4rtiOZLlfryukQ5F_IJy.jpeg.jpg",
       "fetchedAt": "2026-05-21T15:22:28.002Z",
+      "source": "naver"
+    },
+    {
+      "id": "36859834",
+      "shortUrl": "https://naver.me/GFB1E8zC",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/36859834",
+      "name": "델문도",
+      "category": "식당",
+      "naverCategory": null,
+      "address": "방문자리뷰 22,283 · 블로그리뷰 6,297",
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250722_29%2F1753148469951AypHp_JPEG%2FUntitled-5-01.jpg",
+      "fetchedAt": "2026-05-21T15:57:14.708Z",
       "source": "naver"
     }
   ]
