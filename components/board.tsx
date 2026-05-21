@@ -12,6 +12,7 @@ import { EmptyState } from "./empty-state";
 import { NicknameOnboarding } from "./nickname-onboarding";
 import { PlaceCard } from "./place-card";
 import { PlaceDetail } from "./place-detail";
+import { PlaceMap } from "./place-map";
 
 const NICK_KEY = "lb:nickname";
 
@@ -237,6 +238,10 @@ export function Board({
             ))}
           </div>
         )}
+      </section>
+
+      <section className="mt-16">
+        <PlaceMap places={visible} onSelect={setSelected} />
       </section>
 
       <footer className="mt-16 flex items-center justify-between border-t pt-5 text-xs text-[var(--muted)]">

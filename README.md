@@ -25,11 +25,13 @@ npm run dev            # http://localhost:3000
 | ---- | ---- | ---- |
 | `FORCE_REFETCH` | `0` | `1` 이면 캐시 무시하고 모든 항목 재수집 (기본은 한 번 처리된 URL 은 건너뜀) |
 | `SKIP_FETCH` | `0` | `1` 이면 `data/places.json` 그대로 유지 |
-| `MAX_FETCHES_PER_BUILD` | `30` | 빌드당 최대 Naver 호출 횟수 |
-| `GITHUB_TOKEN` | — | **(필수)** 페이지에서 "후보 추가" 저장 시 `share_link` 에 commit 하기 위한 GitHub 개인 액세스 토큰. Vercel 환경 변수에 설정. 권한: `contents:write` |
+| `MAX_FETCHES_PER_BUILD` | `50` | 빌드당 최대 Naver 호출 횟수 |
+| `GITHUB_TOKEN` | — | **(필수)** 페이지에서 "후보 추가"·관리자 편집/삭제 시 GitHub Contents API 로 commit 하기 위한 토큰. 권한: `contents:write` |
 | `GITHUB_REPO_OWNER` | `siksik-e0-0` | 저장소 owner |
 | `GITHUB_REPO_NAME` | `local-bites` | 저장소 이름 |
 | `GITHUB_BRANCH` | `main` | 저장 대상 브랜치 |
+| `ADMIN_PASSWORD` | — | **(필수)** 헤더의 "관리자" 버튼 인증에 사용. 일치 시 카드 편집/삭제 기능 활성화. |
+| `NEXT_PUBLIC_NAVER_MAP_CLIENT_ID` | — | **(필수)** 페이지 하단 지도 렌더링에 사용하는 Naver Maps v3 Client ID. Naver Cloud Platform → Maps → Application 등록 → Web 서비스 URL 에 배포 도메인 등록 후 발급. |
 
 ### Vercel에 GITHUB_TOKEN 설정하기
 
