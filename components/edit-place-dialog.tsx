@@ -3,6 +3,7 @@
 import { Check, ImagePlus, Link2, Loader2, Upload, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import type { Category, Place, PlaceEditPayload } from "@/lib/types";
+import { LocationPicker } from "./location-picker";
 
 const MAX_IMAGE_WIDTH = 1280;
 const MAX_IMAGES = 12;
@@ -419,14 +420,26 @@ export function EditPlaceDialog({
                 placeholder="33.5384, 126.6657"
                 className="w-full rounded-md border bg-[var(--bg)] px-3 py-1.5 font-mono text-sm outline-none focus:border-[var(--fg)]/50 disabled:opacity-60"
               />
-              {coordsError ? (
+              {coordsError && (
                 <p className="mt-1 text-[10px] text-red-600 dark:text-red-300">{coordsError}</p>
-              ) : (
-                <p className="mt-1 text-[10px] text-[var(--muted)]">
-                  네이버 지도에서 해당 위치 우클릭 → "이 위치 좌표 복사" 또는 URL 의 좌표를 붙여넣기
-                </p>
               )}
             </div>
+
+            <LocationPicker
+              lat={parseCoords(coordsInput).lat}
+              lng={parseCoords(coordsInput).lng}
+              onCoordsChange={(la, ln) => {
+                setCoordsInput(`${la.toFixed(6)}, ${ln.toFixed(6)}`);
+                setCoordsError(null);
+              }}
+              onGeocodeRequest={() => address.trim()}
+              geocodeAddress={address}
+              disabled={status.state === "saving"}
+            />
+
+            <p className="text-[10px] text-[var(--muted)]">
+              지도 클릭으로 좌표 설정 · 또는 위 입력란에 "위도, 경도" 형식으로 직접 입력
+            </p>
           </div>
 
           <div>
