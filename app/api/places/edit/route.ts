@@ -63,6 +63,41 @@ function sanitizePatch(raw: unknown): PlaceEditPayload | { error: string } {
     out.images = Array.from(new Set(urls));
   }
 
+  if ("address" in obj) {
+    if (obj.address === null) {
+      out.address = null;
+    } else if (typeof obj.address === "string") {
+      const a = obj.address.trim();
+      out.address = a ? a.slice(0, 200) : null;
+    } else {
+      return { error: "address 는 문자열 또는 null 이어야 합니다." };
+    }
+  }
+
+  if ("lat" in obj) {
+    if (obj.lat === null) {
+      out.lat = null;
+    } else {
+      const n = typeof obj.lat === "string" ? Number(obj.lat) : obj.lat;
+      if (typeof n !== "number" || !Number.isFinite(n) || n < -90 || n > 90) {
+        return { error: "lat 은 -90~90 범위 숫자여야 합니다." };
+      }
+      out.lat = n;
+    }
+  }
+
+  if ("lng" in obj) {
+    if (obj.lng === null) {
+      out.lng = null;
+    } else {
+      const n = typeof obj.lng === "string" ? Number(obj.lng) : obj.lng;
+      if (typeof n !== "number" || !Number.isFinite(n) || n < -180 || n > 180) {
+        return { error: "lng 은 -180~180 범위 숫자여야 합니다." };
+      }
+      out.lng = n;
+    }
+  }
+
   if (Object.keys(out).length === 0) return { error: "수정할 필드가 없습니다." };
   return out;
 }

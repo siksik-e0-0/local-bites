@@ -66,6 +66,9 @@ export function EditPlaceDialog({
   const [imageUrlInput, setImageUrlInput] = useState("");
   const [imageError, setImageError] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
+  const [address, setAddress] = useState("");
+  const [coordsInput, setCoordsInput] = useState("");
+  const [coordsError, setCoordsError] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>({ state: "idle" });
   const nameRef = useRef<HTMLInputElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -81,6 +84,13 @@ export function EditPlaceDialog({
     setImageUrlInput("");
     setImageError(null);
     setUploading(false);
+    setAddress(place.address ?? "");
+    if (place.lat != null && place.lng != null) {
+      setCoordsInput(`${place.lat}, ${place.lng}`);
+    } else {
+      setCoordsInput("");
+    }
+    setCoordsError(null);
     setStatus({ state: "idle" });
     setTimeout(() => nameRef.current?.focus(), 40);
   }, [place]);
@@ -182,6 +192,19 @@ export function EditPlaceDialog({
     setImages(next);
   }
 
+  function parseCoords(s: string): { lat: number | null; lng: number | null; error: string | null } {
+    const t = s.trim();
+    if (!t) return { lat: null, lng: null, error: null };
+    const parts = t.split(/[\s,]+/).filter(Boolean).map(Number);
+    if (parts.length !== 2 || parts.some((n) => !Number.isFinite(n))) {
+      return { lat: null, lng: null, error: "두 개의 숫자가 필요합니다 (예: 33.5384, 126.6657)." };
+    }
+    const [lat, lng] = parts;
+    if (lat < -90 || lat > 90) return { lat: null, lng: null, error: "위도(lat)는 -90~90 범위여야 합니다." };
+    if (lng < -180 || lng > 180) return { lat: null, lng: null, error: "경도(lng)는 -180~180 범위여야 합니다." };
+    return { lat, lng, error: null };
+  }
+
   async function save() {
     const current = place;
     if (!current) return;
@@ -194,12 +217,20 @@ export function EditPlaceDialog({
       setStatus({ state: "error", msg: "이름은 비울 수 없습니다." });
       return;
     }
+    const coords = parseCoords(coordsInput);
+    if (coords.error) {
+      setStatus({ state: "error", msg: `좌표: ${coords.error}` });
+      return;
+    }
     const patch: PlaceEditPayload = {
       name: trimmedName,
       category,
       tags,
       description: description.trim() ? description.trim() : null,
       images,
+      address: address.trim() ? address.trim() : null,
+      lat: coords.lat,
+      lng: coords.lng,
     };
     setStatus({ state: "saving" });
     try {
@@ -341,6 +372,61 @@ export function EditPlaceDialog({
               className="w-full resize-y rounded-lg border bg-[var(--bg)] px-3 py-2 text-sm outline-none focus:border-[var(--fg)]/50 disabled:opacity-60"
             />
             <p className="mt-1 text-right text-[10px] text-[var(--muted)]">{description.length}/500</p>
+          </div>
+
+          <div className="space-y-2 rounded-lg border border-dashed bg-[var(--subtle)]/30 p-3">
+            <div className="flex items-center justify-between">
+              <label className="block text-xs font-medium text-[var(--fg)]/80">위치 정보</label>
+              {place.naverMapUrl && (
+                <a
+                  href={place.naverMapUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[10px] text-[var(--accent)] underline-offset-2 hover:underline"
+                >
+                  네이버 지도에서 열기 ↗
+                </a>
+              )}
+            </div>
+
+            <div>
+              <label className="mb-1 block text-[10px] text-[var(--muted)]">주소</label>
+              <input
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                disabled={status.state === "saving"}
+                maxLength={200}
+                placeholder="제주특별자치도 ..."
+                className="w-full rounded-md border bg-[var(--bg)] px-3 py-1.5 text-sm outline-none focus:border-[var(--fg)]/50 disabled:opacity-60"
+              />
+            </div>
+
+            <div>
+              <label className="mb-1 block text-[10px] text-[var(--muted)]">
+                좌표 (lat, lng)
+              </label>
+              <input
+                value={coordsInput}
+                onChange={(e) => {
+                  setCoordsInput(e.target.value);
+                  if (coordsError) setCoordsError(null);
+                }}
+                onBlur={() => {
+                  const c = parseCoords(coordsInput);
+                  setCoordsError(c.error);
+                }}
+                disabled={status.state === "saving"}
+                placeholder="33.5384, 126.6657"
+                className="w-full rounded-md border bg-[var(--bg)] px-3 py-1.5 font-mono text-sm outline-none focus:border-[var(--fg)]/50 disabled:opacity-60"
+              />
+              {coordsError ? (
+                <p className="mt-1 text-[10px] text-red-600 dark:text-red-300">{coordsError}</p>
+              ) : (
+                <p className="mt-1 text-[10px] text-[var(--muted)]">
+                  네이버 지도에서 해당 위치 우클릭 → "이 위치 좌표 복사" 또는 URL 의 좌표를 붙여넣기
+                </p>
+              )}
+            </div>
           </div>
 
           <div>
