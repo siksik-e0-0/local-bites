@@ -23,7 +23,8 @@ const PLACES_PATH = path.join(DATA_DIR, "places.json");
 const SEED_PATH = path.join(DATA_DIR, "places.seed.json");
 
 const CACHE_TTL_HOURS = Number(process.env.CACHE_TTL_HOURS ?? "24");
-const MAX_FETCHES = Number(process.env.MAX_FETCHES_PER_BUILD ?? "30");
+const MAX_FETCHES = Number(process.env.MAX_FETCHES_PER_BUILD ?? "50");
+const REQUIRED_SCHEMA_VERSION = 2;
 
 async function readJson<T>(p: string, fallback: T): Promise<T> {
   if (!existsSync(p)) return fallback;
@@ -47,6 +48,7 @@ function isAlreadyProcessed(place: Place): boolean {
   ) {
     return false;
   }
+  if ((place.schemaVersion ?? 1) < REQUIRED_SCHEMA_VERSION) return false;
   return true;
 }
 
@@ -139,6 +141,8 @@ async function main() {
           tags: [],
           images: [],
           menu: [],
+          lat: null,
+          lng: null,
           fetchedAt: new Date().toISOString(),
           source: "seed",
         });

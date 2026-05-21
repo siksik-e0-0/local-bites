@@ -26,6 +26,9 @@ export interface Place {
   fetchedAt: string;
   source: "naver" | "cache" | "seed";
   description?: string | null;
+  lat?: number | null;
+  lng?: number | null;
+  schemaVersion?: number;
 }
 
 export interface PlacesFile {
