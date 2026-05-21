@@ -42,15 +42,33 @@ https://naver.me/FBe2MAkT | 식당
 - 중복 URL 자동 제거
 - 카테고리 미지정시 Naver 카테고리에서 자동 추론
 
+## 데이터 갱신 자동화 (GitHub Actions)
+
+`share_link` 가 변경되면 GitHub Actions (`.github/workflows/fetch-places.yml`) 이
+자동으로 `npm run fetch:places` 를 실행하고 `data/places.json` 을 커밋합니다.
+사용자는 `share_link` 만 편집 → push 하면 됩니다.
+
+- 트리거: `share_link`, `scripts/fetch-places.ts`, `lib/naver.ts` 변경시
+- 수동 실행: GitHub → Actions → "Fetch places" → Run workflow (옵션: 캐시 무시)
+- 권한: 워크플로우가 `contents: write` 로 직접 커밋 (별도 PAT 불필요)
+- 커밋 메시지에 `[skip ci]` 가 있어 재귀 트리거 없음
+
+> **참고**: Naver 는 데이터센터 IP 를 차단합니다. GitHub Actions 러너 IP 가
+> 차단되면 워크플로우는 placeholder 카드만 생성합니다. 그래도 빌드는 통과.
+> 차단시 fallback: 로컬에서 `npm run fetch:places` 실행 후 커밋.
+
 ## Vercel 배포
 
-1. 저장소를 GitHub에 푸시.
+1. 저장소를 GitHub 에 푸시.
 2. https://vercel.com/new → 이 저장소 import → 기본 설정 그대로 Deploy.
-3. 이후 `share_link` 변경/push 시 자동 재빌드 (`prebuild` 훅이 `npm run fetch:places` 실행).
+3. **Production Branch 설정**: 기본은 `main`. 작업 브랜치에서 작업 중이라면
+   Vercel Project Settings → Git → Production Branch 를 해당 브랜치로 변경,
+   또는 작업 브랜치를 `main` 에 머지.
+4. 이후 `share_link` 변경/push 시 자동 재빌드.
 
 권장 설정:
-- **Build Region**: `icn1` (서울) — Naver 차단 회피.
-- **Env Vars** (선택): Naver 가 자주 차단되면 `SKIP_FETCH=1` 토글 후 로컬에서 갱신해 푸시.
+- **Build Region**: `icn1` (서울) — Naver 차단 회피 가능성 높음.
+- **Env Vars** (선택): Naver 가 자주 차단되면 `SKIP_FETCH=1` 토글.
 
 ## Naver 봇 차단 우회
 
