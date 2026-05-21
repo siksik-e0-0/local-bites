@@ -1,18 +1,17 @@
 "use client";
 
-import { Plus, RefreshCw } from "lucide-react";
+import { Plus, RefreshCw, ShieldCheck } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import type { Category, Place } from "@/lib/types";
 import { AddDialog } from "./add-dialog";
 import { CategoryFilter, type FilterValue } from "./category-filter";
 import { EmptyState } from "./empty-state";
+import { NicknameOnboarding } from "./nickname-onboarding";
 import { PlaceCard } from "./place-card";
+import { PlaceDetail } from "./place-detail";
 
 const NICK_KEY = "lb:nickname";
-const DEFAULT_NICK = "guest";
-const REPO_EDIT_URL =
-  process.env.NEXT_PUBLIC_REPO_EDIT_URL ??
-  "https://github.com/siksik-e0-0/local-bites/edit/main/share_link";
+const ADMIN_NICK = "admin";
 
 function formatKst(iso: string): string {
   try {
@@ -41,16 +40,23 @@ export function Board({
 }) {
   const [filter, setFilter] = useState<FilterValue>("전체");
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [nickname, setNickname] = useState<string>(DEFAULT_NICK);
+  const [selected, setSelected] = useState<Place | null>(null);
+  const [nickname, setNickname] = useState<string | null>(null);
+  const [needsOnboarding, setNeedsOnboarding] = useState(false);
   const [editingNick, setEditingNick] = useState(false);
 
   useEffect(() => {
-    const saved = typeof window !== "undefined" ? window.localStorage.getItem(NICK_KEY) : null;
-    if (saved) setNickname(saved);
+    const saved =
+      typeof window !== "undefined" ? window.localStorage.getItem(NICK_KEY) : null;
+    if (saved) {
+      setNickname(saved);
+    } else {
+      setNeedsOnboarding(true);
+    }
   }, []);
 
   function saveNick(v: string) {
-    const clean = v.trim().slice(0, 24) || DEFAULT_NICK;
+    const clean = v.trim().slice(0, 24) || "guest";
     setNickname(clean);
     try {
       window.localStorage.setItem(NICK_KEY, clean);
@@ -59,11 +65,16 @@ export function Board({
     }
   }
 
+  const isAdmin = nickname === ADMIN_NICK;
+
   const counts: Record<FilterValue, number> = useMemo(() => {
-    const base: Record<FilterValue, number> = { 전체: initialPlaces.length, 식당: 0, 카페: 0, 기타: 0 };
-    for (const p of initialPlaces) {
-      base[p.category as Category]++;
-    }
+    const base: Record<FilterValue, number> = {
+      전체: initialPlaces.length,
+      식당: 0,
+      카페: 0,
+      기타: 0,
+    };
+    for (const p of initialPlaces) base[p.category as Category]++;
     return base;
   }, [initialPlaces]);
 
@@ -83,40 +94,46 @@ export function Board({
             맛집 정보판
           </h1>
           <p className="mt-2 text-sm text-[var(--muted)]">
-            함께 정해요 — 후보 <span className="tabular-nums text-[var(--fg)]/80">{initialPlaces.length}</span>곳
+            함께 정해요 — 후보{" "}
+            <span className="tabular-nums text-[var(--fg)]/80">{initialPlaces.length}</span>곳
           </p>
         </div>
 
-        <div className="flex items-center gap-1.5 text-xs">
-          {editingNick ? (
-            <input
-              autoFocus
-              defaultValue={nickname}
-              onBlur={(e) => {
-                saveNick(e.currentTarget.value);
-                setEditingNick(false);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  saveNick((e.target as HTMLInputElement).value);
+        {nickname && (
+          <div className="flex items-center gap-1.5 text-xs">
+            {editingNick ? (
+              <input
+                autoFocus
+                defaultValue={nickname}
+                onBlur={(e) => {
+                  saveNick(e.currentTarget.value);
                   setEditingNick(false);
-                } else if (e.key === "Escape") {
-                  setEditingNick(false);
-                }
-              }}
-              className="w-32 rounded-full border bg-[var(--bg)] px-3 py-1 font-mono text-xs outline-none focus:border-[var(--fg)]/50"
-            />
-          ) : (
-            <button
-              onClick={() => setEditingNick(true)}
-              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-mono text-[var(--muted)] transition hover:border-[var(--fg)]/40 hover:text-[var(--fg)]"
-              title="닉네임 변경"
-            >
-              <span className="text-[var(--fg)]/50">@</span>
-              {nickname}
-            </button>
-          )}
-        </div>
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    saveNick((e.target as HTMLInputElement).value);
+                    setEditingNick(false);
+                  } else if (e.key === "Escape") {
+                    setEditingNick(false);
+                  }
+                }}
+                className="w-32 rounded-full border bg-[var(--bg)] px-3 py-1 font-mono text-xs outline-none focus:border-[var(--fg)]/50"
+              />
+            ) : (
+              <button
+                onClick={() => setEditingNick(true)}
+                className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-mono text-[var(--muted)] transition hover:border-[var(--fg)]/40 hover:text-[var(--fg)]"
+                title="닉네임 변경"
+              >
+                {isAdmin && (
+                  <ShieldCheck className="size-3 text-[var(--accent)]" strokeWidth={2} />
+                )}
+                <span className="text-[var(--fg)]/50">@</span>
+                {nickname}
+              </button>
+            )}
+          </div>
+        )}
       </header>
 
       <div className="sticky top-0 z-20 -mx-5 mt-10 flex flex-col gap-3 bg-[var(--bg)]/85 px-5 py-3 backdrop-blur-md sm:-mx-8 sm:flex-row sm:items-center sm:justify-between sm:px-8">
@@ -136,7 +153,12 @@ export function Board({
         ) : (
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
             {visible.map((p, i) => (
-              <PlaceCard key={p.id || p.shortUrl} place={p} index={i} />
+              <PlaceCard
+                key={p.id || p.shortUrl}
+                place={p}
+                index={i}
+                onSelect={setSelected}
+              />
             ))}
           </div>
         )}
@@ -155,10 +177,14 @@ export function Board({
         </button>
       </footer>
 
-      <AddDialog
-        open={dialogOpen}
-        onClose={() => setDialogOpen(false)}
-        repoEditUrl={REPO_EDIT_URL}
+      <AddDialog open={dialogOpen} onClose={() => setDialogOpen(false)} />
+      <PlaceDetail place={selected} onClose={() => setSelected(null)} />
+      <NicknameOnboarding
+        open={needsOnboarding}
+        onSubmit={(v) => {
+          saveNick(v);
+          setNeedsOnboarding(false);
+        }}
       />
     </div>
   );

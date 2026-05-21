@@ -21,13 +21,31 @@ function Monogram({ name, category }: { name: string; category: Category }) {
   );
 }
 
-export function PlaceCard({ place, index }: { place: Place; index: number }) {
+export function PlaceCard({
+  place,
+  index,
+  onSelect,
+}: {
+  place: Place;
+  index: number;
+  onSelect: (place: Place) => void;
+}) {
   const { Icon } = CATEGORY_META[place.category];
   const rating = place.rating != null ? place.rating.toFixed(1) : null;
+  const tags = place.tags ?? [];
 
   return (
     <article
-      className="lb-card-enter group relative flex flex-col overflow-hidden rounded-2xl border bg-[var(--card)] transition-all hover:-translate-y-0.5 hover:border-[var(--fg)]/30 hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]"
+      onClick={() => onSelect(place)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onSelect(place);
+        }
+      }}
+      className="lb-card-enter group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border bg-[var(--card)] text-left transition-all hover:-translate-y-0.5 hover:border-[var(--fg)]/30 hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]/40"
       style={{ animationDelay: `${Math.min(index, 12) * 50}ms` }}
     >
       <div className="relative aspect-[16/10] overflow-hidden border-b bg-[var(--subtle)]">
@@ -73,6 +91,20 @@ export function PlaceCard({ place, index }: { place: Place; index: number }) {
           )}
         </div>
 
+        {tags.length > 0 && (
+          <div className="flex flex-wrap gap-1">
+            {tags.map((t) => (
+              <span
+                key={t}
+                className="inline-flex items-center gap-0.5 rounded-full border border-[var(--accent)]/30 bg-[var(--accent-soft)] px-2 py-0.5 text-[10px] font-medium text-[var(--accent)] dark:text-[var(--accent)]"
+              >
+                <MapPin className="size-2.5" strokeWidth={2} />
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
+
         <dl className="space-y-1.5 text-sm">
           {place.address && (
             <div className="flex items-start gap-2 text-[var(--muted)]">
@@ -85,6 +117,7 @@ export function PlaceCard({ place, index }: { place: Place; index: number }) {
               <Phone className="mt-0.5 size-3.5 shrink-0" strokeWidth={1.5} />
               <a
                 href={`tel:${place.phone.replace(/[^0-9+]/g, "")}`}
+                onClick={(e) => e.stopPropagation()}
                 className="font-mono text-xs text-[var(--fg)]/80 hover:underline"
               >
                 {place.phone}
@@ -105,6 +138,7 @@ export function PlaceCard({ place, index }: { place: Place; index: number }) {
           href={place.naverMapUrl}
           target="_blank"
           rel="noreferrer"
+          onClick={(e) => e.stopPropagation()}
           className="mt-auto inline-flex items-center justify-center gap-1.5 rounded-lg border bg-[var(--bg)] py-2 text-sm text-[var(--fg)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
         >
           Naver지도에서 보기

@@ -35,11 +35,22 @@ async function readJson<T>(p: string, fallback: T): Promise<T> {
   }
 }
 
-function isFresh(place: Place): boolean {
+function isAlreadyProcessed(place: Place): boolean {
+  // 한 번 성공적으로 fetch 한 URL 은 다시 fetch 하지 않음 (요구사항: 신규만 처리).
+  // 단, V1 잘못된 데이터(주소 자리에 리뷰 카운트 등) 또는 V2 형식이 아닌 항목은 재처리.
   if (place.source !== "naver") return false;
-  const ms = Date.now() - new Date(place.fetchedAt).getTime();
-  return ms < CACHE_TTL_HOURS * 60 * 60 * 1000;
+  if (!Array.isArray(place.tags)) return false;
+  if (!Array.isArray(place.images)) return false;
+  if (
+    typeof place.address === "string" &&
+    /방문자리뷰|블로그리뷰/.test(place.address)
+  ) {
+    return false;
+  }
+  return true;
 }
+
+void CACHE_TTL_HOURS;
 
 async function main() {
   if (process.env.SKIP_FETCH === "1") {
@@ -80,10 +91,10 @@ async function main() {
   for (const entry of entries) {
     const cached = cacheByShortUrl.get(entry.url) ?? null;
 
-    if (!force && cached && isFresh(cached)) {
+    if (!force && cached && isAlreadyProcessed(cached)) {
       results.push(cached);
       fromCache++;
-      console.log(`  [${entry.url}] 캐시 사용 (${cached.name})`);
+      console.log(`  [${entry.url}] 이미 처리됨, 건너뜀 (${cached.name})`);
       continue;
     }
 
@@ -125,6 +136,9 @@ async function main() {
           rating: null,
           reviewCount: null,
           heroImageUrl: null,
+          tags: [],
+          images: [],
+          menu: [],
           fetchedAt: new Date().toISOString(),
           source: "seed",
         });
