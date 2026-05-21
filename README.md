@@ -23,11 +23,22 @@ npm run dev            # http://localhost:3000
 
 | 변수 | 기본 | 설명 |
 | ---- | ---- | ---- |
-| `FORCE_REFETCH` | `0` | `1` 이면 캐시 무시하고 모든 항목 재수집 |
+| `FORCE_REFETCH` | `0` | `1` 이면 캐시 무시하고 모든 항목 재수집 (기본은 한 번 처리된 URL 은 건너뜀) |
 | `SKIP_FETCH` | `0` | `1` 이면 `data/places.json` 그대로 유지 |
-| `CACHE_TTL_HOURS` | `24` | 캐시 유효 시간 |
 | `MAX_FETCHES_PER_BUILD` | `30` | 빌드당 최대 Naver 호출 횟수 |
-| `NEXT_PUBLIC_REPO_EDIT_URL` | `https://github.com/siksik-e0-0/local-bites/edit/main/share_link` | "share_link 편집" 버튼이 여는 URL |
+| `GITHUB_TOKEN` | — | **(필수)** 페이지에서 "후보 추가" 저장 시 `share_link` 에 commit 하기 위한 GitHub 개인 액세스 토큰. Vercel 환경 변수에 설정. 권한: `contents:write` |
+| `GITHUB_REPO_OWNER` | `siksik-e0-0` | 저장소 owner |
+| `GITHUB_REPO_NAME` | `local-bites` | 저장소 이름 |
+| `GITHUB_BRANCH` | `main` | 저장 대상 브랜치 |
+
+### Vercel에 GITHUB_TOKEN 설정하기
+
+1. GitHub → Settings → Developer settings → **Personal access tokens (Fine-grained)** → Generate new token
+2. Repository access: `local-bites` 만 선택
+3. Permissions → **Contents: Read and write**
+4. Generate → 토큰 복사
+5. Vercel → Project → Settings → Environment Variables → `GITHUB_TOKEN` = 위 토큰 (Production / Preview / Development 모두 체크)
+6. Redeploy
 
 ## share_link 형식
 

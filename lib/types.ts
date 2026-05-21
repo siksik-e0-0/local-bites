@@ -1,5 +1,12 @@
 export type Category = "식당" | "카페" | "기타";
 
+export interface MenuItem {
+  name: string;
+  price: string | null;
+  description: string | null;
+  imageUrl: string | null;
+}
+
 export interface Place {
   id: string;
   shortUrl: string;
@@ -13,6 +20,9 @@ export interface Place {
   rating: number | null;
   reviewCount: number | null;
   heroImageUrl: string | null;
+  tags: string[];
+  images: string[];
+  menu: MenuItem[];
   fetchedAt: string;
   source: "naver" | "cache" | "seed";
 }

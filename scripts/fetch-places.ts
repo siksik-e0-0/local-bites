@@ -35,11 +35,15 @@ async function readJson<T>(p: string, fallback: T): Promise<T> {
   }
 }
 
-function isFresh(place: Place): boolean {
+function isAlreadyProcessed(place: Place): boolean {
+  // 한 번 성공적으로 fetch 한 URL 은 다시 fetch 하지 않음 (요구사항: 신규만 처리).
+  // FORCE_REFETCH=1 일 때만 무시.
   if (place.source !== "naver") return false;
-  const ms = Date.now() - new Date(place.fetchedAt).getTime();
-  return ms < CACHE_TTL_HOURS * 60 * 60 * 1000;
+  return true;
 }
+
+// 호환을 위해 남겨둠 — 외부에서 import 하던 코드가 있을 경우 대비
+void CACHE_TTL_HOURS;
 
 async function main() {
   if (process.env.SKIP_FETCH === "1") {
@@ -80,10 +84,10 @@ async function main() {
   for (const entry of entries) {
     const cached = cacheByShortUrl.get(entry.url) ?? null;
 
-    if (!force && cached && isFresh(cached)) {
+    if (!force && cached && isAlreadyProcessed(cached)) {
       results.push(cached);
       fromCache++;
-      console.log(`  [${entry.url}] 캐시 사용 (${cached.name})`);
+      console.log(`  [${entry.url}] 이미 처리됨, 건너뜀 (${cached.name})`);
       continue;
     }
 
@@ -125,6 +129,9 @@ async function main() {
           rating: null,
           reviewCount: null,
           heroImageUrl: null,
+          tags: [],
+          images: [],
+          menu: [],
           fetchedAt: new Date().toISOString(),
           source: "seed",
         });

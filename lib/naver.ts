@@ -1,4 +1,4 @@
-import type { Category, Place } from "./types";
+import type { Category, MenuItem, Place } from "./types";
 
 const UA_POOL = [
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
@@ -133,6 +133,28 @@ interface RawPlace {
   rating?: number | null;
   reviewCount?: number | null;
   heroImageUrl?: string | null;
+  images?: string[];
+  menu?: MenuItem[];
+}
+
+function looksLikeAddress(s: string | null | undefined): boolean {
+  if (!s || typeof s !== "string") return false;
+  const t = s.trim();
+  if (!t) return false;
+  if (/방문자리뷰|블로그리뷰|평점|리뷰\s*\d/.test(t)) return false;
+  if (/^[\d.,\s·•]+$/.test(t)) return false;
+  const addrKeywords = ["도 ", "시 ", "군 ", "구 ", "읍 ", "면 ", "동 ", "리 ", "로 ", "길 ", "번지"];
+  if (addrKeywords.some((k) => t.includes(k))) return true;
+  if (t.length >= 8 && t.length <= 100) return true;
+  return false;
+}
+
+export function deriveTags(address: string | null | undefined): string[] {
+  if (!address) return [];
+  const out: string[] = [];
+  if (address.includes("제주시")) out.push("제주시");
+  if (address.includes("서귀포시")) out.push("서귀포시");
+  return out;
 }
 
 function extractApolloState(html: string): unknown | null {
@@ -161,21 +183,103 @@ function walkApolloForEntity(
   if (!state || typeof state !== "object") return null;
   const visited = new Set<unknown>();
   const queue: unknown[] = [state];
+  let nameOnlyFallback: Record<string, unknown> | null = null;
   while (queue.length) {
     const node = queue.shift();
     if (!node || typeof node !== "object" || visited.has(node)) continue;
     visited.add(node);
     const rec = node as Record<string, unknown>;
     if (rec.id === placeId || rec.id === Number(placeId)) {
-      if (rec.name || rec.address || rec.roadAddress || rec.businessName) {
-        return rec;
+      const hasRealAddress =
+        looksLikeAddress(rec.roadAddress as string) ||
+        looksLikeAddress(rec.address as string) ||
+        looksLikeAddress(rec.fullRoadAddress as string) ||
+        looksLikeAddress(rec.commonAddress as string) ||
+        looksLikeAddress(rec.jibunAddress as string);
+      if (hasRealAddress) return rec;
+      if (!nameOnlyFallback && (rec.name || rec.businessName)) nameOnlyFallback = rec;
+    }
+    for (const v of Object.values(rec)) {
+      if (v && typeof v === "object") queue.push(v);
+    }
+  }
+  return nameOnlyFallback;
+}
+
+function walkApolloForMenu(state: unknown): MenuItem[] {
+  if (!state || typeof state !== "object") return [];
+  const visited = new Set<unknown>();
+  const queue: unknown[] = [state];
+  const out: MenuItem[] = [];
+  const seen = new Set<string>();
+  while (queue.length) {
+    const node = queue.shift();
+    if (!node || typeof node !== "object" || visited.has(node)) continue;
+    visited.add(node);
+    const rec = node as Record<string, unknown>;
+    const typename = typeof rec.__typename === "string" ? rec.__typename : "";
+    if (
+      (typename.toLowerCase().includes("menu") && typeof rec.name === "string") ||
+      (typeof rec.name === "string" && (rec.price != null || rec.menuUrl != null))
+    ) {
+      const name = String(rec.name).trim();
+      if (name && !seen.has(name) && !/^주의|^정보|^안내/.test(name)) {
+        let imageUrl: string | null = null;
+        const images = rec.images;
+        if (Array.isArray(images) && images.length > 0) {
+          const first = images[0] as Record<string, unknown>;
+          if (typeof first?.url === "string") imageUrl = first.url;
+        }
+        if (!imageUrl && typeof rec.menuUrl === "string") imageUrl = rec.menuUrl;
+        if (!imageUrl && typeof rec.imageUrl === "string") imageUrl = rec.imageUrl;
+        out.push({
+          name,
+          price: rec.price != null ? String(rec.price).trim() : null,
+          description:
+            typeof rec.description === "string" && rec.description.trim()
+              ? rec.description.trim()
+              : null,
+          imageUrl,
+        });
+        seen.add(name);
       }
     }
     for (const v of Object.values(rec)) {
       if (v && typeof v === "object") queue.push(v);
     }
   }
-  return null;
+  return out.slice(0, 30);
+}
+
+function walkApolloForImages(state: unknown, placeId: string): string[] {
+  if (!state || typeof state !== "object") return [];
+  const visited = new Set<unknown>();
+  const queue: unknown[] = [state];
+  const urls = new Set<string>();
+  while (queue.length) {
+    const node = queue.shift();
+    if (!node || typeof node !== "object" || visited.has(node)) continue;
+    visited.add(node);
+    const rec = node as Record<string, unknown>;
+    if (Array.isArray(rec.images)) {
+      for (const img of rec.images) {
+        if (img && typeof img === "object") {
+          const o = img as Record<string, unknown>;
+          for (const k of ["url", "origin", "fullPath", "imageUrl"]) {
+            const v = o[k];
+            if (typeof v === "string" && v.startsWith("http")) urls.add(v);
+          }
+        } else if (typeof img === "string" && img.startsWith("http")) {
+          urls.add(img);
+        }
+      }
+    }
+    for (const v of Object.values(rec)) {
+      if (v && typeof v === "object") queue.push(v);
+    }
+  }
+  void placeId;
+  return Array.from(urls).slice(0, 10);
 }
 
 function fromApollo(entity: Record<string, unknown>): RawPlace {
@@ -219,10 +323,21 @@ function fromApollo(entity: Record<string, unknown>): RawPlace {
       .join("\n");
   }
 
+  const addressCandidate = get(
+    "roadAddress",
+    "fullRoadAddress",
+    "roadAddr",
+    "commonAddress",
+    "address",
+    "jibunAddress",
+    "addressNo",
+  );
+  const address = looksLikeAddress(addressCandidate) ? addressCandidate : null;
+
   return {
     name: get("name", "businessName"),
     category: get("category", "categoryName", "businessCategory"),
-    address: get("roadAddress", "address", "fullRoadAddress"),
+    address,
     phone: get("phone", "virtualPhone", "businessPhone"),
     businessHours,
     rating: getNum("visitorReviewScore", "reviewScore", "rating"),
@@ -271,7 +386,7 @@ function fromJsonLd(html: string): RawPlace {
           return {
             name: typeof o.name === "string" ? o.name : null,
             category: typeof o.servesCuisine === "string" ? o.servesCuisine : null,
-            address: addr,
+            address: looksLikeAddress(addr) ? addr : null,
             phone: typeof o.telephone === "string" ? o.telephone : null,
             businessHours: typeof o.openingHours === "string" ? o.openingHours : null,
             rating,
@@ -314,7 +429,7 @@ function fromMeta(html: string): RawPlace {
   return {
     name,
     category: null,
-    address: desc,
+    address: looksLikeAddress(desc) ? desc : null,
     phone: null,
     businessHours: null,
     rating: null,
@@ -371,6 +486,8 @@ export async function fetchPlace(
   }
 
   let raw: RawPlace = {};
+  let images: string[] = [];
+  let menu: MenuItem[] = [];
   let layer: string = "none";
   if (html) {
     const apollo = extractApolloState(html);
@@ -380,6 +497,8 @@ export async function fetchPlace(
         raw = mergeRaw(raw, fromApollo(entity));
         layer = "apollo";
       }
+      images = walkApolloForImages(apollo, placeId);
+      menu = walkApolloForMenu(apollo);
     }
     const jsonLd = fromJsonLd(html);
     raw = mergeRaw(raw, jsonLd);
@@ -396,8 +515,20 @@ export async function fetchPlace(
 
   const category: Category = userCategory ?? inferCategory(raw.category);
   const naverMapUrl = `https://map.naver.com/p/entry/place/${placeId}`;
+  const finalAddress = raw.address ?? cached?.address ?? null;
+  const finalHero = raw.heroImageUrl ?? cached?.heroImageUrl ?? null;
+  const mergedImages = Array.from(
+    new Set([
+      ...(finalHero ? [finalHero] : []),
+      ...images,
+      ...(cached?.images ?? []),
+    ]),
+  ).slice(0, 10);
+  const finalMenu = menu.length > 0 ? menu : cached?.menu ?? [];
 
-  console.log(`  [${shortUrl}] placeId=${placeId} layer=${layer} via=${usedUrl ?? "n/a"}`);
+  console.log(
+    `  [${shortUrl}] placeId=${placeId} layer=${layer} images=${mergedImages.length} menu=${finalMenu.length} via=${usedUrl ?? "n/a"}`,
+  );
 
   return {
     id: placeId,
@@ -406,12 +537,15 @@ export async function fetchPlace(
     name: raw.name ?? cached?.name ?? "(이름 없음)",
     category,
     naverCategory: raw.category ?? cached?.naverCategory ?? null,
-    address: raw.address ?? cached?.address ?? null,
+    address: finalAddress,
     phone: raw.phone ?? cached?.phone ?? null,
     businessHours: raw.businessHours ?? cached?.businessHours ?? null,
     rating: raw.rating ?? cached?.rating ?? null,
     reviewCount: raw.reviewCount ?? cached?.reviewCount ?? null,
-    heroImageUrl: raw.heroImageUrl ?? cached?.heroImageUrl ?? null,
+    heroImageUrl: finalHero,
+    tags: deriveTags(finalAddress),
+    images: mergedImages,
+    menu: finalMenu,
     fetchedAt: new Date().toISOString(),
     source: hasData ? "naver" : cached ? "cache" : "seed",
   };
