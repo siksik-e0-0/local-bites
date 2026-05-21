@@ -37,12 +37,19 @@ async function readJson<T>(p: string, fallback: T): Promise<T> {
 
 function isAlreadyProcessed(place: Place): boolean {
   // 한 번 성공적으로 fetch 한 URL 은 다시 fetch 하지 않음 (요구사항: 신규만 처리).
-  // FORCE_REFETCH=1 일 때만 무시.
+  // 단, V1 잘못된 데이터(주소 자리에 리뷰 카운트 등) 또는 V2 형식이 아닌 항목은 재처리.
   if (place.source !== "naver") return false;
+  if (!Array.isArray(place.tags)) return false;
+  if (!Array.isArray(place.images)) return false;
+  if (
+    typeof place.address === "string" &&
+    /방문자리뷰|블로그리뷰/.test(place.address)
+  ) {
+    return false;
+  }
   return true;
 }
 
-// 호환을 위해 남겨둠 — 외부에서 import 하던 코드가 있을 경우 대비
 void CACHE_TTL_HOURS;
 
 async function main() {
