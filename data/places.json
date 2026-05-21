@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T16:00:26.906Z",
+  "generatedAt": "2026-05-21T16:03:24.781Z",
   "places": [
     {
       "id": "1480142748",
@@ -19,7 +19,7 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230525_121%2F1684968233004M5NQm_JPEG%2FIMG_3956.jpeg"
       ],
       "menu": [],
-      "fetchedAt": "2026-05-21T16:00:08.558Z",
+      "fetchedAt": "2026-05-21T16:03:07.512Z",
       "source": "naver"
     },
     {
@@ -40,7 +40,7 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250811_159%2F1754897993855Vqy9d_JPEG%2F1.jpg"
       ],
       "menu": [],
-      "fetchedAt": "2026-05-21T16:00:10.629Z",
+      "fetchedAt": "2026-05-21T16:03:08.916Z",
       "source": "naver"
     },
     {
@@ -61,24 +61,8 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20171201_138%2F1512086773534gflQ0_JPEG%2FHjlZynXEFvjUo3hSPYQ45EMF.jpg"
       ],
       "menu": [],
-      "fetchedAt": "2026-05-21T16:00:12.555Z",
+      "fetchedAt": "2026-05-21T16:03:10.075Z",
       "source": "naver"
-    },
-    {
-      "id": "pending:FyAteQQN",
-      "shortUrl": "https://naver.me/FyAteQQN",
-      "naverMapUrl": "https://naver.me/FyAteQQN",
-      "name": "(데이터 갱신 필요)",
-      "category": "기타",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
-      "businessHours": null,
-      "rating": null,
-      "reviewCount": null,
-      "heroImageUrl": null,
-      "fetchedAt": "2026-05-21T15:13:37.135Z",
-      "source": "cache"
     },
     {
       "id": "68336236",
@@ -98,7 +82,7 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240722_179%2F1721622224623hDr41_JPEG%2FKakaoTalk_20240719_233607103_02.jpg"
       ],
       "menu": [],
-      "fetchedAt": "2026-05-21T16:00:14.464Z",
+      "fetchedAt": "2026-05-21T16:03:11.842Z",
       "source": "naver"
     },
     {
@@ -119,7 +103,7 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMDZfMTI3%2FMDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504%2FIMG_3080.jpg%233024x4032"
       ],
       "menu": [],
-      "fetchedAt": "2026-05-21T16:00:16.068Z",
+      "fetchedAt": "2026-05-21T16:03:13.056Z",
       "source": "naver"
     },
     {
@@ -140,7 +124,7 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230420_150%2F16819621668228Ba0p_JPEG%2FEB1B4F69-41E2-4AF8-A825-B4B2EE53DBD8.jpeg"
       ],
       "menu": [],
-      "fetchedAt": "2026-05-21T16:00:17.267Z",
+      "fetchedAt": "2026-05-21T16:03:14.142Z",
       "source": "naver"
     },
     {
@@ -148,7 +132,7 @@
       "shortUrl": "https://naver.me/5pws2zzg",
       "naverMapUrl": "https://map.naver.com/p/entry/place/1872411366",
       "name": "아침미소목장",
-      "category": "식당",
+      "category": "카페",
       "naverCategory": null,
       "address": "방문자리뷰 3,411 · 블로그리뷰 2,021",
       "phone": null,
@@ -161,7 +145,7 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250220_154%2F174001965280939i2y_JPEG%2F%25BE%25C6%25C4%25A7%25B9%25CC%25BC%25D2%25B8%25F1%25C0%25E5_%25C7%25B3%25B0%25E6_24.jpg"
       ],
       "menu": [],
-      "fetchedAt": "2026-05-21T16:00:19.321Z",
+      "fetchedAt": "2026-05-21T16:03:15.958Z",
       "source": "naver"
     },
     {
@@ -182,7 +166,7 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231101_59%2F1698806746026sUnYY_JPEG%2FIMG_8577.jpeg"
       ],
       "menu": [],
-      "fetchedAt": "2026-05-21T16:00:20.529Z",
+      "fetchedAt": "2026-05-21T16:03:17.020Z",
       "source": "naver"
     },
     {
@@ -203,7 +187,7 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201202_200%2F1606874035894MQeN0_JPEG%2FkoYKX7XMt83F8ALITl6sZZvU.jpg"
       ],
       "menu": [],
-      "fetchedAt": "2026-05-21T16:00:22.292Z",
+      "fetchedAt": "2026-05-21T16:03:18.493Z",
       "source": "naver"
     },
     {
@@ -224,7 +208,7 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240621_37%2F1718929923929yy4Tk_JPEG%2F1000020949.jpg"
       ],
       "menu": [],
-      "fetchedAt": "2026-05-21T16:00:23.930Z",
+      "fetchedAt": "2026-05-21T16:03:20.143Z",
       "source": "naver"
     },
     {
@@ -245,7 +229,28 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200714_120%2F1594710093425P2TNf_JPEG%2F8yWy4rtiOZLlfryukQ5F_IJy.jpeg.jpg"
       ],
       "menu": [],
-      "fetchedAt": "2026-05-21T16:00:25.948Z",
+      "fetchedAt": "2026-05-21T16:03:21.454Z",
+      "source": "naver"
+    },
+    {
+      "id": "36859834",
+      "shortUrl": "https://naver.me/GFB1E8zC",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/36859834",
+      "name": "델문도",
+      "category": "카페",
+      "naverCategory": null,
+      "address": null,
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250722_29%2F1753148469951AypHp_JPEG%2FUntitled-5-01.jpg",
+      "tags": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250722_29%2F1753148469951AypHp_JPEG%2FUntitled-5-01.jpg"
+      ],
+      "menu": [],
+      "fetchedAt": "2026-05-21T16:03:23.416Z",
       "source": "naver"
     }
   ]
