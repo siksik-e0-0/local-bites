@@ -507,9 +507,40 @@ function fromMeta(html: string): RawPlace {
     const m = html.match(re);
     return m ? m[1].trim() : null;
   };
-  const title = meta("og:title") || metaAlt("og:title");
-  const desc = meta("og:description") || metaAlt("og:description") || meta("description");
-  const image = meta("og:image") || metaAlt("og:image");
+  const findMeta = (...keys: string[]): string | null => {
+    for (const k of keys) {
+      const v = meta(k) ?? metaAlt(k);
+      if (v) return v;
+    }
+    return null;
+  };
+  const title = findMeta("og:title");
+  const desc = findMeta("og:description", "description");
+  const image = findMeta("og:image", "og:image:secure_url");
+  const latRaw = findMeta(
+    "og:latitude",
+    "place:location:latitude",
+    "naver:latitude",
+    "geo.position.latitude",
+  );
+  const lngRaw = findMeta(
+    "og:longitude",
+    "place:location:longitude",
+    "naver:longitude",
+    "geo.position.longitude",
+  );
+  const geoPos = findMeta("geo.position", "ICBM");
+  let lat: number | null = latRaw ? Number(latRaw) : null;
+  let lng: number | null = lngRaw ? Number(lngRaw) : null;
+  if ((lat == null || !Number.isFinite(lat)) && geoPos) {
+    const parts = geoPos.split(/[,;]/).map((s) => Number(s.trim()));
+    if (parts.length >= 2 && parts.every(Number.isFinite)) {
+      lat = parts[0];
+      lng = parts[1];
+    }
+  }
+  if (lat != null && !Number.isFinite(lat)) lat = null;
+  if (lng != null && !Number.isFinite(lng)) lng = null;
   let name: string | null = null;
   if (title) {
     name = title.replace(/\s*[:|-]\s*네이버.*$/, "").trim();
@@ -523,7 +554,62 @@ function fromMeta(html: string): RawPlace {
     rating: null,
     reviewCount: null,
     heroImageUrl: image,
+    lat,
+    lng,
   };
+}
+
+function coordsFromUrl(url: string): { lat: number | null; lng: number | null } {
+  try {
+    const u = new URL(url);
+    const params = u.searchParams;
+
+    function inKoreaLatLng(la: number, ln: number): boolean {
+      return la >= 33 && la <= 39 && ln >= 124 && ln <= 132;
+    }
+
+    let lat: number | null = null;
+    let lng: number | null = null;
+    for (const k of ["lat", "latitude", "y", "mapy", "centerLat"]) {
+      const n = Number(params.get(k));
+      if (Number.isFinite(n) && n !== 0 && lat == null) lat = n;
+    }
+    for (const k of ["lng", "lon", "longitude", "x", "mapx", "centerLng"]) {
+      const n = Number(params.get(k));
+      if (Number.isFinite(n) && n !== 0 && lng == null) lng = n;
+    }
+
+    if (lat == null || lng == null) {
+      const c = params.get("c");
+      if (c) {
+        const parts = c.split(",").map((s) => Number(s));
+        if (parts.length >= 2 && Number.isFinite(parts[0]) && Number.isFinite(parts[1])) {
+          const a = parts[0];
+          const b = parts[1];
+          if (inKoreaLatLng(b, a)) {
+            lat = b;
+            lng = a;
+          } else if (inKoreaLatLng(a, b)) {
+            lat = a;
+            lng = b;
+          }
+        }
+      }
+    }
+
+    if (lat != null && lng != null && !inKoreaLatLng(lat, lng) && inKoreaLatLng(lng, lat)) {
+      const t = lat;
+      lat = lng;
+      lng = t;
+    }
+    if (lat != null && lng != null && !inKoreaLatLng(lat, lng)) {
+      lat = null;
+      lng = null;
+    }
+    return { lat, lng };
+  } catch {
+    return { lat: null, lng: null };
+  }
 }
 
 function mergeRaw(...parts: RawPlace[]): RawPlace {
@@ -677,8 +763,13 @@ export async function fetchPlace(
   ).slice(0, 10);
   const finalMenu = menu.length > 0 ? menu : cached?.menu ?? [];
   const finalHours = raw.businessHours ?? hours ?? cached?.businessHours ?? null;
-  const finalLat = raw.lat ?? cached?.lat ?? null;
-  const finalLng = raw.lng ?? cached?.lng ?? null;
+  let finalLat = raw.lat ?? cached?.lat ?? null;
+  let finalLng = raw.lng ?? cached?.lng ?? null;
+  if (finalLat == null || finalLng == null) {
+    const fromUrl = coordsFromUrl(finalUrl);
+    if (finalLat == null && fromUrl.lat != null) finalLat = fromUrl.lat;
+    if (finalLng == null && fromUrl.lng != null) finalLng = fromUrl.lng;
+  }
 
   console.log(
     `  [${shortUrl}] placeId=${placeId} layer=${layer} images=${mergedImages.length} menu=${finalMenu.length} hours=${finalHours ? "y" : "n"} geo=${finalLat != null && finalLng != null ? "y" : "n"} via=${usedUrl ?? "n/a"}`,
