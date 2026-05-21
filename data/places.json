@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T17:02:09.585Z",
+  "generatedAt": "2026-05-21T17:27:17.522Z",
   "places": [
     {
       "id": "1480142748",
@@ -22,7 +22,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:01:50.379Z",
+      "fetchedAt": "2026-05-21T17:26:59.058Z",
       "source": "naver"
     },
     {
@@ -46,7 +46,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:01:52.143Z",
+      "fetchedAt": "2026-05-21T17:27:00.741Z",
       "source": "naver"
     },
     {
@@ -70,7 +70,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:01:54.185Z",
+      "fetchedAt": "2026-05-21T17:27:02.128Z",
       "source": "naver"
     },
     {
@@ -94,7 +94,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:01:55.935Z",
+      "fetchedAt": "2026-05-21T17:27:03.539Z",
       "source": "naver"
     },
     {
@@ -118,7 +118,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:01:57.499Z",
+      "fetchedAt": "2026-05-21T17:27:05.607Z",
       "source": "naver"
     },
     {
@@ -142,7 +142,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:01:59.367Z",
+      "fetchedAt": "2026-05-21T17:27:06.790Z",
       "source": "naver"
     },
     {
@@ -166,7 +166,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:02:00.701Z",
+      "fetchedAt": "2026-05-21T17:27:08.491Z",
       "source": "naver"
     },
     {
@@ -190,7 +190,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:02:01.882Z",
+      "fetchedAt": "2026-05-21T17:27:09.904Z",
       "source": "naver"
     },
     {
@@ -214,7 +214,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:02:03.506Z",
+      "fetchedAt": "2026-05-21T17:27:11.018Z",
       "source": "naver"
     },
     {
@@ -238,7 +238,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:02:05.615Z",
+      "fetchedAt": "2026-05-21T17:27:13.037Z",
       "source": "naver"
     },
     {
@@ -262,7 +262,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:02:06.786Z",
+      "fetchedAt": "2026-05-21T17:27:14.418Z",
       "source": "naver"
     },
     {
@@ -286,7 +286,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:02:08.689Z",
+      "fetchedAt": "2026-05-21T17:27:16.480Z",
       "source": "naver"
     }
   ]
