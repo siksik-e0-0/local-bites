@@ -515,7 +515,8 @@ export async function fetchPlace(
 
   const category: Category = userCategory ?? inferCategory(raw.category);
   const naverMapUrl = `https://map.naver.com/p/entry/place/${placeId}`;
-  const finalAddress = raw.address ?? cached?.address ?? null;
+  const addressCandidate = raw.address ?? cached?.address ?? null;
+  const finalAddress = looksLikeAddress(addressCandidate) ? addressCandidate : null;
   const finalHero = raw.heroImageUrl ?? cached?.heroImageUrl ?? null;
   const mergedImages = Array.from(
     new Set([
