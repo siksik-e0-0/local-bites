@@ -53,6 +53,16 @@ function sanitizePatch(raw: unknown): PlaceEditPayload | { error: string } {
     out.name = n.slice(0, 80);
   }
 
+  if ("images" in obj) {
+    if (!Array.isArray(obj.images)) return { error: "images 는 배열이어야 합니다." };
+    const urls = obj.images
+      .filter((u): u is string => typeof u === "string")
+      .map((u) => u.trim())
+      .filter((u) => /^(https?:\/\/|\/uploads\/)/i.test(u))
+      .slice(0, 12);
+    out.images = Array.from(new Set(urls));
+  }
+
   if (Object.keys(out).length === 0) return { error: "수정할 필드가 없습니다." };
   return out;
 }

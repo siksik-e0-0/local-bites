@@ -41,6 +41,7 @@ export interface PlaceOverride {
   description?: string | null;
   category?: Category;
   name?: string;
+  images?: string[];
   deleted?: boolean;
   updatedAt?: string;
 }
@@ -55,4 +56,5 @@ export interface PlaceEditPayload {
   description?: string | null;
   category?: Category;
   name?: string;
+  images?: string[];
 }
