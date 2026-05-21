@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T15:57:15.976Z",
+  "generatedAt": "2026-05-21T16:01:19.449Z",
   "places": [
     {
       "id": "1480142748",
@@ -48,22 +48,6 @@
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20171201_138%2F1512086773534gflQ0_JPEG%2FHjlZynXEFvjUo3hSPYQ45EMF.jpg",
       "fetchedAt": "2026-05-21T15:22:13.421Z",
       "source": "naver"
-    },
-    {
-      "id": "pending:FyAteQQN",
-      "shortUrl": "https://naver.me/FyAteQQN",
-      "naverMapUrl": "https://naver.me/FyAteQQN",
-      "name": "(데이터 갱신 필요)",
-      "category": "기타",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
-      "businessHours": null,
-      "rating": null,
-      "reviewCount": null,
-      "heroImageUrl": null,
-      "fetchedAt": "2026-05-21T15:13:37.135Z",
-      "source": "cache"
     },
     {
       "id": "68336236",
