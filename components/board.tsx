@@ -1,17 +1,19 @@
 "use client";
 
-import { Plus, RefreshCw, ShieldCheck } from "lucide-react";
+import { LogOut, Plus, RefreshCw, ShieldCheck, ShieldOff } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import type { Category, Place } from "@/lib/types";
+import { getAdminToken, setAdminToken } from "@/lib/admin-client";
+import type { Category, Place, PlaceEditPayload } from "@/lib/types";
 import { AddDialog } from "./add-dialog";
+import { AdminDialog } from "./admin-dialog";
 import { CategoryFilter, type FilterValue } from "./category-filter";
+import { EditPlaceDialog } from "./edit-place-dialog";
 import { EmptyState } from "./empty-state";
 import { NicknameOnboarding } from "./nickname-onboarding";
 import { PlaceCard } from "./place-card";
 import { PlaceDetail } from "./place-detail";
 
 const NICK_KEY = "lb:nickname";
-const ADMIN_NICK = "admin";
 
 function formatKst(iso: string): string {
   try {
@@ -38,12 +40,20 @@ export function Board({
   initialPlaces: Place[];
   generatedAt: string;
 }) {
+  const [places, setPlaces] = useState<Place[]>(initialPlaces);
   const [filter, setFilter] = useState<FilterValue>("전체");
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [adminDialogOpen, setAdminDialogOpen] = useState(false);
   const [selected, setSelected] = useState<Place | null>(null);
+  const [editing, setEditing] = useState<Place | null>(null);
   const [nickname, setNickname] = useState<string | null>(null);
   const [needsOnboarding, setNeedsOnboarding] = useState(false);
   const [editingNick, setEditingNick] = useState(false);
+  const [adminToken, setAdminTokenState] = useState<string | null>(null);
+
+  useEffect(() => {
+    setPlaces(initialPlaces);
+  }, [initialPlaces]);
 
   useEffect(() => {
     const saved =
@@ -53,6 +63,7 @@ export function Board({
     } else {
       setNeedsOnboarding(true);
     }
+    setAdminTokenState(getAdminToken());
   }, []);
 
   function saveNick(v: string) {
@@ -65,23 +76,65 @@ export function Board({
     }
   }
 
-  const isAdmin = nickname === ADMIN_NICK;
+  function handleAdminSuccess(token: string) {
+    setAdminToken(token);
+    setAdminTokenState(token);
+    setAdminDialogOpen(false);
+  }
+
+  function logoutAdmin() {
+    setAdminToken(null);
+    setAdminTokenState(null);
+  }
+
+  function applyLocalEdit(id: string, patch: PlaceEditPayload) {
+    setPlaces((prev) =>
+      prev.map((p) => {
+        if (p.id !== id) return p;
+        return {
+          ...p,
+          name: patch.name ?? p.name,
+          category: patch.category ?? p.category,
+          tags: patch.tags ?? p.tags,
+          description: patch.description !== undefined ? patch.description : p.description ?? null,
+        };
+      }),
+    );
+    setSelected((cur) => {
+      if (!cur || cur.id !== id) return cur;
+      return {
+        ...cur,
+        name: patch.name ?? cur.name,
+        category: patch.category ?? cur.category,
+        tags: patch.tags ?? cur.tags,
+        description: patch.description !== undefined ? patch.description : cur.description ?? null,
+      };
+    });
+  }
+
+  function applyLocalDelete(id: string) {
+    setPlaces((prev) => prev.filter((p) => p.id !== id));
+    setSelected((cur) => (cur && cur.id === id ? null : cur));
+    setEditing((cur) => (cur && cur.id === id ? null : cur));
+  }
+
+  const isAdmin = adminToken !== null;
 
   const counts: Record<FilterValue, number> = useMemo(() => {
     const base: Record<FilterValue, number> = {
-      전체: initialPlaces.length,
+      전체: places.length,
       식당: 0,
       카페: 0,
       기타: 0,
     };
-    for (const p of initialPlaces) base[p.category as Category]++;
+    for (const p of places) base[p.category as Category]++;
     return base;
-  }, [initialPlaces]);
+  }, [places]);
 
   const visible = useMemo(() => {
-    if (filter === "전체") return initialPlaces;
-    return initialPlaces.filter((p) => p.category === filter);
-  }, [filter, initialPlaces]);
+    if (filter === "전체") return places;
+    return places.filter((p) => p.category === filter);
+  }, [filter, places]);
 
   return (
     <div className="mx-auto w-full max-w-[1120px] px-5 pb-24 pt-12 sm:px-8">
@@ -95,13 +148,34 @@ export function Board({
           </h1>
           <p className="mt-2 text-sm text-[var(--muted)]">
             함께 정해요 — 후보{" "}
-            <span className="tabular-nums text-[var(--fg)]/80">{initialPlaces.length}</span>곳
+            <span className="tabular-nums text-[var(--fg)]/80">{places.length}</span>곳
           </p>
         </div>
 
-        {nickname && (
-          <div className="flex items-center gap-1.5 text-xs">
-            {editingNick ? (
+        <div className="flex flex-wrap items-center gap-1.5 text-xs">
+          {isAdmin ? (
+            <button
+              onClick={logoutAdmin}
+              className="inline-flex items-center gap-1.5 rounded-full border border-[var(--accent)]/40 bg-[var(--accent-soft)] px-3 py-1 font-mono text-[var(--accent)] transition hover:opacity-90"
+              title="관리자 모드 종료"
+            >
+              <ShieldCheck className="size-3" strokeWidth={2} />
+              관리자
+              <LogOut className="size-3 opacity-70" strokeWidth={2} />
+            </button>
+          ) : (
+            <button
+              onClick={() => setAdminDialogOpen(true)}
+              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-mono text-[var(--muted)] transition hover:border-[var(--fg)]/40 hover:text-[var(--fg)]"
+              title="관리자 로그인"
+            >
+              <ShieldOff className="size-3" strokeWidth={2} />
+              관리자
+            </button>
+          )}
+
+          {nickname && (
+            editingNick ? (
               <input
                 autoFocus
                 defaultValue={nickname}
@@ -125,15 +199,12 @@ export function Board({
                 className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-mono text-[var(--muted)] transition hover:border-[var(--fg)]/40 hover:text-[var(--fg)]"
                 title="닉네임 변경"
               >
-                {isAdmin && (
-                  <ShieldCheck className="size-3 text-[var(--accent)]" strokeWidth={2} />
-                )}
                 <span className="text-[var(--fg)]/50">@</span>
                 {nickname}
               </button>
-            )}
-          </div>
-        )}
+            )
+          )}
+        </div>
       </header>
 
       <div className="sticky top-0 z-20 -mx-5 mt-10 flex flex-col gap-3 bg-[var(--bg)]/85 px-5 py-3 backdrop-blur-md sm:-mx-8 sm:flex-row sm:items-center sm:justify-between sm:px-8">
@@ -157,7 +228,11 @@ export function Board({
                 key={p.id || p.shortUrl}
                 place={p}
                 index={i}
+                isAdmin={isAdmin}
+                adminToken={adminToken}
                 onSelect={setSelected}
+                onEdit={setEditing}
+                onDeleted={applyLocalDelete}
               />
             ))}
           </div>
@@ -178,7 +253,25 @@ export function Board({
       </footer>
 
       <AddDialog open={dialogOpen} onClose={() => setDialogOpen(false)} />
-      <PlaceDetail place={selected} onClose={() => setSelected(null)} />
+      <PlaceDetail
+        place={selected}
+        isAdmin={isAdmin}
+        onClose={() => setSelected(null)}
+        onEdit={(p) => setEditing(p)}
+      />
+      <EditPlaceDialog
+        place={editing}
+        adminToken={adminToken}
+        onClose={() => setEditing(null)}
+        onSaved={(patch) => {
+          if (editing) applyLocalEdit(editing.id, patch);
+        }}
+      />
+      <AdminDialog
+        open={adminDialogOpen}
+        onClose={() => setAdminDialogOpen(false)}
+        onSuccess={handleAdminSuccess}
+      />
       <NicknameOnboarding
         open={needsOnboarding}
         onSubmit={(v) => {
