@@ -8,6 +8,7 @@ import {
   ExternalLink,
   MapPin,
   Navigation,
+  Pencil,
   Phone,
   Sparkles,
   Star,
@@ -25,10 +26,14 @@ const CAT_ICON: Record<Category, typeof UtensilsCrossed> = {
 
 export function PlaceDetail({
   place,
+  isAdmin,
   onClose,
+  onEdit,
 }: {
   place: Place | null;
+  isAdmin: boolean;
   onClose: () => void;
+  onEdit: (place: Place) => void;
 }) {
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const [activeIdx, setActiveIdx] = useState(0);
@@ -83,13 +88,26 @@ export function PlaceDetail({
             <Icon className="size-4 shrink-0 text-[var(--muted)]" strokeWidth={1.5} />
             <h2 className="truncate text-base font-medium tracking-tight">{place.name}</h2>
           </div>
-          <button
-            onClick={onClose}
-            className="rounded-md p-1.5 text-[var(--muted)] transition hover:bg-[var(--subtle)] hover:text-[var(--fg)]"
-            aria-label="닫기"
-          >
-            <X className="size-4" strokeWidth={1.75} />
-          </button>
+          <div className="flex shrink-0 items-center gap-0.5">
+            {isAdmin && (
+              <button
+                onClick={() => onEdit(place)}
+                className="inline-flex items-center gap-1 rounded-md px-2 py-1.5 text-xs text-[var(--muted)] transition hover:bg-[var(--subtle)] hover:text-[var(--fg)]"
+                aria-label="편집"
+                title="편집"
+              >
+                <Pencil className="size-3.5" strokeWidth={1.75} />
+                편집
+              </button>
+            )}
+            <button
+              onClick={onClose}
+              className="rounded-md p-1.5 text-[var(--muted)] transition hover:bg-[var(--subtle)] hover:text-[var(--fg)]"
+              aria-label="닫기"
+            >
+              <X className="size-4" strokeWidth={1.75} />
+            </button>
+          </div>
         </header>
 
         <div className="flex-1 overflow-y-auto">
@@ -181,6 +199,12 @@ export function PlaceDetail({
                 </span>
               )}
             </div>
+
+            {place.description && (
+              <p className="whitespace-pre-wrap rounded-lg border bg-[var(--subtle)]/50 px-3 py-2.5 text-sm leading-relaxed text-[var(--fg)]/85">
+                {place.description}
+              </p>
+            )}
 
             <dl className="space-y-2 text-sm">
               {place.address && (

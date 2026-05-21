@@ -25,9 +25,31 @@ export interface Place {
   menu: MenuItem[];
   fetchedAt: string;
   source: "naver" | "cache" | "seed";
+  description?: string | null;
 }
 
 export interface PlacesFile {
   generatedAt: string;
   places: Place[];
+}
+
+export interface PlaceOverride {
+  tags?: string[];
+  description?: string | null;
+  category?: Category;
+  name?: string;
+  deleted?: boolean;
+  updatedAt?: string;
+}
+
+export interface OverridesFile {
+  version: number;
+  overrides: Record<string, PlaceOverride>;
+}
+
+export interface PlaceEditPayload {
+  tags?: string[];
+  description?: string | null;
+  category?: Category;
+  name?: string;
 }

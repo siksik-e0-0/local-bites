@@ -1,6 +1,19 @@
 "use client";
 
-import { Clock, Coffee, ExternalLink, MapPin, Phone, Sparkles, Star, UtensilsCrossed } from "lucide-react";
+import {
+  Clock,
+  Coffee,
+  ExternalLink,
+  Loader2,
+  MapPin,
+  Pencil,
+  Phone,
+  Sparkles,
+  Star,
+  Trash2,
+  UtensilsCrossed,
+} from "lucide-react";
+import { useState } from "react";
 import type { Category, Place } from "@/lib/types";
 
 const CATEGORY_META: Record<Category, { Icon: typeof UtensilsCrossed; label: string }> = {
@@ -24,15 +37,56 @@ function Monogram({ name, category }: { name: string; category: Category }) {
 export function PlaceCard({
   place,
   index,
+  isAdmin,
+  adminToken,
   onSelect,
+  onEdit,
+  onDeleted,
 }: {
   place: Place;
   index: number;
+  isAdmin: boolean;
+  adminToken: string | null;
   onSelect: (place: Place) => void;
+  onEdit: (place: Place) => void;
+  onDeleted: (id: string) => void;
 }) {
   const { Icon } = CATEGORY_META[place.category];
   const rating = place.rating != null ? place.rating.toFixed(1) : null;
   const tags = place.tags ?? [];
+  const [deleting, setDeleting] = useState(false);
+  const [delError, setDelError] = useState<string | null>(null);
+
+  async function handleDelete(e: React.MouseEvent) {
+    e.stopPropagation();
+    if (!adminToken) {
+      setDelError("관리자 토큰 없음");
+      return;
+    }
+    if (!confirm(`'${place.name}' 카드를 삭제할까요?\nshare_link 에서도 제거됩니다.`)) return;
+    setDeleting(true);
+    setDelError(null);
+    try {
+      const res = await fetch("/api/places/delete", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-admin-token": adminToken,
+        },
+        body: JSON.stringify({ id: place.id, shortUrl: place.shortUrl }),
+      });
+      const data = (await res.json()) as { ok: boolean; error?: string };
+      if (!data.ok) {
+        setDelError(data.error ?? "삭제 실패");
+        setDeleting(false);
+        return;
+      }
+      onDeleted(place.id);
+    } catch (err) {
+      setDelError(`네트워크 오류: ${(err as Error).message}`);
+      setDeleting(false);
+    }
+  }
 
   return (
     <article
@@ -70,6 +124,34 @@ export function PlaceCard({
             데이터 갱신 필요
           </div>
         )}
+        {isAdmin && (
+          <div className="absolute bottom-3 right-3 flex gap-1.5">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onEdit(place);
+              }}
+              aria-label="편집"
+              title="편집"
+              className="grid size-8 place-items-center rounded-full border border-white/40 bg-white/85 text-neutral-800 backdrop-blur-md transition hover:bg-white dark:bg-black/55 dark:text-neutral-100 dark:hover:bg-black/75"
+            >
+              <Pencil className="size-3.5" strokeWidth={1.75} />
+            </button>
+            <button
+              onClick={handleDelete}
+              disabled={deleting}
+              aria-label="삭제"
+              title="삭제"
+              className="grid size-8 place-items-center rounded-full border border-red-300/60 bg-red-50/90 text-red-700 backdrop-blur-md transition hover:bg-red-100 disabled:opacity-60 dark:bg-red-950/60 dark:text-red-200"
+            >
+              {deleting ? (
+                <Loader2 className="size-3.5 animate-spin" />
+              ) : (
+                <Trash2 className="size-3.5" strokeWidth={1.75} />
+              )}
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-5">
@@ -105,6 +187,12 @@ export function PlaceCard({
           </div>
         )}
 
+        {place.description && (
+          <p className="line-clamp-3 whitespace-pre-wrap rounded-md bg-[var(--subtle)]/60 px-2.5 py-1.5 text-xs leading-relaxed text-[var(--fg)]/80">
+            {place.description}
+          </p>
+        )}
+
         <dl className="space-y-1.5 text-sm">
           {place.address && (
             <div className="flex items-start gap-2 text-[var(--muted)]">
@@ -133,6 +221,10 @@ export function PlaceCard({
             </div>
           )}
         </dl>
+
+        {delError && (
+          <p className="text-[10px] text-red-600 dark:text-red-300">{delError}</p>
+        )}
 
         <a
           href={place.naverMapUrl}
