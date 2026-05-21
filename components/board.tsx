@@ -89,28 +89,21 @@ export function Board({
   }
 
   function applyLocalEdit(id: string, patch: PlaceEditPayload) {
-    setPlaces((prev) =>
-      prev.map((p) => {
-        if (p.id !== id) return p;
-        return {
-          ...p,
-          name: patch.name ?? p.name,
-          category: patch.category ?? p.category,
-          tags: patch.tags ?? p.tags,
-          description: patch.description !== undefined ? patch.description : p.description ?? null,
-        };
-      }),
-    );
-    setSelected((cur) => {
-      if (!cur || cur.id !== id) return cur;
+    const applyTo = <T extends Place>(p: T): T => {
+      const nextImages = patch.images ?? p.images;
+      const nextHero = patch.images ? (patch.images[0] ?? null) : p.heroImageUrl;
       return {
-        ...cur,
-        name: patch.name ?? cur.name,
-        category: patch.category ?? cur.category,
-        tags: patch.tags ?? cur.tags,
-        description: patch.description !== undefined ? patch.description : cur.description ?? null,
+        ...p,
+        name: patch.name ?? p.name,
+        category: patch.category ?? p.category,
+        tags: patch.tags ?? p.tags,
+        description: patch.description !== undefined ? patch.description : p.description ?? null,
+        images: nextImages,
+        heroImageUrl: nextHero,
       };
-    });
+    };
+    setPlaces((prev) => prev.map((p) => (p.id === id ? applyTo(p) : p)));
+    setSelected((cur) => (cur && cur.id === id ? applyTo(cur) : cur));
   }
 
   function applyLocalDelete(id: string) {
