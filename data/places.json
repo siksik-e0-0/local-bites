@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T05:55:46.292Z",
+  "generatedAt": "2026-05-22T07:06:13.075Z",
   "places": [
     {
       "id": "1480142748",
@@ -430,6 +430,40 @@
       "lng": null,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T05:55:45.468Z",
+      "source": "naver"
+    },
+    {
+      "id": "1299244724",
+      "shortUrl": "https://naver.me/xONdhIPL",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1299244724",
+      "name": "웨스트그라운드",
+      "category": "식당",
+      "naverCategory": "카페,디저트",
+      "address": "제주 제주시 한경면 신한로 183-16 웨스트그라운드",
+      "phone": "0507-1314-3855",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260219_249%2F1771466869036kRyAR_JPEG%2FIMG_5215.jpeg",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260219_249%2F1771466869036kRyAR_JPEG%2FIMG_5215.jpeg",
+        "https://ldb-phinf.pstatic.net/20260328_59/1774683224715Q9405_JPEG/IMG_5696.jpeg",
+        "https://ldb-phinf.pstatic.net/20260409_65/1775737918248EhJri_JPEG/IMG_5696.jpeg",
+        "https://ldb-phinf.pstatic.net/20251211_123/1765415167597zdkXC_JPEG/IMG_4517.jpeg",
+        "https://ldb-phinf.pstatic.net/20251115_6/1763186629814LoEca_JPEG/KakaoTalk_20251115_150242757.jpg",
+        "https://ldb-phinf.pstatic.net/20230427_54/1682553867336mLWlX_JPEG/3.jpg",
+        "https://ldb-phinf.pstatic.net/20230426_276/1682499181724Kgp4Q_JPEG/2.jpg",
+        "https://ldb-phinf.pstatic.net/20230508_171/16835070461112F0pc_JPEG/4.jpg",
+        "https://ldb-phinf.pstatic.net/20230508_34/1683507264626taLKD_JPEG/3.jpg",
+        "https://ldb-phinf.pstatic.net/20221102_238/166736721650335Ntg_JPEG/55D87A90-3AB5-4CDD-8599-E43643477AE9.jpeg"
+      ],
+      "lat": 33.3391685,
+      "lng": 126.1964635,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T07:06:11.871Z",
       "source": "naver"
     }
   ]
