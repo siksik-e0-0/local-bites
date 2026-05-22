@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T22:44:45.480Z",
+  "generatedAt": "2026-05-22T22:47:39.680Z",
   "places": [
     {
       "id": "1480142748",
@@ -1360,40 +1360,6 @@
       "source": "naver"
     },
     {
-      "id": "31927980",
-      "shortUrl": "https://naver.me/xPYUVKCs",
-      "naverMapUrl": "https://map.naver.com/p/entry/place/31927980",
-      "name": "오설록 제주",
-      "category": "카페",
-      "naverCategory": "카페,디저트",
-      "address": "제주 서귀포시 안덕면 신화역사로 23",
-      "phone": null,
-      "businessHours": null,
-      "rating": null,
-      "reviewCount": null,
-      "heroImageUrl": null,
-      "tags": [
-        "서귀포시"
-      ],
-      "images": [
-        "https://pup-review-phinf.pstatic.net/MjAyNjAzMjRfMjY4/MDAxNzc0MzMwNTcyNzg3.7th_MBphDuDv5JLloRHrPZDljmOYcSHuf6GAmlZP-ucg.DBiGZBKo6ypb-c-M6zYmvL11kCDiwzj10eDDPy1z6hYg.JPEG/20260322_132414.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjAzMTFfMTE1/MDAxNzczMTk2NzQ2MTMx.9I672zfz-md9kdknADTfAp4HtiQHiT4mRRbmnk5fgicg.YEorzsccZCvoZU7NrVyjistAnZMFoHV76GkoPtOvOxUg.JPEG/1000172949.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjAzMDlfMTI0/MDAxNzczMDI5Mzk1OTU0.zRECqizoWhwmQSuZxSOvDi9OqFy86Ev-gjYMHcVC7CQg.aWQHS3ZlADxjp525BNWmJ2nHjXPTk-jA_xtlFUGsb9Qg.JPEG/IMG_5737.jpeg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjA0MjRfMjIz/MDAxNzc2OTg3OTMxMzY5.AIpiZ0YkwmIbHwhnK6t7de024sTIsnUgP8n13uGHy-cg.R2S_ISBkMXnYuq2YJifI6RZUB7DveT7jjclm1FzCUwgg.JPEG/20260420_123745.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjAyMjdfMTE0/MDAxNzcyMTYwNzgyMzEx.1cgHKf_QaJlz_oGNIQ2A7gVsj_F292t8NDXVtN1_iDgg.nUgV_dc7FWm3mITvqWchHNS_rHCskwrbAtu6Zj_ZqsEg.JPEG/13063.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjAzMTFfMTM5/MDAxNzczMTk2NzQzNjgz.ipvQ0eLfz8o-CHY6KrDkpGNW_4kUOlAW7Bgq021Dwl0g.fuwmpRdUui1u6mXG0bMFmhr3LlzXrvoVDAGs44hJJt4g.JPEG/1000172952.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjA1MDJfMzkg/MDAxNzc3NzA4MTgwNTA5.AH7WuyaaJKPoKuwfNqWncYO1TGcfwpzb3RV5sByydCwg.IpC-CCjNZZXC7eXOoOncKdEqWz_IEnuxJHZxYibU1JUg.JPEG/13D9BDF2-812F-4DA5-9B3C-A4E42DAADA24.jpeg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjAzMjBfODYg/MDAxNzczOTg5OTI2MDYy.P4ndL33AgeS_wdBA2b_Tm7e4liCbn00SS1uY8s6DJ1Qg.EmTB1khppxDv9HHN1nONewPS44Pb6ERT2WJ66TM2TPsg.JPEG/20260316_142532.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjAyMjhfOTAg/MDAxNzcyMjg0ODEyNzgw.mRSTHL-VpXY4Y4_Ovb9whJVZHK5R-YNeiN0Yt5e5gBIg.xOwkZSZWZ2DYukhGRf4KaX-If4Q4YKnlah8j3zBuJlYg.JPEG/4F4042F0-76AA-40B1-8725-4BE471334C28.jpeg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjA0MTZfNTIg/MDAxNzc2MzE3NTQwODE5.U_Tnxtc06NHmE6u80A6mgJzSPDmsgfHG0B5ehndC-10g.MagYWeUeR3yVH1D93JZg0a8JlMzqlmSphouv-oyW70Ag.JPEG/1000017815.jpg.jpg"
-      ],
-      "lat": 33.3060364,
-      "lng": 126.2898551,
-      "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T22:36:25.865Z",
-      "source": "naver"
-    },
-    {
       "id": "11621150",
       "shortUrl": "https://naver.me/5ajsKlPi",
       "naverMapUrl": "https://map.naver.com/p/entry/place/11621150",
@@ -1653,6 +1619,40 @@
       "lng": 126.626798,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T22:44:44.946Z",
+      "source": "naver"
+    },
+    {
+      "id": "31927980",
+      "shortUrl": "https://naver.me/xzHl0wq4",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/31927980",
+      "name": "오설록 제주",
+      "category": "카페",
+      "naverCategory": "카페,디저트",
+      "address": "제주 서귀포시 안덕면 신화역사로 23",
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": null,
+      "tags": [
+        "서귀포시"
+      ],
+      "images": [
+        "https://pup-review-phinf.pstatic.net/MjAyNjAzMjRfMjY4/MDAxNzc0MzMwNTcyNzg3.7th_MBphDuDv5JLloRHrPZDljmOYcSHuf6GAmlZP-ucg.DBiGZBKo6ypb-c-M6zYmvL11kCDiwzj10eDDPy1z6hYg.JPEG/20260322_132414.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjAzMTFfMTE1/MDAxNzczMTk2NzQ2MTMx.9I672zfz-md9kdknADTfAp4HtiQHiT4mRRbmnk5fgicg.YEorzsccZCvoZU7NrVyjistAnZMFoHV76GkoPtOvOxUg.JPEG/1000172949.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjAzMDlfMTI0/MDAxNzczMDI5Mzk1OTU0.zRECqizoWhwmQSuZxSOvDi9OqFy86Ev-gjYMHcVC7CQg.aWQHS3ZlADxjp525BNWmJ2nHjXPTk-jA_xtlFUGsb9Qg.JPEG/IMG_5737.jpeg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjA0MjRfMjIz/MDAxNzc2OTg3OTMxMzY5.AIpiZ0YkwmIbHwhnK6t7de024sTIsnUgP8n13uGHy-cg.R2S_ISBkMXnYuq2YJifI6RZUB7DveT7jjclm1FzCUwgg.JPEG/20260420_123745.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjAyMjdfMTE0/MDAxNzcyMTYwNzgyMzEx.1cgHKf_QaJlz_oGNIQ2A7gVsj_F292t8NDXVtN1_iDgg.nUgV_dc7FWm3mITvqWchHNS_rHCskwrbAtu6Zj_ZqsEg.JPEG/13063.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjAzMTFfMTM5/MDAxNzczMTk2NzQzNjgz.ipvQ0eLfz8o-CHY6KrDkpGNW_4kUOlAW7Bgq021Dwl0g.fuwmpRdUui1u6mXG0bMFmhr3LlzXrvoVDAGs44hJJt4g.JPEG/1000172952.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjA1MDJfMzkg/MDAxNzc3NzA4MTgwNTA5.AH7WuyaaJKPoKuwfNqWncYO1TGcfwpzb3RV5sByydCwg.IpC-CCjNZZXC7eXOoOncKdEqWz_IEnuxJHZxYibU1JUg.JPEG/13D9BDF2-812F-4DA5-9B3C-A4E42DAADA24.jpeg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjAzMjBfODYg/MDAxNzczOTg5OTI2MDYy.P4ndL33AgeS_wdBA2b_Tm7e4liCbn00SS1uY8s6DJ1Qg.EmTB1khppxDv9HHN1nONewPS44Pb6ERT2WJ66TM2TPsg.JPEG/20260316_142532.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjAyMjhfOTAg/MDAxNzcyMjg0ODEyNzgw.mRSTHL-VpXY4Y4_Ovb9whJVZHK5R-YNeiN0Yt5e5gBIg.xOwkZSZWZ2DYukhGRf4KaX-If4Q4YKnlah8j3zBuJlYg.JPEG/4F4042F0-76AA-40B1-8725-4BE471334C28.jpeg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjA0MTZfNTIg/MDAxNzc2MzE3NTQwODE5.U_Tnxtc06NHmE6u80A6mgJzSPDmsgfHG0B5ehndC-10g.MagYWeUeR3yVH1D93JZg0a8JlMzqlmSphouv-oyW70Ag.JPEG/1000017815.jpg.jpg"
+      ],
+      "lat": 33.3060364,
+      "lng": 126.2898551,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T22:47:38.480Z",
       "source": "naver"
     }
   ]
