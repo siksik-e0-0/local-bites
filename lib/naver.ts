@@ -703,7 +703,7 @@ export async function fetchPlace(
     if (layer === "none" && (meta.name || meta.heroImageUrl)) layer = "meta";
   }
 
-  const tryDeepFetch = layer === "apollo" && homeType != null;
+  const tryDeepFetch = homeType != null;
   if (tryDeepFetch && homeType) {
     if (menu.length < 1) {
       await sleep(400 + Math.floor(Math.random() * 500));
@@ -755,6 +755,43 @@ export async function fetchPlace(
           if (moreImages.length) images = Array.from(new Set([...images, ...moreImages]));
         }
       }
+    }
+  }
+
+  // Last-ditch deep fetch when no home page returned anything usable:
+  // try menu/list and information for each PLACE_TYPE — these endpoints
+  // sometimes work even when /home is blocked.
+  if (!homeType && (menu.length < 1 || (!hours && !raw.businessHours))) {
+    for (const t of PLACE_TYPES) {
+      if (menu.length < 1) {
+        await sleep(400 + Math.floor(Math.random() * 500));
+        const menuHtml = await fetchHtml(
+          `https://m.place.naver.com/${t}/${placeId}/menu/list`,
+        );
+        if (menuHtml) {
+          const a = extractApolloState(menuHtml);
+          if (a) {
+            const m = walkApolloForMenu(a);
+            if (m.length > menu.length) menu = m;
+          }
+        }
+      }
+      if (!hours && !raw.businessHours) {
+        await sleep(400 + Math.floor(Math.random() * 500));
+        const infoHtml = await fetchHtml(
+          `https://m.place.naver.com/${t}/${placeId}/information`,
+        );
+        if (infoHtml) {
+          const a = extractApolloState(infoHtml);
+          if (a) {
+            const h = walkApolloForHours(a);
+            if (h) hours = h;
+            const entity = walkApolloForEntity(a, placeId);
+            if (entity) raw = mergeRaw(raw, fromApollo(entity));
+          }
+        }
+      }
+      if (menu.length > 0 && (hours || raw.businessHours)) break;
     }
   }
 
