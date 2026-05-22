@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T11:35:52.174Z",
+  "generatedAt": "2026-05-22T11:36:26.021Z",
   "places": [
     {
       "id": "1480142748",
@@ -681,46 +681,6 @@
       "lng": null,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T10:07:33.553Z",
-      "source": "naver"
-    },
-    {
-      "id": "1300963457",
-      "shortUrl": "https://naver.me/FCAptXEe",
-      "naverMapUrl": "https://map.naver.com/p/entry/place/1300963457",
-      "name": "아라찐빵",
-      "category": "기타",
-      "naverCategory": "찐빵",
-      "address": "제주 제주시 남광로4길 19",
-      "phone": null,
-      "businessHours": null,
-      "rating": null,
-      "reviewCount": null,
-      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200714_120%2F1594710093425P2TNf_JPEG%2F8yWy4rtiOZLlfryukQ5F_IJy.jpeg.jpg",
-      "tags": [
-        "제주시"
-      ],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200714_120%2F1594710093425P2TNf_JPEG%2F8yWy4rtiOZLlfryukQ5F_IJy.jpeg.jpg",
-        "https://ldb-phinf.pstatic.net/20260224_2/1771880372990tMe4O_JPEG/1000019770.jpg",
-        "https://ldb-phinf.pstatic.net/20200714_120/1594710093425P2TNf_JPEG/8yWy4rtiOZLlfryukQ5F_IJy.jpeg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjAzMTdfMTIz/MDAxNzczNzE4NzMzOTM4.SQwqtHw4OHbAtJeYnYc4DjA6mWPjSaUuNQPHWgUeeEEg.SWtcu6acksj2NgeQtvnRgHs09tFby55iHhfeem-W_n4g.JPEG/20260317_111456.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjA0MDhfMjg1/MDAxNzc1NjUzODIwMzgy.63_H8wP29yP-hU8Qd5P-DU7cHrsQa9GmFpIl_UDqbQEg.7Z1C6u48LqlsQ4uMvU7sQm40pnDfRCP0IGIXpq6O_E0g.JPEG/FD342A71-33D9-4E95-8A8B-B7EDF2A21F4E.jpeg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjAyMjJfMSAg/MDAxNzcxNzYxNjQ2NDg2.1XFZbCBxUAwpjNaQjIrKrKI8AAq70aObKzp6yNB8fnwg.xeG9ulcVzaxrfWNa6jjrS6ftskibmvR5mjp4OovvrD4g.JPEG/20250722_122101.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNTEyMjZfMTE2/MDAxNzY2NzIyMjgzMDE4.TPBdUMqX93bMTpzX2gz7QBhoLaVeZ-WkVeQiz5uqxWcg.Nq3ZcvFTxMuJ2Xxq_4ndnX2rQmjo7NavNe3DHmKcW3og.JPEG/0EC14C05-EF3A-40E4-9DBA-EDB792A6EAA7.jpeg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjAzMTFfMjU2/MDAxNzczMjQwMzc5MjE0.A-nsCl4F1suL8E8Lqr2lKPCrIbQlpy9qiaNVJMbFrOkg.BmhUcXQoCjQuqY0iAVC-VVFqc3gxVz7gmLyoIx_UgJYg.JPEG/20260306_090126.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNTA3MzFfMTQ2/MDAxNzUzOTUwNjA1NzIz.bMnapYv5p9NrYK5l7TRpbdEYi1_YwkQRM2Oe7kxfxzwg.8kvns_sWJYV0ftydPSMQJswXMt4r7G56f3crSHJfg8sg.JPEG/20250730_074521.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNTA3MTdfMjQx/MDAxNzUyNzI2MzMxMDIz.H8xrK6rD7BeWkXPZfdE1I9cDJbIPhx7Dnno5XACmfN8g.wJSomT_fOvoNqP_03oCXJWswGKJgJKGf4lSwZu_-ACQg.JPEG/20250708_103714.jpg"
-      ],
-      "menu": [
-        {
-          "name": "찐빵",
-          "price": "10000"
-        }
-      ],
-      "lat": null,
-      "lng": null,
-      "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T10:07:36.686Z",
       "source": "naver"
     },
     {
