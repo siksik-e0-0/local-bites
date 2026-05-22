@@ -55,6 +55,21 @@
       "lng": 126.679408,
       "updatedAt": "2026-05-21T18:55:13.765Z"
     },
+    "1271837768": {
+      "tags": [
+        "함덕"
+      ],
+      "description": null,
+      "category": "식당",
+      "name": "좀녀해녀촌",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240621_37%2F1718929923929yy4Tk_JPEG%2F1000020949.jpg"
+      ],
+      "address": "제주 제주시 조천읍 함덕5길 36 1층",
+      "lat": 33.546486,
+      "lng": 126.659489,
+      "updatedAt": "2026-05-22T01:33:39.278Z"
+    },
     "1455840441": {
       "tags": [],
       "description": null,
