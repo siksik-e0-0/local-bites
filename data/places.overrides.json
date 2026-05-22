@@ -169,11 +169,13 @@
       "description": null,
       "category": "기타",
       "name": "교래자연휴양림",
-      "images": [],
+      "images": [
+        "/uploads/pendingFlBcSkhi/1779414028767-ytcf2w.jpg"
+      ],
       "address": "제주 제주시 조천읍 남조로 2023 교래자연휴양림",
       "lat": 33.441573,
       "lng": 126.660541,
-      "updatedAt": "2026-05-22T01:39:35.169Z"
+      "updatedAt": "2026-05-22T01:40:33.318Z"
     }
   }
 }
