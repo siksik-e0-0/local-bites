@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T12:20:23.187Z",
+  "generatedAt": "2026-05-22T12:24:32.648Z",
   "places": [
     {
       "id": "1480142748",
@@ -1341,6 +1341,82 @@
       "lng": null,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T10:07:13.200Z",
+      "source": "naver"
+    },
+    {
+      "id": "1438674779",
+      "shortUrl": "https://naver.me/xTTV5OEw",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1438674779",
+      "name": "제주갈치명가 함덕",
+      "category": "식당",
+      "naverCategory": "한식",
+      "address": "제주 제주시 조천읍 함덕로 6 1층 제주갈치명가 함덕",
+      "phone": "0507-1484-8031",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240104_23%2F1704335303336bdouc_JPEG%2F1.jpg",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240104_23%2F1704335303336bdouc_JPEG%2F1.jpg",
+        "https://ldb-phinf.pstatic.net/20240326_201/1711416211610KYtNo_JPEG/%C7%D4%B4%F6%B8%C0%C1%FD_545.jpg",
+        "https://ldb-phinf.pstatic.net/20240326_52/1711416211509sJkxG_JPEG/%C7%D4%B4%F6%B8%C0%C1%FD_1079.jpg",
+        "https://ldb-phinf.pstatic.net/20240326_144/1711416211686SFfcV_JPEG/%C7%D4%B4%F6%B8%C0%C1%FD_1443.jpg",
+        "https://ldb-phinf.pstatic.net/20240326_212/1711416211515sKheg_JPEG/%C7%D4%B4%F6%B8%C0%C1%FD_1479.jpg",
+        "https://ldb-phinf.pstatic.net/20240326_176/1711416211618fQcWH_JPEG/%C7%D4%B4%F6%B8%C0%C1%FD_1553.jpg",
+        "https://ldb-phinf.pstatic.net/20240326_74/1711416627928Jsa6w_JPEG/%C7%D4%B4%F6%B8%C0%C1%FD_488.jpg",
+        "https://ldb-phinf.pstatic.net/20240326_205/1711416627984cOWV6_JPEG/%C7%D4%B4%F6%B8%C0%C1%FD_1020.jpg",
+        "https://ldb-phinf.pstatic.net/20240326_148/1711416628112uRcwP_JPEG/%C7%D4%B4%F6%B8%C0%C1%FD_1055.jpg",
+        "https://ldb-phinf.pstatic.net/20240326_195/1711416627900HrPH2_JPEG/%C7%D4%B4%F6%B8%C0%C1%FD_1079.jpg"
+      ],
+      "menu": [
+        {
+          "name": "A.문어순살갈치조림+통갈치구이(소)",
+          "price": "109000"
+        },
+        {
+          "name": "B. 제주 통갈치구이 세트 (소)",
+          "price": "69000"
+        },
+        {
+          "name": "C. 제주 문어순살갈치 조림 (소)",
+          "price": "79000"
+        },
+        {
+          "name": "제주 묵은지 순살갈치조림 1인",
+          "price": "23000"
+        },
+        {
+          "name": "A. 문어순살갈치조림+통갈치구이(중)",
+          "price": "139000"
+        },
+        {
+          "name": "A 문어순살갈치조림+통갈치구이(대)",
+          "price": "169000"
+        },
+        {
+          "name": "A 문어순살갈치조림+통갈치구이(특대)",
+          "price": "209000"
+        },
+        {
+          "name": "B. 제주 통갈치구이 세트 (중)",
+          "price": "89000"
+        },
+        {
+          "name": "B. 제주 통갈치구이 세트 (대)",
+          "price": "119000"
+        },
+        {
+          "name": "C. 제주 문어순살갈치 조림 (중)",
+          "price": "99000"
+        }
+      ],
+      "lat": null,
+      "lng": null,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T12:24:31.984Z",
       "source": "naver"
     }
   ]
