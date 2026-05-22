@@ -62,7 +62,7 @@ function injectScript(clientId: string, param: KeyParam): Promise<void> {
   return new Promise((resolve, reject) => {
     const s = document.createElement("script");
     s.id = SCRIPT_ID;
-    s.src = `https://oapi.map.naver.com/openapi/v3/maps.js?${param}=${encodeURIComponent(clientId)}`;
+    s.src = `https://oapi.map.naver.com/openapi/v3/maps.js?${param}=${encodeURIComponent(clientId)}&submodules=geocoder`;
     s.async = true;
     s.onload = () => resolve();
     s.onerror = () => reject(new Error("script error"));
