@@ -79,6 +79,13 @@ export default async function Page() {
     sb.from("lb_place_comments").select("id, place_id, author, body, created_at").order("created_at", { ascending: true }),
   ]);
 
+  if (placesRes.error) {
+    console.error("[page] lb_places query error:", placesRes.error.message, placesRes.error.code);
+  }
+  if (overridesRes.error) {
+    console.error("[page] lb_place_overrides query error:", overridesRes.error.message);
+  }
+
   const places = (placesRes.data ?? []).map((r) => rowToPlace(r as Record<string, unknown>));
 
   const overrideMap: Record<string, PlaceOverride> = {};
