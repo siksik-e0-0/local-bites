@@ -68,6 +68,19 @@
       "lat": 33.514246,
       "lng": 126.703688,
       "updatedAt": "2026-05-22T01:28:28.259Z"
+    },
+    "1680427154": {
+      "tags": [],
+      "description": null,
+      "category": "식당",
+      "name": "친밀 제주",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230420_150%2F16819621668228Ba0p_JPEG%2FEB1B4F69-41E2-4AF8-A825-B4B2EE53DBD8.jpeg"
+      ],
+      "address": "남조로 1781",
+      "lat": 33.426927,
+      "lng": 126.673666,
+      "updatedAt": "2026-05-22T01:30:28.726Z"
     }
   }
 }
