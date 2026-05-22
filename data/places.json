@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T22:40:08.164Z",
+  "generatedAt": "2026-05-22T22:44:45.480Z",
   "places": [
     {
       "id": "1480142748",
@@ -1360,40 +1360,6 @@
       "source": "naver"
     },
     {
-      "id": "112862112",
-      "shortUrl": "https://naver.me/FCZr7PeT",
-      "naverMapUrl": "https://map.naver.com/p/entry/place/112862112",
-      "name": "사려니숲길",
-      "category": "기타",
-      "naverCategory": "숲,숲길",
-      "address": "제주 제주시 봉개동 산64-5",
-      "phone": null,
-      "businessHours": null,
-      "rating": null,
-      "reviewCount": null,
-      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAxMjNfNDEg%2FMDAxNzA1OTg4NzE0NTMz.WGYh05zT3jZ_DIUhpGro91pMT-h0Mmekq4s64Y6Zcrkg.XeEnBbTYlD6qm14ZprcBhHZZgRvzIaHIqucjcP2gzSQg.JPEG.happyjejudo%2F%25C1%25A6%25C1%25D6%25B9%25AB%25C0%25E5%25BE%25D6%25BD%25A3%25B1%25E632.jpeg%231200x900",
-      "tags": [
-        "제주시"
-      ],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAxMjNfNDEg%2FMDAxNzA1OTg4NzE0NTMz.WGYh05zT3jZ_DIUhpGro91pMT-h0Mmekq4s64Y6Zcrkg.XeEnBbTYlD6qm14ZprcBhHZZgRvzIaHIqucjcP2gzSQg.JPEG.happyjejudo%2F%25C1%25A6%25C1%25D6%25B9%25AB%25C0%25E5%25BE%25D6%25BD%25A3%25B1%25E632.jpeg%231200x900",
-        "http://blogfiles.naver.net/MjAyNDAxMjNfNDEg/MDAxNzA1OTg4NzE0NTMz.WGYh05zT3jZ_DIUhpGro91pMT-h0Mmekq4s64Y6Zcrkg.XeEnBbTYlD6qm14ZprcBhHZZgRvzIaHIqucjcP2gzSQg.JPEG.happyjejudo/%C1%A6%C1%D6%B9%AB%C0%E5%BE%D6%BD%A3%B1%E632.jpeg#1200x900",
-        "http://blogfiles.naver.net/MjAyMzExMDFfNjYg/MDAxNjk4ODMyNzgzNDEw.f6rY545sDmNm5leboApYGNwEaN3OZ1pVfcJM1y9juU0g.aO_XunV-y-tzAnAi287XY91UxEw7JZkFc4MZb47v-n8g.JPEG.hhome1/%C1%A6%C1%D6%B5%B51_13_%C1%A6%C1%D6_%BB%E7%B7%C1%B4%CF%BD%A3%B1%E6_%C7%D1%B6%F3%BB%EA%B5%D1%B7%B9%B1%E6_%C0%D4%B1%B8_%2872%29.JPG#966x644",
-        "http://blogfiles.naver.net/MjAyMzExMDFfMjk4/MDAxNjk4ODMyNzgzMTI0.EyXYoz1Lkg_Q_sYhAloy8k7C10gdNhT2pcHgdHefasAg.pDGf4fhEofQRqpQSUiAhTDCYolGIRWAgTk0SL0M-KuQg.JPEG.hhome1/%C1%A6%C1%D6%B5%B51_13_%C1%A6%C1%D6_%BB%E7%B7%C1%B4%CF%BD%A3%B1%E6_%C7%D1%B6%F3%BB%EA%B5%D1%B7%B9%B1%E6_%C0%D4%B1%B8_%2866%29.JPG#966x644",
-        "http://blogfiles.naver.net/MjAyMzEyMTRfMTYy/MDAxNzAyNTI1MDIzODQy.Rmiq2TV4p1blHRxwFGef_jrWFCPd3I5-LQ0wxE0F55sg.F4yxWNSLvzxo92RQJd0DGD_SFudhpyRnJP6o2AtMbAkg.JPEG.polipoli37/20231130_134011.jpg#1862x2483",
-        "http://blogfiles.naver.net/MjAyMzEwMDFfMjkx/MDAxNjk2MTMwNTE3MjE1.py8H2Y2oave6n7pQ_m5oNWo6ie3A-NkG3RxCCoyTbvEg.X8XAevHPIMkPTZ5xpcRrvsJi_gNz3TNU_VmpaDVkDjgg.JPEG.swealyssu/photo-1507041957456-9c397ce39c97.jpg#1080x1620",
-        "https://pup-review-phinf.pstatic.net/MjAyNTA2MDRfNDAg/MDAxNzQ4OTcwNDAzNDE0.yLzU1kxTmpnngppZz5CWHDfbqJF46ZM7qSv0T8zUfS0g.32cAFYggoW-Hx6L47mAg7HF9GlvZ4gegVgFGPzFyvnYg.JPEG/20250531_132658.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNjA1MTVfMjUg/MDAxNzc4ODQwMDY0NDk0.3HgT_FPsKltRu8pMjeEZGe5uirw9SlX050_98ViIdoog.qLoRFSVmWup0K1V40CeN0CpHK7gdVzwUmtjAxPfKzCQg.JPEG/20260421_115631.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNTExMjBfMTcy/MDAxNzYzNjQ2NDc5NDMw.oFCHJ_lsmKJ6w8otKA4_XMcgzm9_aBcuxu2OZ-4mkCQg.DCVLf9ANof5OObI2ct-wL1u6GvfLIFmASaSosb-R0Bkg.JPEG/6F2C101A-1706-4075-AC37-08B103571145.jpeg",
-        "https://pup-review-phinf.pstatic.net/MjAyNTA5MzBfMjA4/MDAxNzU5MTkxNDcyMDY2.yEpvRVj_J7lT-aJv_Kzeqj0zZNadzpvy8AXa7RNiBacg.83xBWiqsT0EIXuXjlwvKueq6nbjf0Ijr0bcPdBU3fqkg.JPEG/B2EDAEF4-877E-4619-9684-C2A30E9411F4.jpeg"
-      ],
-      "lat": 33.4226957,
-      "lng": 126.626798,
-      "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T22:35:02.960Z",
-      "source": "naver"
-    },
-    {
       "id": "31927980",
       "shortUrl": "https://naver.me/xPYUVKCs",
       "naverMapUrl": "https://map.naver.com/p/entry/place/31927980",
@@ -1653,6 +1619,40 @@
       "lng": 126.4142189,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T22:40:07.347Z",
+      "source": "naver"
+    },
+    {
+      "id": "112862112",
+      "shortUrl": "https://naver.me/xPYUVTgC",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/112862112",
+      "name": "사려니숲길",
+      "category": "기타",
+      "naverCategory": "숲,숲길",
+      "address": "제주 제주시 봉개동 산64-5",
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAxMjNfNDEg%2FMDAxNzA1OTg4NzE0NTMz.WGYh05zT3jZ_DIUhpGro91pMT-h0Mmekq4s64Y6Zcrkg.XeEnBbTYlD6qm14ZprcBhHZZgRvzIaHIqucjcP2gzSQg.JPEG.happyjejudo%2F%25C1%25A6%25C1%25D6%25B9%25AB%25C0%25E5%25BE%25D6%25BD%25A3%25B1%25E632.jpeg%231200x900",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAxMjNfNDEg%2FMDAxNzA1OTg4NzE0NTMz.WGYh05zT3jZ_DIUhpGro91pMT-h0Mmekq4s64Y6Zcrkg.XeEnBbTYlD6qm14ZprcBhHZZgRvzIaHIqucjcP2gzSQg.JPEG.happyjejudo%2F%25C1%25A6%25C1%25D6%25B9%25AB%25C0%25E5%25BE%25D6%25BD%25A3%25B1%25E632.jpeg%231200x900",
+        "http://blogfiles.naver.net/MjAyNDAxMjNfNDEg/MDAxNzA1OTg4NzE0NTMz.WGYh05zT3jZ_DIUhpGro91pMT-h0Mmekq4s64Y6Zcrkg.XeEnBbTYlD6qm14ZprcBhHZZgRvzIaHIqucjcP2gzSQg.JPEG.happyjejudo/%C1%A6%C1%D6%B9%AB%C0%E5%BE%D6%BD%A3%B1%E632.jpeg#1200x900",
+        "http://blogfiles.naver.net/MjAyMzExMDFfNjYg/MDAxNjk4ODMyNzgzNDEw.f6rY545sDmNm5leboApYGNwEaN3OZ1pVfcJM1y9juU0g.aO_XunV-y-tzAnAi287XY91UxEw7JZkFc4MZb47v-n8g.JPEG.hhome1/%C1%A6%C1%D6%B5%B51_13_%C1%A6%C1%D6_%BB%E7%B7%C1%B4%CF%BD%A3%B1%E6_%C7%D1%B6%F3%BB%EA%B5%D1%B7%B9%B1%E6_%C0%D4%B1%B8_%2872%29.JPG#966x644",
+        "http://blogfiles.naver.net/MjAyMzExMDFfMjk4/MDAxNjk4ODMyNzgzMTI0.EyXYoz1Lkg_Q_sYhAloy8k7C10gdNhT2pcHgdHefasAg.pDGf4fhEofQRqpQSUiAhTDCYolGIRWAgTk0SL0M-KuQg.JPEG.hhome1/%C1%A6%C1%D6%B5%B51_13_%C1%A6%C1%D6_%BB%E7%B7%C1%B4%CF%BD%A3%B1%E6_%C7%D1%B6%F3%BB%EA%B5%D1%B7%B9%B1%E6_%C0%D4%B1%B8_%2866%29.JPG#966x644",
+        "http://blogfiles.naver.net/MjAyMzEyMTRfMTYy/MDAxNzAyNTI1MDIzODQy.Rmiq2TV4p1blHRxwFGef_jrWFCPd3I5-LQ0wxE0F55sg.F4yxWNSLvzxo92RQJd0DGD_SFudhpyRnJP6o2AtMbAkg.JPEG.polipoli37/20231130_134011.jpg#1862x2483",
+        "http://blogfiles.naver.net/MjAyMzEwMDFfMjkx/MDAxNjk2MTMwNTE3MjE1.py8H2Y2oave6n7pQ_m5oNWo6ie3A-NkG3RxCCoyTbvEg.X8XAevHPIMkPTZ5xpcRrvsJi_gNz3TNU_VmpaDVkDjgg.JPEG.swealyssu/photo-1507041957456-9c397ce39c97.jpg#1080x1620",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA2MDRfNDAg/MDAxNzQ4OTcwNDAzNDE0.yLzU1kxTmpnngppZz5CWHDfbqJF46ZM7qSv0T8zUfS0g.32cAFYggoW-Hx6L47mAg7HF9GlvZ4gegVgFGPzFyvnYg.JPEG/20250531_132658.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjA1MTVfMjUg/MDAxNzc4ODQwMDY0NDk0.3HgT_FPsKltRu8pMjeEZGe5uirw9SlX050_98ViIdoog.qLoRFSVmWup0K1V40CeN0CpHK7gdVzwUmtjAxPfKzCQg.JPEG/20260421_115631.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTExMjBfMTcy/MDAxNzYzNjQ2NDc5NDMw.oFCHJ_lsmKJ6w8otKA4_XMcgzm9_aBcuxu2OZ-4mkCQg.DCVLf9ANof5OObI2ct-wL1u6GvfLIFmASaSosb-R0Bkg.JPEG/6F2C101A-1706-4075-AC37-08B103571145.jpeg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA5MzBfMjA4/MDAxNzU5MTkxNDcyMDY2.yEpvRVj_J7lT-aJv_Kzeqj0zZNadzpvy8AXa7RNiBacg.83xBWiqsT0EIXuXjlwvKueq6nbjf0Ijr0bcPdBU3fqkg.JPEG/B2EDAEF4-877E-4619-9684-C2A30E9411F4.jpeg"
+      ],
+      "lat": 33.4226957,
+      "lng": 126.626798,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T22:44:44.946Z",
       "source": "naver"
     }
   ]
