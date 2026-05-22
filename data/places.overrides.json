@@ -105,8 +105,19 @@
     },
     "1307448582": {
       "name": "콜린 제주점",
-      "category": "식당",
-      "updatedAt": "2026-05-22T05:41:38.159Z"
+      "category": "카페",
+      "updatedAt": "2026-05-22T05:44:27.385Z",
+      "tags": [],
+      "description": null,
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231007_163%2F1696671648430YyuBz_JPEG%2F03.jpg",
+        "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231007_260%2F1696671647800740RC_JPEG%2F04.jpg"
+      ],
+      "address": "제주특별자치도 제주시 애월읍 애월로1길 24-8 1-3층",
+      "lat": 33.462944,
+      "lng": 126.310415,
+      "businessHours": null,
+      "menu": []
     },
     "1455840441": {
       "tags": [],
