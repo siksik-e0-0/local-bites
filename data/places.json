@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T11:36:26.021Z",
+  "generatedAt": "2026-05-22T12:20:23.187Z",
   "places": [
     {
       "id": "1480142748",
@@ -263,82 +263,6 @@
       "lng": null,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T10:07:08.535Z",
-      "source": "naver"
-    },
-    {
-      "id": "1066096453",
-      "shortUrl": "https://naver.me/xSFaZe8U",
-      "naverMapUrl": "https://map.naver.com/p/entry/place/1066096453",
-      "name": "우동카덴",
-      "category": "식당",
-      "naverCategory": "일식당",
-      "address": "제주 제주시 조천읍 교래3길 23",
-      "phone": "0507-1346-6263",
-      "businessHours": null,
-      "rating": null,
-      "reviewCount": null,
-      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMDZfMTI3%2FMDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504%2FIMG_3080.jpg%233024x4032",
-      "tags": [
-        "제주시"
-      ],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMDZfMTI3%2FMDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504%2FIMG_3080.jpg%233024x4032",
-        "https://ldb-phinf.pstatic.net/20210929_66/1632876683653pnxWq_JPEG/YbcNib3p7UZbC0C0fKXD9V8N.jpg",
-        "http://blogfiles.naver.net/MjAyMzEyMDZfMTI3/MDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504/IMG_3080.jpg#3024x4032",
-        "http://blogfiles.naver.net/MjAyMzEyMDZfMjgg/MDAxNzAxODYyMzI2OTU5.D2qMJpwt8ggv48Hs2epWzEpXpZ-yk5ErgO7_uAGyxqwg.JLOLNkTG1JyNTrHgHFs7P_z_-GlGnMPQgQN7LC9SMtAg.JPEG.zizo0504/IMG_3077.jpg#3024x4032",
-        "http://blogfiles.naver.net/MjAyNDAxMjJfMjYz/MDAxNzA1OTEyMTc5Mzk4.d0oSMUroF8r9pmYMDLqXj6VKceN5U4OLKmIzg6LgR5wg.5XDdb4R5iB1-bqluvU0zfo_x_v3HOblYl9Rrip6VzjUg.JPEG.na000117/output_2217676516.jpg#828x828",
-        "http://blogfiles.naver.net/MjAyMzA4MjBfMTUg/MDAxNjkyNTQyMzk2MDE3.RxPbO275zXVoG6wGuE3J7JpnrBEEHy6Oa-6N2AnFuWYg.DeT-pQYjW8aofDvKvxfeKtv_AbA0UVqRrCfPpQkmSKwg.JPEG.01698774078/IMG_8144.JPG#3024x4032",
-        "http://blogfiles.naver.net/MjAyMzA4MDFfMTIw/MDAxNjkwODgwOTUxMDMw.tqdxW1vIvLiqnGkuxe8yQ8g9LimW3pVdXy5OSUkBUPwg.VZ_nWBXvy23EvfQz48N3c_fAWhkXSuyZ6wNagJGy49Qg.JPEG.hoy1980326/output_1973771284.jpg#2048x1365",
-        "https://pup-review-phinf.pstatic.net/MjAyNjA0MTNfMTQ3/MDAxNzc2MDc4MTA2NzI0.CUimwT_KRzUXamP7Avt2xyemFdLkpbFA480XmNRfdq8g.txnvgmG4hhfpLjEX-SpIwwf23Z0IBNUG9OYV1aG975cg.JPEG/1776077921860.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNTEwMDVfMjI1/MDAxNzU5NjU0ODUyMzIy.KZn-2sU0eF9W-hdw-0Tv-6WAOIP0NJPq3xLfqpiIicUg.mSiJ1nKzeoVAGrI__Nlzxd2DCC8PrnZ3uLLYVsxo7vIg.JPEG/20251004_122822.jpg.jpg",
-        "https://pup-review-phinf.pstatic.net/MjAyNTA1MzFfMjI1/MDAxNzQ4Njc0MDU5NTUx.JFVsVZVKVtPwfuOU_rwiHc0jJChwAZkTdT7OR2YsFY8g.WtrK5BQ_eCfMHF03yfzLA-BdZkvN2GTIWVRR6RYfvfEg.JPEG/1000015243.jpg.jpg"
-      ],
-      "menu": [
-        {
-          "name": "야마카케우동",
-          "price": "15000"
-        },
-        {
-          "name": "텐뿌라우동",
-          "price": "14000"
-        },
-        {
-          "name": "은갈치튀김",
-          "price": "34000"
-        },
-        {
-          "name": "이카텐붓카케 우동",
-          "price": "14000"
-        },
-        {
-          "name": "카덴냉우동",
-          "price": "10000"
-        },
-        {
-          "name": "자루우동",
-          "price": "9000"
-        },
-        {
-          "name": "멘타이코(명란)우동",
-          "price": "14000"
-        },
-        {
-          "name": "카레라이스+미니우동",
-          "price": "13000"
-        },
-        {
-          "name": "아사리(바지락)우동",
-          "price": "14000"
-        },
-        {
-          "name": "키쯔네(유부)우동",
-          "price": "12000"
-        }
-      ],
-      "lat": null,
-      "lng": null,
-      "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T10:07:13.200Z",
       "source": "naver"
     },
     {
@@ -1341,6 +1265,82 @@
       "lng": null,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T11:35:50.893Z",
+      "source": "naver"
+    },
+    {
+      "id": "1066096453",
+      "shortUrl": "https://naver.me/xSFaZe8U",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1066096453",
+      "name": "우동카덴",
+      "category": "식당",
+      "naverCategory": "일식당",
+      "address": "제주 제주시 조천읍 교래3길 23",
+      "phone": "0507-1346-6263",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMDZfMTI3%2FMDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504%2FIMG_3080.jpg%233024x4032",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMDZfMTI3%2FMDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504%2FIMG_3080.jpg%233024x4032",
+        "https://ldb-phinf.pstatic.net/20210929_66/1632876683653pnxWq_JPEG/YbcNib3p7UZbC0C0fKXD9V8N.jpg",
+        "http://blogfiles.naver.net/MjAyMzEyMDZfMTI3/MDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504/IMG_3080.jpg#3024x4032",
+        "http://blogfiles.naver.net/MjAyMzEyMDZfMjgg/MDAxNzAxODYyMzI2OTU5.D2qMJpwt8ggv48Hs2epWzEpXpZ-yk5ErgO7_uAGyxqwg.JLOLNkTG1JyNTrHgHFs7P_z_-GlGnMPQgQN7LC9SMtAg.JPEG.zizo0504/IMG_3077.jpg#3024x4032",
+        "http://blogfiles.naver.net/MjAyNDAxMjJfMjYz/MDAxNzA1OTEyMTc5Mzk4.d0oSMUroF8r9pmYMDLqXj6VKceN5U4OLKmIzg6LgR5wg.5XDdb4R5iB1-bqluvU0zfo_x_v3HOblYl9Rrip6VzjUg.JPEG.na000117/output_2217676516.jpg#828x828",
+        "http://blogfiles.naver.net/MjAyMzA4MjBfMTUg/MDAxNjkyNTQyMzk2MDE3.RxPbO275zXVoG6wGuE3J7JpnrBEEHy6Oa-6N2AnFuWYg.DeT-pQYjW8aofDvKvxfeKtv_AbA0UVqRrCfPpQkmSKwg.JPEG.01698774078/IMG_8144.JPG#3024x4032",
+        "http://blogfiles.naver.net/MjAyMzA4MDFfMTIw/MDAxNjkwODgwOTUxMDMw.tqdxW1vIvLiqnGkuxe8yQ8g9LimW3pVdXy5OSUkBUPwg.VZ_nWBXvy23EvfQz48N3c_fAWhkXSuyZ6wNagJGy49Qg.JPEG.hoy1980326/output_1973771284.jpg#2048x1365",
+        "https://pup-review-phinf.pstatic.net/MjAyNjA0MTNfMTQ3/MDAxNzc2MDc4MTA2NzI0.CUimwT_KRzUXamP7Avt2xyemFdLkpbFA480XmNRfdq8g.txnvgmG4hhfpLjEX-SpIwwf23Z0IBNUG9OYV1aG975cg.JPEG/1776077921860.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTEwMDVfMjI1/MDAxNzU5NjU0ODUyMzIy.KZn-2sU0eF9W-hdw-0Tv-6WAOIP0NJPq3xLfqpiIicUg.mSiJ1nKzeoVAGrI__Nlzxd2DCC8PrnZ3uLLYVsxo7vIg.JPEG/20251004_122822.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA1MzFfMjI1/MDAxNzQ4Njc0MDU5NTUx.JFVsVZVKVtPwfuOU_rwiHc0jJChwAZkTdT7OR2YsFY8g.WtrK5BQ_eCfMHF03yfzLA-BdZkvN2GTIWVRR6RYfvfEg.JPEG/1000015243.jpg.jpg"
+      ],
+      "menu": [
+        {
+          "name": "야마카케우동",
+          "price": "15000"
+        },
+        {
+          "name": "텐뿌라우동",
+          "price": "14000"
+        },
+        {
+          "name": "은갈치튀김",
+          "price": "34000"
+        },
+        {
+          "name": "이카텐붓카케 우동",
+          "price": "14000"
+        },
+        {
+          "name": "카덴냉우동",
+          "price": "10000"
+        },
+        {
+          "name": "자루우동",
+          "price": "9000"
+        },
+        {
+          "name": "멘타이코(명란)우동",
+          "price": "14000"
+        },
+        {
+          "name": "카레라이스+미니우동",
+          "price": "13000"
+        },
+        {
+          "name": "아사리(바지락)우동",
+          "price": "14000"
+        },
+        {
+          "name": "키쯔네(유부)우동",
+          "price": "12000"
+        }
+      ],
+      "lat": null,
+      "lng": null,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T10:07:13.200Z",
       "source": "naver"
     }
   ]
