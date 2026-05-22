@@ -2,11 +2,13 @@
   "version": 1,
   "overrides": {
     "38014906": {
-      "tags": [],
+      "tags": [
+        "함덕"
+      ],
       "description": null,
       "category": "식당",
       "name": "동복뚝배기 함덕",
-      "updatedAt": "2026-05-21T18:31:04.281Z",
+      "updatedAt": "2026-05-22T01:19:47.126Z",
       "images": [
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250811_159%2F1754897993855Vqy9d_JPEG%2F1.jpg"
       ],
