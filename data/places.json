@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T05:28:09.161Z",
+  "generatedAt": "2026-05-22T05:55:46.292Z",
   "places": [
     {
       "id": "1480142748",
@@ -407,6 +407,29 @@
       "lng": 126.4782935,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T05:28:08.636Z",
+      "source": "naver"
+    },
+    {
+      "id": "1307448582",
+      "shortUrl": "https://naver.me/G4WMQTDU",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1307448582",
+      "name": "콜린 제주점",
+      "category": "식당",
+      "naverCategory": null,
+      "address": null,
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231007_163%2F1696671648430YyuBz_JPEG%2F03.jpg",
+      "tags": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231007_163%2F1696671648430YyuBz_JPEG%2F03.jpg"
+      ],
+      "lat": null,
+      "lng": null,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T05:55:45.468Z",
       "source": "naver"
     }
   ]
