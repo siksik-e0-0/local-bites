@@ -94,8 +94,17 @@
       "name": "웨스트그라운드",
       "lat": 33.3391685,
       "lng": 126.1964635,
-      "category": "식당",
-      "updatedAt": "2026-05-22T06:19:59.303Z"
+      "category": "카페",
+      "updatedAt": "2026-05-22T06:21:54.900Z",
+      "tags": [
+        "협재"
+      ],
+      "description": null,
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260219_249%2F1771466869036kRyAR_JPEG%2FIMG_5215.jpeg"
+      ],
+      "address": null,
+      "businessHours": null
     },
     "1300963457": {
       "tags": [],
