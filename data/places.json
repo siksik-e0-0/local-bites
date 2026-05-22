@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T11:31:15.891Z",
+  "generatedAt": "2026-05-22T11:35:17.392Z",
   "places": [
     {
       "id": "1480142748",
@@ -857,82 +857,6 @@
       "lng": 126.3641827,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T10:07:45.422Z",
-      "source": "naver"
-    },
-    {
-      "id": "1214681781",
-      "shortUrl": "https://naver.me/GAr8Ei2o",
-      "naverMapUrl": "https://map.naver.com/p/entry/place/1214681781",
-      "name": "하라케케",
-      "category": "카페",
-      "naverCategory": "카페,디저트",
-      "address": "제주 서귀포시 속골로 29-10 16호",
-      "phone": "0507-1311-0878",
-      "businessHours": null,
-      "rating": null,
-      "reviewCount": null,
-      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260424_81%2F1777012663747eIf11_JPEG%2FKakaoTalk_20240920_212241606_02.jpg",
-      "tags": [
-        "서귀포시"
-      ],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260424_81%2F1777012663747eIf11_JPEG%2FKakaoTalk_20240920_212241606_02.jpg",
-        "https://ldb-phinf.pstatic.net/20250602_4/17488482390195uA5Y_JPEG/1000060711.jpg",
-        "https://ldb-phinf.pstatic.net/20250602_299/1748847142524tKaEF_JPEG/1000060710.jpg",
-        "https://ldb-phinf.pstatic.net/20250602_287/1748845980464xNC6G_JPEG/1000060704.jpg",
-        "https://ldb-phinf.pstatic.net/20250602_64/1748845178724O0VHQ_JPEG/1000060702.jpg",
-        "https://ldb-phinf.pstatic.net/20250602_85/1748844788433G893T_JPEG/1000060695.jpg",
-        "https://ldb-phinf.pstatic.net/20250602_86/17488446159232cfDA_JPEG/1000060696.jpg",
-        "https://ldb-phinf.pstatic.net/20250526_22/1748230092066YMJWW_JPEG/1000060089.jpg",
-        "https://ldb-phinf.pstatic.net/20250526_205/1748230089505az9B5_JPEG/1000060087.jpg",
-        "https://ldb-phinf.pstatic.net/20250526_83/1748230089784TTcIF_JPEG/1000060051.jpg"
-      ],
-      "menu": [
-        {
-          "name": "모카라떼",
-          "price": "9000"
-        },
-        {
-          "name": "아메리카노(HOT)",
-          "price": "7000"
-        },
-        {
-          "name": "허니 블랙슈가 라떼(ICE)",
-          "price": "9000"
-        },
-        {
-          "name": "초코라떼(ICE)",
-          "price": "9000"
-        },
-        {
-          "name": "라임모히또(논알콜 칵테일)",
-          "price": "13000"
-        },
-        {
-          "name": "포 디 엠퍼리(HOT)",
-          "price": "8000"
-        },
-        {
-          "name": "Breakfast(~am10:00)",
-          "price": "15000"
-        },
-        {
-          "name": "아이스 아메리카노",
-          "price": "7000"
-        },
-        {
-          "name": "수제청 레몬차(ICE)",
-          "price": "9000"
-        },
-        {
-          "name": "하라케케 하이볼",
-          "price": "12000"
-        }
-      ],
-      "lat": 33.2428676,
-      "lng": 126.5277074,
-      "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T10:07:49.256Z",
       "source": "naver"
     },
     {
