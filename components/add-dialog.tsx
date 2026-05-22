@@ -7,6 +7,40 @@ import { LocationPicker } from "./location-picker";
 
 const CATS: (Category | null)[] = [null, "식당", "카페", "기타"];
 
+interface NaverService {
+  Status: { OK: number };
+  geocode: (
+    params: { query: string },
+    cb: (status: number, response: { v2?: { addresses?: Array<{ x: string; y: string }> } }) => void,
+  ) => void;
+}
+
+function getNaverService(): NaverService | null {
+  if (typeof window === "undefined") return null;
+  const naver = (window as unknown as { naver?: { maps?: { Service?: NaverService } } }).naver;
+  return naver?.maps?.Service ?? null;
+}
+
+async function geocodeAddress(addr: string): Promise<{ lat: number; lng: number } | null> {
+  for (let i = 0; i < 12; i++) {
+    const svc = getNaverService();
+    if (svc) {
+      return new Promise((resolve) => {
+        svc.geocode({ query: addr }, (status, response) => {
+          if (status !== svc.Status.OK) { resolve(null); return; }
+          const first = response.v2?.addresses?.[0];
+          if (!first) { resolve(null); return; }
+          const la = Number(first.y);
+          const ln = Number(first.x);
+          resolve(Number.isFinite(la) && Number.isFinite(ln) ? { lat: la, lng: ln } : null);
+        });
+      });
+    }
+    await new Promise((r) => setTimeout(r, 250));
+  }
+  return null;
+}
+
 type SaveStatus =
   | { state: "idle" }
   | { state: "saving" }
@@ -135,6 +169,15 @@ export function AddDialog({
       }));
       if (data.category && !cat) setCat(data.category);
       setPreviewStatus({ state: "ready", parserFailed: !!data.parserFailed });
+
+      // Auto-geocode if address present but no coords
+      if (data.address && data.lat == null && data.lng == null) {
+        geocodeAddress(data.address).then((coords) => {
+          if (coords) {
+            setPreview((p) => ({ ...p, lat: coords.lat, lng: coords.lng }));
+          }
+        });
+      }
     } catch (err) {
       setPreviewStatus({
         state: "error",
