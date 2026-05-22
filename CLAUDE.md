@@ -35,8 +35,9 @@ feature branch (claude/dreamy-volta-GayKF) 에서는 **절대로** `data/places.
 
 ## 환경
 
-- production URL: `https://local-bites-pied.vercel.app`
-- 프리뷰 URL 패턴: `local-bites-git-claude-dreamy-volta-gaykf-siksik-e0-0s-projects.vercel.app`
+- production URL: `https://sik-dorak.vercel.app`
+- 구 production (fallback): `https://local-bites-pied.vercel.app`
+- 프리뷰 URL 패턴: `sik-dorak-git-claude-dreamy-volta-gaykf-siksik-e0-0s-projects.vercel.app`
 - 두 URL 모두 NCP Maps Application 의 Web 서비스 URL 에 등록되어야 지도가 동작
 
 

@@ -139,6 +139,8 @@ https://naver.me/FBe2MAkT | 식당
 3. 환경 변수 설정 (위 목록 참조).
 4. 이후 코드 변경 push 시 자동 재빌드.
 
+**Production URL**: https://sik-dorak.vercel.app
+
 ### Vercel Ignored Build Step
 
 `vercel.json`에 `ignoreCommand`로 `scripts/vercel-ignore.sh` 등록됨.
