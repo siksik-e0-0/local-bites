@@ -1,12 +1,5 @@
 export type Category = "식당" | "카페" | "기타";
 
-export interface MenuItem {
-  name: string;
-  price: string | null;
-  description: string | null;
-  imageUrl: string | null;
-}
-
 export interface Place {
   id: string;
   shortUrl: string;
@@ -22,7 +15,6 @@ export interface Place {
   heroImageUrl: string | null;
   tags: string[];
   images: string[];
-  menu: MenuItem[];
   fetchedAt: string;
   source: "naver" | "cache" | "seed";
   description?: string | null;
@@ -46,7 +38,6 @@ export interface PlaceOverride {
   lat?: number | null;
   lng?: number | null;
   businessHours?: string | null;
-  menu?: MenuItem[];
   deleted?: boolean;
   updatedAt?: string;
 }
@@ -66,7 +57,6 @@ export interface PlaceEditPayload {
   lat?: number | null;
   lng?: number | null;
   businessHours?: string | null;
-  menu?: MenuItem[];
 }
 
 export interface PlaceComment {

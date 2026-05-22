@@ -61,11 +61,9 @@ export async function POST(req: Request) {
       lng: place.lng ?? null,
       heroImageUrl: place.heroImageUrl,
       businessHours: place.businessHours,
-      menu: place.menu ?? [],
       parserFailed,
       debug: {
         source: place.source,
-        menuCount: (place.menu ?? []).length,
         hasHours: !!place.businessHours,
         hasAddress: !!place.address,
         hasCoords: place.lat != null && place.lng != null,
@@ -83,7 +81,6 @@ export async function POST(req: Request) {
       lng: null,
       heroImageUrl: null,
       businessHours: null,
-      menu: [],
       parserFailed: true,
       debug: { error: (err as Error).message },
     });

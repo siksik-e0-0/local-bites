@@ -1,4 +1,4 @@
-import type { Category, MenuItem, Place } from "./types";
+import type { Category, Place } from "./types";
 
 const UA_POOL = [
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
@@ -136,7 +136,6 @@ interface RawPlace {
   reviewCount?: number | null;
   heroImageUrl?: string | null;
   images?: string[];
-  menu?: MenuItem[];
   lat?: number | null;
   lng?: number | null;
 }
@@ -208,59 +207,6 @@ function walkApolloForEntity(
     }
   }
   return nameOnlyFallback;
-}
-
-function walkApolloForMenu(state: unknown): MenuItem[] {
-  if (!state || typeof state !== "object") return [];
-  const visited = new Set<unknown>();
-  const queue: unknown[] = [state];
-  const out: MenuItem[] = [];
-  const seen = new Set<string>();
-  while (queue.length) {
-    const node = queue.shift();
-    if (!node || typeof node !== "object" || visited.has(node)) continue;
-    visited.add(node);
-    const rec = node as Record<string, unknown>;
-    const typename = typeof rec.__typename === "string" ? rec.__typename : "";
-    const typenameLower = typename.toLowerCase();
-    const looksLikeMenu =
-      (typenameLower.includes("menu") &&
-        !typenameLower.includes("menucategory") &&
-        !typenameLower.includes("menufilter") &&
-        typeof rec.name === "string") ||
-      (typeof rec.name === "string" && (rec.price != null || rec.menuUrl != null)) ||
-      (typeof rec.name === "string" &&
-        typeof rec.description === "string" &&
-        (rec.priceNumber != null || rec.priceText != null || rec.imageUrl != null));
-    if (looksLikeMenu) {
-      const name = String(rec.name).trim();
-      if (name && !seen.has(name) && !/^주의|^정보|^안내/.test(name) && name.length <= 60) {
-        let imageUrl: string | null = null;
-        const images = rec.images;
-        if (Array.isArray(images) && images.length > 0) {
-          const first = images[0] as Record<string, unknown>;
-          if (typeof first?.url === "string") imageUrl = first.url;
-        }
-        if (!imageUrl && typeof rec.menuUrl === "string") imageUrl = rec.menuUrl;
-        if (!imageUrl && typeof rec.imageUrl === "string") imageUrl = rec.imageUrl;
-        const priceRaw = rec.price ?? rec.priceText ?? rec.priceNumber;
-        out.push({
-          name,
-          price: priceRaw != null ? String(priceRaw).trim() : null,
-          description:
-            typeof rec.description === "string" && rec.description.trim()
-              ? rec.description.trim()
-              : null,
-          imageUrl,
-        });
-        seen.add(name);
-      }
-    }
-    for (const v of Object.values(rec)) {
-      if (v && typeof v === "object") queue.push(v);
-    }
-  }
-  return out.slice(0, 30);
 }
 
 function walkApolloForHours(state: unknown): string | null {
@@ -699,7 +645,6 @@ export async function fetchPlace(
 
   let raw: RawPlace = {};
   let images: string[] = [];
-  let menu: MenuItem[] = [];
   let hours: string | null = null;
   let layer: string = "none";
   if (homeHtml) {
@@ -711,7 +656,6 @@ export async function fetchPlace(
         layer = "apollo";
       }
       images = walkApolloForImages(apollo, placeId);
-      menu = walkApolloForMenu(apollo);
       hours = walkApolloForHours(apollo);
     }
     const jsonLd = fromJsonLd(homeHtml);
@@ -724,23 +668,6 @@ export async function fetchPlace(
 
   const tryDeepFetch = layer === "apollo" && homeType != null;
   if (tryDeepFetch && homeType) {
-    if (menu.length < 1) {
-      await sleep(400 + Math.floor(Math.random() * 500));
-      const menuHtml = await fetchHtml(
-        `https://m.place.naver.com/${homeType}/${placeId}/menu/list`,
-        usedUrl ?? undefined,
-      );
-      if (menuHtml) {
-        const a = extractApolloState(menuHtml);
-        if (a) {
-          const m = walkApolloForMenu(a);
-          if (m.length > menu.length) menu = m;
-          const moreImages = walkApolloForImages(a, placeId);
-          if (moreImages.length) images = Array.from(new Set([...images, ...moreImages]));
-        }
-      }
-    }
-
     if (!hours && !raw.businessHours) {
       await sleep(400 + Math.floor(Math.random() * 500));
       const infoHtml = await fetchHtml(
@@ -795,7 +722,6 @@ export async function fetchPlace(
       ...(cached?.images ?? []),
     ]),
   ).slice(0, 10);
-  const finalMenu = menu.length > 0 ? menu : cached?.menu ?? [];
   const finalHours = raw.businessHours ?? hours ?? cached?.businessHours ?? null;
   let finalLat = raw.lat ?? cached?.lat ?? null;
   let finalLng = raw.lng ?? cached?.lng ?? null;
@@ -806,7 +732,7 @@ export async function fetchPlace(
   }
 
   console.log(
-    `  [${shortUrl}] placeId=${placeId} layer=${layer} images=${mergedImages.length} menu=${finalMenu.length} hours=${finalHours ? "y" : "n"} geo=${finalLat != null && finalLng != null ? "y" : "n"} via=${usedUrl ?? "n/a"}`,
+    `  [${shortUrl}] placeId=${placeId} layer=${layer} images=${mergedImages.length} hours=${finalHours ? "y" : "n"} geo=${finalLat != null && finalLng != null ? "y" : "n"} via=${usedUrl ?? "n/a"}`,
   );
 
   return {
@@ -824,7 +750,6 @@ export async function fetchPlace(
     heroImageUrl: finalHero,
     tags: deriveTags(finalAddress),
     images: mergedImages,
-    menu: finalMenu,
     lat: finalLat,
     lng: finalLng,
     schemaVersion: 2,

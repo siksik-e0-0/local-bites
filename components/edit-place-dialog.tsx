@@ -2,9 +2,8 @@
 
 import { Check, ImagePlus, Link2, Loader2, Upload, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import type { Category, MenuItem, Place, PlaceEditPayload } from "@/lib/types";
+import type { Category, Place, PlaceEditPayload } from "@/lib/types";
 import { LocationPicker } from "./location-picker";
-import { MenuEditor } from "./menu-editor";
 
 const MAX_IMAGE_WIDTH = 1280;
 const MAX_IMAGES = 12;
@@ -72,7 +71,6 @@ export function EditPlaceDialog({
   const [coordsInput, setCoordsInput] = useState("");
   const [coordsError, setCoordsError] = useState<string | null>(null);
   const [businessHours, setBusinessHours] = useState("");
-  const [menu, setMenu] = useState<MenuItem[]>([]);
   const [status, setStatus] = useState<Status>({ state: "idle" });
   const nameRef = useRef<HTMLInputElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -96,7 +94,6 @@ export function EditPlaceDialog({
     }
     setCoordsError(null);
     setBusinessHours(place.businessHours ?? "");
-    setMenu(place.menu ?? []);
     setStatus({ state: "idle" });
     setTimeout(() => nameRef.current?.focus(), 40);
   }, [place]);
@@ -228,13 +225,6 @@ export function EditPlaceDialog({
       setStatus({ state: "error", msg: `좌표: ${coords.error}` });
       return;
     }
-    const cleanedMenu = menu
-      .map((m) => ({
-        ...m,
-        name: m.name.trim(),
-        price: m.price?.trim() || null,
-      }))
-      .filter((m) => m.name);
     const patch: PlaceEditPayload = {
       name: trimmedName,
       category,
@@ -245,7 +235,6 @@ export function EditPlaceDialog({
       lat: coords.lat,
       lng: coords.lng,
       businessHours: businessHours.trim() ? businessHours.trim() : null,
-      menu: cleanedMenu,
     };
     setStatus({ state: "saving" });
     try {
@@ -466,18 +455,6 @@ export function EditPlaceDialog({
               maxLength={500}
               placeholder="예) 매일 11:00 - 21:00 / 매주 화 휴무"
               className="w-full resize-y rounded-lg border bg-[var(--bg)] px-3 py-2 text-sm outline-none focus:border-[var(--fg)]/50 disabled:opacity-60"
-            />
-          </div>
-
-          <div>
-            <div className="mb-1.5 flex items-center justify-between">
-              <label className="block text-xs text-[var(--muted)]">메뉴</label>
-              <span className="text-[10px] text-[var(--muted)]">{menu.length}/30</span>
-            </div>
-            <MenuEditor
-              items={menu}
-              onChange={setMenu}
-              disabled={status.state === "saving"}
             />
           </div>
 
