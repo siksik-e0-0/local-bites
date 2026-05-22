@@ -163,6 +163,17 @@
       "lat": 33.541042,
       "lng": 126.667167,
       "updatedAt": "2026-05-22T01:32:42.119Z"
+    },
+    "pending:FlBcSkhi": {
+      "tags": [],
+      "description": null,
+      "category": "기타",
+      "name": "교래자연휴양림",
+      "images": [],
+      "address": "제주 제주시 조천읍 남조로 2023 교래자연휴양림",
+      "lat": 33.441573,
+      "lng": 126.660541,
+      "updatedAt": "2026-05-22T01:39:35.169Z"
     }
   }
 }
