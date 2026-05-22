@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T10:24:14.869Z",
+  "generatedAt": "2026-05-22T10:35:29.898Z",
   "places": [
     {
       "id": "1480142748",
@@ -1305,82 +1305,6 @@
       "lng": null,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T10:08:12.584Z",
-      "source": "naver"
-    },
-    {
-      "id": "36859834",
-      "shortUrl": "https://naver.me/5HkCYBUT",
-      "naverMapUrl": "https://map.naver.com/p/entry/place/36859834",
-      "name": "델문도",
-      "category": "카페",
-      "naverCategory": "카페,디저트",
-      "address": "제주 제주시 조천읍 조함해안로 519-10",
-      "phone": "064-702-0007",
-      "businessHours": null,
-      "rating": null,
-      "reviewCount": null,
-      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250722_29%2F1753148469951AypHp_JPEG%2FUntitled-5-01.jpg",
-      "tags": [
-        "제주시"
-      ],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250722_29%2F1753148469951AypHp_JPEG%2FUntitled-5-01.jpg",
-        "https://ldb-phinf.pstatic.net/20260324_225/1774330870242dCTVO_JPEG/%BC%D2%B1%DD%BB%A7.jpg",
-        "https://ldb-phinf.pstatic.net/20260324_192/17743308319976iev5_JPEG/%BF%EC%B5%B5%B6%A5%C4%E1%BB%A7.jpg",
-        "https://ldb-phinf.pstatic.net/20260324_258/1774330927608DGVif_JPEG/%B4%E7%B1%D9%BB%A7.jpg",
-        "https://ldb-phinf.pstatic.net/20260325_24/17743994599237jg98_JPEG/%B6%F3%BA%C0%BD%B4.jpg",
-        "https://ldb-phinf.pstatic.net/20260324_65/1774331437071QwwM4_JPEG/%BC%AD%BF%EC%BA%C0.jpg",
-        "https://ldb-phinf.pstatic.net/20260324_220/1774318887257sanAC_JPEG/%B5%A8%B9%AE%B5%B5_%BE%C6%B8%DE.jpg",
-        "https://ldb-phinf.pstatic.net/20260324_113/1774318852591rOw8U_JPEG/%BE%C6%C0%CC%BD%BA%BE%C6%B8%DE%B8%AE%C4%AB%B3%EB.jpg",
-        "https://ldb-phinf.pstatic.net/20260324_80/1774320045868XHEku_JPEG/%B5%A8%B9%AE%B5%B5_%BE%C6%C0%CC%BD%BA%B6%F3%B6%BC.jpg",
-        "https://ldb-phinf.pstatic.net/20260324_169/1774328767133dOS1K_JPEG/%B5%A8%B9%AE%B5%B5_%BD%B4%C6%E4%B3%CA.jpg"
-      ],
-      "menu": [
-        {
-          "name": "고메버터 소금빵",
-          "price": "4500"
-        },
-        {
-          "name": "우도 땅콩빵",
-          "price": "5000"
-        },
-        {
-          "name": "구좌당근&마요",
-          "price": "5000"
-        },
-        {
-          "name": "라봉슈",
-          "price": "5500"
-        },
-        {
-          "name": "서우봉 팡도르",
-          "price": "6000"
-        },
-        {
-          "name": "아메리카노",
-          "price": "7000"
-        },
-        {
-          "name": "아이스 아메리카노",
-          "price": "7500"
-        },
-        {
-          "name": "아이스 카페라떼",
-          "price": "8500"
-        },
-        {
-          "name": "문도슈페너",
-          "price": "9000"
-        },
-        {
-          "name": "아이스 우도땅콩라떼",
-          "price": "9000"
-        }
-      ],
-      "lat": 33.543731,
-      "lng": 126.6686961,
-      "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T10:24:13.424Z",
       "source": "naver"
     }
   ]
