@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T02:21:06.704Z",
+  "generatedAt": "2026-05-22T02:38:25.618Z",
   "places": [
     {
       "id": "1480142748",
@@ -311,6 +311,54 @@
       "lng": 126.6605408,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T02:21:05.612Z",
+      "source": "naver"
+    },
+    {
+      "id": "1635962925",
+      "shortUrl": "https://naver.me/5p0qla4A",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1635962925",
+      "name": "시소 카이막 애월점",
+      "category": "식당",
+      "naverCategory": null,
+      "address": null,
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240625_83%2F1719252773107JVjBv_JPEG%2FIMG_2482.jpeg",
+      "tags": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240625_83%2F1719252773107JVjBv_JPEG%2FIMG_2482.jpeg"
+      ],
+      "menu": [],
+      "lat": 33.4780326,
+      "lng": 126.3641827,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T02:38:22.468Z",
+      "source": "naver"
+    },
+    {
+      "id": "1214681781",
+      "shortUrl": "https://naver.me/GAr8Ei2o",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1214681781",
+      "name": "하라케케",
+      "category": "카페",
+      "naverCategory": null,
+      "address": null,
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260424_81%2F1777012663747eIf11_JPEG%2FKakaoTalk_20240920_212241606_02.jpg",
+      "tags": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260424_81%2F1777012663747eIf11_JPEG%2FKakaoTalk_20240920_212241606_02.jpg"
+      ],
+      "menu": [],
+      "lat": 33.2428676,
+      "lng": 126.5277074,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T02:38:24.164Z",
       "source": "naver"
     }
   ]
