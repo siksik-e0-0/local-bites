@@ -2,6 +2,8 @@ name: Fetch places
 
 on:
   push:
+    branches:
+      - main
     paths:
       - "share_link"
       - "scripts/fetch-places.ts"
