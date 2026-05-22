@@ -15,7 +15,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "맛집 정보판 · Local Bites",
+  title: "맛집백과 · Local Bites",
   description: "가족여행 맛집 후보를 함께 정해요.",
 };
 

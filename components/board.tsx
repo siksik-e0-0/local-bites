@@ -299,7 +299,7 @@ export function Board({
             Local Bites · 가족여행
           </p>
           <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
-            맛집 정보판
+            맛집백과
           </h1>
           <p className="mt-2 text-sm text-[var(--muted)]">
             함께 정해요 — 후보{" "}
