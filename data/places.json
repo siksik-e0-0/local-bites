@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T09:52:43.863Z",
+  "generatedAt": "2026-05-22T10:08:18.642Z",
   "places": [
     {
       "id": "1480142748",
@@ -29,10 +29,44 @@
         "https://ldb-phinf.pstatic.net/20230525_121/1684968233004M5NQm_JPEG/IMG_3956.jpeg",
         "https://ldb-phinf.pstatic.net/20230525_217/16849682329177Dgon_JPEG/IMG_3955.jpeg"
       ],
+      "menu": [
+        {
+          "name": "흑돼지간장불고기",
+          "price": "16000"
+        },
+        {
+          "name": "흑돼지두루치기",
+          "price": "16000"
+        },
+        {
+          "name": "어린이(4세-9세)",
+          "price": "10000"
+        },
+        {
+          "name": "유아",
+          "price": "3000"
+        },
+        {
+          "name": "흑돼지두루치기 10첩도시락",
+          "price": "16000"
+        },
+        {
+          "name": "흑돼지간장불고기 10첩도시락",
+          "price": "16000"
+        },
+        {
+          "name": "돈사랑도시락",
+          "price": "14000"
+        },
+        {
+          "name": "고기추가",
+          "price": "10000"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:38:40.915Z",
+      "fetchedAt": "2026-05-22T10:06:56.177Z",
       "source": "naver"
     },
     {
@@ -63,10 +97,52 @@
         "https://ldb-phinf.pstatic.net/20231029_136/1698563440620i7Kib_JPEG/%B6%D2-%C7%D8%B9%B0.jpg",
         "https://ldb-phinf.pstatic.net/20231029_178/1698563454231iEuFN_JPEG/%BC%BA%B0%D4.jpg"
       ],
+      "menu": [
+        {
+          "name": "제주바당 순살은갈치조림(1인)",
+          "price": "19000"
+        },
+        {
+          "name": "볏짚훈연 제주바당 통갈치구이 (소)",
+          "price": "38000"
+        },
+        {
+          "name": "활 전복뚝배기",
+          "price": "20000"
+        },
+        {
+          "name": "모듬물회 (2인)",
+          "price": "35000"
+        },
+        {
+          "name": "갈치물회",
+          "price": "17000"
+        },
+        {
+          "name": "볏짚훈연 제주바당 통갈치구이 (대)",
+          "price": "95000"
+        },
+        {
+          "name": "볏짚훈연 제주바당 대물통갈치구이",
+          "price": "150000"
+        },
+        {
+          "name": "해물 뚝배기",
+          "price": "15000"
+        },
+        {
+          "name": "성게 미역국",
+          "price": "18000"
+        },
+        {
+          "name": "전복 물회",
+          "price": "18000"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:38:43.524Z",
+      "fetchedAt": "2026-05-22T10:06:59.914Z",
       "source": "naver"
     },
     {
@@ -97,10 +173,44 @@
         "https://ldb-phinf.pstatic.net/20190920_207/1568963461318a1a1R_JPEG/Wxsft7c6kdby-mxIx9rn9o7p.JPG.jpg",
         "https://ldb-phinf.pstatic.net/20171201_138/1512086773534gflQ0_JPEG/HjlZynXEFvjUo3hSPYQ45EMF.jpg"
       ],
+      "menu": [
+        {
+          "name": "전복해물뚝배기",
+          "price": "16000"
+        },
+        {
+          "name": "점심밥상",
+          "price": "11000"
+        },
+        {
+          "name": "전복성게국",
+          "price": "16000"
+        },
+        {
+          "name": "콩국수",
+          "price": "10000"
+        },
+        {
+          "name": "비빔밥",
+          "price": "10000"
+        },
+        {
+          "name": "전복죽",
+          "price": "16000"
+        },
+        {
+          "name": "몸국",
+          "price": "10000"
+        },
+        {
+          "name": "김치찌개",
+          "price": "10000"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:38:46.295Z",
+      "fetchedAt": "2026-05-22T10:07:03.870Z",
       "source": "naver"
     },
     {
@@ -131,10 +241,28 @@
         "https://ldb-phinf.pstatic.net/20240717_237/1721179553840H2HAB_JPEG/1000011523.jpg",
         "https://ldb-phinf.pstatic.net/20240717_172/1721179547335a7R8E_JPEG/1000011566.jpg"
       ],
+      "menu": [
+        {
+          "name": "흑돼지 2인분 (500g)",
+          "price": "57000"
+        },
+        {
+          "name": "흑돼지 1인분 추가 (250g)",
+          "price": "28500"
+        },
+        {
+          "name": "백돼지 2인분 (500g)",
+          "price": "45000"
+        },
+        {
+          "name": "백돼지 1인분 추가 (250g)",
+          "price": "22500"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:38:48.882Z",
+      "fetchedAt": "2026-05-22T10:07:08.535Z",
       "source": "naver"
     },
     {
@@ -165,10 +293,52 @@
         "https://pup-review-phinf.pstatic.net/MjAyNTEwMDVfMjI1/MDAxNzU5NjU0ODUyMzIy.KZn-2sU0eF9W-hdw-0Tv-6WAOIP0NJPq3xLfqpiIicUg.mSiJ1nKzeoVAGrI__Nlzxd2DCC8PrnZ3uLLYVsxo7vIg.JPEG/20251004_122822.jpg.jpg",
         "https://pup-review-phinf.pstatic.net/MjAyNTA1MzFfMjI1/MDAxNzQ4Njc0MDU5NTUx.JFVsVZVKVtPwfuOU_rwiHc0jJChwAZkTdT7OR2YsFY8g.WtrK5BQ_eCfMHF03yfzLA-BdZkvN2GTIWVRR6RYfvfEg.JPEG/1000015243.jpg.jpg"
       ],
+      "menu": [
+        {
+          "name": "야마카케우동",
+          "price": "15000"
+        },
+        {
+          "name": "텐뿌라우동",
+          "price": "14000"
+        },
+        {
+          "name": "은갈치튀김",
+          "price": "34000"
+        },
+        {
+          "name": "이카텐붓카케 우동",
+          "price": "14000"
+        },
+        {
+          "name": "카덴냉우동",
+          "price": "10000"
+        },
+        {
+          "name": "자루우동",
+          "price": "9000"
+        },
+        {
+          "name": "멘타이코(명란)우동",
+          "price": "14000"
+        },
+        {
+          "name": "카레라이스+미니우동",
+          "price": "13000"
+        },
+        {
+          "name": "아사리(바지락)우동",
+          "price": "14000"
+        },
+        {
+          "name": "키쯔네(유부)우동",
+          "price": "12000"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:38:51.851Z",
+      "fetchedAt": "2026-05-22T10:07:13.200Z",
       "source": "naver"
     },
     {
@@ -197,10 +367,32 @@
         "http://blogfiles.naver.net/MjAyMzA4MjdfMTA1/MDAxNjkzMTQ1OTY3Nzg2.w7Na85qlkBpNYGJZk1mUDoVgbuZhY-0lFjbXakSd1y4g.oALJdkz9otguTM1WjNsyFX5n0tYkwGuMqcMjRgyHW1Ug.JPEG.sunlovely09/20230818_125718.jpg#4000x3000",
         "http://blogfiles.naver.net/MjAyMzA1MjJfOSAg/MDAxNjg0Njg2NzY5MDA3.fEgzxk6Az-5BBMsa_OPG3E2E8eD02Aqax3OIuaqnxQgg.uDmAcwiSg8m78NiC4BXEbD-ozxq4SwLCCEeHT5MtkTIg.JPEG.7633974/IMG_2532.jpg#900x900"
       ],
+      "menu": [
+        {
+          "name": "콜슬로우",
+          "price": "5000"
+        },
+        {
+          "name": "치미츄리토마토,양파,파슬리샐러드",
+          "price": "5000"
+        },
+        {
+          "name": "숯불에구운치킨,로메인시저샐러드",
+          "price": "15000"
+        },
+        {
+          "name": "아보카도콘샐러드와새우칩",
+          "price": "17500"
+        },
+        {
+          "name": "칠리프렌치프라이",
+          "price": "18500"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:38:55.073Z",
+      "fetchedAt": "2026-05-22T10:07:17.319Z",
       "source": "naver"
     },
     {
@@ -231,10 +423,52 @@
         "https://ldb-phinf.pstatic.net/20250605_293/17491025437013QOXw_PNG/%BF%EC%C0%AF%BB%F7%B5%E5%28%BC%D2%29_%C7%F6%C0%E5%C7%D2%C0%CE.png",
         "https://ldb-phinf.pstatic.net/20250605_50/1749102491652VYdtQ_PNG/%BE%DF%C3%A4%BB%F7%B5%E5%28%B4%EB%29_%C7%F6%C0%E5%C7%D2%C0%CE.png"
       ],
+      "menu": [
+        {
+          "name": "카이막 세트",
+          "price": "16000"
+        },
+        {
+          "name": "HOT/ICE 목장 밀크티",
+          "price": "7000"
+        },
+        {
+          "name": "HOT/ICE 목장 연유라떼",
+          "price": "7000"
+        },
+        {
+          "name": "목장 초코우유",
+          "price": "6000"
+        },
+        {
+          "name": "목장 말차우유",
+          "price": "6000"
+        },
+        {
+          "name": "목장 딸기우유",
+          "price": "6000"
+        },
+        {
+          "name": "우유샌드(대)",
+          "price": "10800"
+        },
+        {
+          "name": "우유샌드(소)",
+          "price": "3600"
+        },
+        {
+          "name": "야채샌드(대)",
+          "price": "9000"
+        },
+        {
+          "name": "야채샌드(소)",
+          "price": "3600"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:38:57.417Z",
+      "fetchedAt": "2026-05-22T10:07:21.203Z",
       "source": "naver"
     },
     {
@@ -265,10 +499,52 @@
         "https://ldb-phinf.pstatic.net/20250814_289/1755150465611t8RXV_JPEG/IMG_1799.jpeg",
         "https://ldb-phinf.pstatic.net/20251113_82/1763010622341JJS9G_JPEG/IMG_1923.jpeg"
       ],
+      "menu": [
+        {
+          "name": "전복, 소라, 멍게 모듬",
+          "price": "30000"
+        },
+        {
+          "name": "전복죽",
+          "price": "12000"
+        },
+        {
+          "name": "전복",
+          "price": "20000"
+        },
+        {
+          "name": "소라",
+          "price": "20000"
+        },
+        {
+          "name": "멍게",
+          "price": "20000"
+        },
+        {
+          "name": "해삼",
+          "price": "20000"
+        },
+        {
+          "name": "홍해삼",
+          "price": "30000"
+        },
+        {
+          "name": "문어",
+          "price": "20000"
+        },
+        {
+          "name": "산낙지",
+          "price": "20000"
+        },
+        {
+          "name": "광어",
+          "price": "20000"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:39:00.003Z",
+      "fetchedAt": "2026-05-22T10:07:25.054Z",
       "source": "naver"
     },
     {
@@ -299,10 +575,36 @@
         "https://pup-review-phinf.pstatic.net/MjAyNTA1MjhfMTMw/MDAxNzQ4Mzk4MzA1NTYz.dhL0ICeQVAPLYh9Q7BjEtsJItGlz5Otp3yBpTjDYpqEg.nFO661d918sJXGfTupCdLBS3VcTNNm2d8ZxOr9VEAr8g.JPEG/1000047026.jpg.jpg",
         "https://pup-review-phinf.pstatic.net/MjAyNTExMTdfNzQg/MDAxNzYzMzg2OTc3OTI3.Rm_vwEvoRmIXsdrCPrJmlMfjV4QmRoIK5hqJ9rZpflQg.fn9w2x9S9mQWDKvXc83sCZ1R2eSGo1TvbHl2kq3iSvog.JPEG/397D3C5E-9448-4703-BCD8-86BF93373138.jpeg"
       ],
+      "menu": [
+        {
+          "name": "시장치킨(후라이드)",
+          "price": "20000"
+        },
+        {
+          "name": "반반치킨",
+          "price": "22000"
+        },
+        {
+          "name": "양념치킨",
+          "price": "23000"
+        },
+        {
+          "name": "세트(후라이드,똥집,닭발)",
+          "price": "31000"
+        },
+        {
+          "name": "똥집튀김",
+          "price": "12000"
+        },
+        {
+          "name": "닭발튀김",
+          "price": "14000"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:39:02.162Z",
+      "fetchedAt": "2026-05-22T10:07:28.507Z",
       "source": "naver"
     },
     {
@@ -333,10 +635,52 @@
         "https://ldb-phinf.pstatic.net/20221121_288/1669034606755O36PL_JPEG/20221116_133741.jpg",
         "https://ldb-phinf.pstatic.net/20221121_89/166903451669895A7C_JPEG/20221116_133716.jpg"
       ],
+      "menu": [
+        {
+          "name": "전복죽",
+          "price": "15000"
+        },
+        {
+          "name": "해녀한상",
+          "price": "50000"
+        },
+        {
+          "name": "해녀물회",
+          "price": "15000"
+        },
+        {
+          "name": "성게보말죽",
+          "price": "15000"
+        },
+        {
+          "name": "전복구이",
+          "price": "30000"
+        },
+        {
+          "name": "몸국",
+          "price": "12000"
+        },
+        {
+          "name": "전복물회",
+          "price": "15000"
+        },
+        {
+          "name": "해산물모듬(소)",
+          "price": "30000"
+        },
+        {
+          "name": "해산물모듬(대)",
+          "price": "50000"
+        },
+        {
+          "name": "소라꼬치",
+          "price": "15000"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:39:05.327Z",
+      "fetchedAt": "2026-05-22T10:07:33.553Z",
       "source": "naver"
     },
     {
@@ -367,10 +711,16 @@
         "https://pup-review-phinf.pstatic.net/MjAyNTA3MzFfMTQ2/MDAxNzUzOTUwNjA1NzIz.bMnapYv5p9NrYK5l7TRpbdEYi1_YwkQRM2Oe7kxfxzwg.8kvns_sWJYV0ftydPSMQJswXMt4r7G56f3crSHJfg8sg.JPEG/20250730_074521.jpg.jpg",
         "https://pup-review-phinf.pstatic.net/MjAyNTA3MTdfMjQx/MDAxNzUyNzI2MzMxMDIz.H8xrK6rD7BeWkXPZfdE1I9cDJbIPhx7Dnno5XACmfN8g.wJSomT_fOvoNqP_03oCXJWswGKJgJKGf4lSwZu_-ACQg.JPEG/20250708_103714.jpg"
       ],
+      "menu": [
+        {
+          "name": "찐빵",
+          "price": "10000"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:39:08.345Z",
+      "fetchedAt": "2026-05-22T10:07:36.686Z",
       "source": "naver"
     },
     {
@@ -401,10 +751,40 @@
         "https://pup-review-phinf.pstatic.net/MjAyNTEwMDZfNTAg/MDAxNzU5NzAwMzk2MTAw.gL-4Gor67QFwCevFYqpNQFJMBk9EgRk7sM2N2a_4_kUg.6w9ZomNC_29q2V4BEtb9umZ4HGAz7lpZhGKJWbUKmUcg.JPEG/20251005_165221.jpg.jpg",
         "https://pup-review-phinf.pstatic.net/MjAyNTEwMTdfOTEg/MDAxNzYwNzAyMTMwMzYy.EQZ3DiDgPDXfL61FyfAVeV5ddS1FTp4Z5m07ZiCsfnAg.4Mf8tcTtZ_qnOGeep8e39eTtFBETk_ux-mHM1axIr5Eg.JPEG/20251017_105139.jpg.jpg"
       ],
+      "menu": [
+        {
+          "name": "어른",
+          "price": "1000"
+        },
+        {
+          "name": "청소년/군인",
+          "price": "600"
+        },
+        {
+          "name": "어른(단체:10인이상)",
+          "price": "800"
+        },
+        {
+          "name": "청소년/군인(단체:10인이상)",
+          "price": "500"
+        },
+        {
+          "name": "야영장",
+          "price": "2000"
+        },
+        {
+          "name": "야외무대",
+          "price": "50000"
+        },
+        {
+          "name": "야외공연장",
+          "price": "30000"
+        }
+      ],
       "lat": 33.4415727,
       "lng": 126.6605408,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:39:13.994Z",
+      "fetchedAt": "2026-05-22T10:07:40.852Z",
       "source": "naver"
     },
     {
@@ -435,10 +815,48 @@
         "https://ldb-phinf.pstatic.net/20240715_189/1721034238272YL8Aw_JPEG/%B4%F5%C4%A1%C4%BF%C7%C7.jpg",
         "https://ldb-phinf.pstatic.net/20240715_33/17210341919358nMPc_JPEG/%B4%F5%C4%A1%B6%F3%B6%BC.jpg"
       ],
+      "menu": [
+        {
+          "name": "초코 카이막 (시즌)",
+          "price": "14000"
+        },
+        {
+          "name": "시소 카이막",
+          "price": "13000"
+        },
+        {
+          "name": "두바이 카이막 초콜릿",
+          "price": "9000"
+        },
+        {
+          "name": "카이막 우유",
+          "price": "4000"
+        },
+        {
+          "name": "천연꿀",
+          "price": "2000"
+        },
+        {
+          "name": "에크맥",
+          "price": "1500"
+        },
+        {
+          "name": "선물박스 포장",
+          "price": "1000"
+        },
+        {
+          "name": "더치커피",
+          "price": "4000"
+        },
+        {
+          "name": "더치라떼",
+          "price": "5000"
+        }
+      ],
       "lat": 33.4780326,
       "lng": 126.3641827,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:39:16.754Z",
+      "fetchedAt": "2026-05-22T10:07:45.422Z",
       "source": "naver"
     },
     {
@@ -469,10 +887,52 @@
         "https://ldb-phinf.pstatic.net/20250526_205/1748230089505az9B5_JPEG/1000060087.jpg",
         "https://ldb-phinf.pstatic.net/20250526_83/1748230089784TTcIF_JPEG/1000060051.jpg"
       ],
+      "menu": [
+        {
+          "name": "모카라떼",
+          "price": "9000"
+        },
+        {
+          "name": "아메리카노(HOT)",
+          "price": "7000"
+        },
+        {
+          "name": "허니 블랙슈가 라떼(ICE)",
+          "price": "9000"
+        },
+        {
+          "name": "초코라떼(ICE)",
+          "price": "9000"
+        },
+        {
+          "name": "라임모히또(논알콜 칵테일)",
+          "price": "13000"
+        },
+        {
+          "name": "포 디 엠퍼리(HOT)",
+          "price": "8000"
+        },
+        {
+          "name": "Breakfast(~am10:00)",
+          "price": "15000"
+        },
+        {
+          "name": "아이스 아메리카노",
+          "price": "7000"
+        },
+        {
+          "name": "수제청 레몬차(ICE)",
+          "price": "9000"
+        },
+        {
+          "name": "하라케케 하이볼",
+          "price": "12000"
+        }
+      ],
       "lat": 33.2428676,
       "lng": 126.5277074,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:39:19.602Z",
+      "fetchedAt": "2026-05-22T10:07:49.256Z",
       "source": "naver"
     },
     {
@@ -503,10 +963,52 @@
         "https://ldb-phinf.pstatic.net/20250904_194/1756990432911UHy2M_PNG/R_solbre_c.png",
         "https://ldb-phinf.pstatic.net/20240702_181/1719906443008mRr3U_JPEG/2.jpg"
       ],
+      "menu": [
+        {
+          "name": "소금빵 아이스크림",
+          "price": "5000"
+        },
+        {
+          "name": "성이시돌목장 유기농 우유아이스크림",
+          "price": "4000"
+        },
+        {
+          "name": "생크림 소금빵",
+          "price": "3000"
+        },
+        {
+          "name": "앙버터 소금빵",
+          "price": "3500"
+        },
+        {
+          "name": "에그마요 소금빵",
+          "price": "3500"
+        },
+        {
+          "name": "마늘 소금빵",
+          "price": "3500"
+        },
+        {
+          "name": "쪽파크림치즈 소금빵",
+          "price": "4000"
+        },
+        {
+          "name": "햄치즈 소금빵",
+          "price": "4000"
+        },
+        {
+          "name": "초코 소금빵",
+          "price": "3000"
+        },
+        {
+          "name": "고메버터 소금빵",
+          "price": "2500"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:39:22.623Z",
+      "fetchedAt": "2026-05-22T10:07:53.514Z",
       "source": "naver"
     },
     {
@@ -537,10 +1039,52 @@
         "https://ldb-phinf.pstatic.net/20170919_32/1505754860043MTMCN_JPEG/UDw8ThbxGdpTeGO-XAQbiPwS.JPG.jpg",
         "https://ldb-phinf.pstatic.net/20190122_155/1548126351660Uk8r6_JPEG/0E7KE7bQSLgC9nhnhb7sO3If.jpg"
       ],
+      "menu": [
+        {
+          "name": "돔베고기세트(점심한정).2인이상주문",
+          "price": "15000"
+        },
+        {
+          "name": "돔베국수세트(점심한정).2인이상주문",
+          "price": "14000"
+        },
+        {
+          "name": "김치돔베보쌈 小",
+          "price": "46000"
+        },
+        {
+          "name": "김치돔베보쌈 中",
+          "price": "53000"
+        },
+        {
+          "name": "김치돔베보쌈 大",
+          "price": "60000"
+        },
+        {
+          "name": "돔베한상",
+          "price": "100000"
+        },
+        {
+          "name": "멸고국수(단품주문 불가)",
+          "price": "9000"
+        },
+        {
+          "name": "몸국추가",
+          "price": "9000"
+        },
+        {
+          "name": "보쌈고기추가",
+          "price": "20000"
+        },
+        {
+          "name": "순두부추가",
+          "price": "9000"
+        }
+      ],
       "lat": 33.4877908,
       "lng": 126.4782935,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:39:25.054Z",
+      "fetchedAt": "2026-05-22T10:07:57.746Z",
       "source": "naver"
     },
     {
@@ -571,10 +1115,52 @@
         "https://ldb-phinf.pstatic.net/20250106_282/1736155945224Y0Jzb_JPEG/1736155906400.jpg",
         "https://ldb-phinf.pstatic.net/20231112_186/1699765230421fbR1O_JPEG/%C7%C3%B7%B9%C0%CC%BD%BA_%BE%F7%C3%BC%BB%E7%C1%F83.jpg"
       ],
+      "menu": [
+        {
+          "name": "아이스 홍시 빙수",
+          "price": "13000"
+        },
+        {
+          "name": "한라봉 크림라떼",
+          "price": "7000"
+        },
+        {
+          "name": "플레인 팬케이크",
+          "price": "13000"
+        },
+        {
+          "name": "프렌치 토스트",
+          "price": "13000"
+        },
+        {
+          "name": "제주 감귤 착즙 주스",
+          "price": "7000"
+        },
+        {
+          "name": "이탈리안 오믈렛",
+          "price": "16000"
+        },
+        {
+          "name": "뇨끼",
+          "price": "23000"
+        },
+        {
+          "name": "제주 문어 해산물 떡볶이(2~3인용)",
+          "price": "32000"
+        },
+        {
+          "name": "브런치",
+          "price": ""
+        },
+        {
+          "name": "아메리카노",
+          "price": "6000"
+        }
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:39:27.987Z",
+      "fetchedAt": "2026-05-22T10:08:02.790Z",
       "source": "naver"
     },
     {
@@ -605,10 +1191,52 @@
         "https://ldb-phinf.pstatic.net/20230508_34/1683507264626taLKD_JPEG/3.jpg",
         "https://ldb-phinf.pstatic.net/20221102_238/166736721650335Ntg_JPEG/55D87A90-3AB5-4CDD-8599-E43643477AE9.jpeg"
       ],
+      "menu": [
+        {
+          "name": "제주 애플망고 빙수 2인",
+          "price": "42000"
+        },
+        {
+          "name": "제주 애플망고 빙수 1인",
+          "price": "32000"
+        },
+        {
+          "name": "크로플(고구마,옥수수)",
+          "price": "15000"
+        },
+        {
+          "name": "더치 팬케이크(바나나크림)",
+          "price": "15000"
+        },
+        {
+          "name": "애플망고스무디",
+          "price": "11000"
+        },
+        {
+          "name": "애플망고라떼",
+          "price": "11000"
+        },
+        {
+          "name": "애플망고쥬스",
+          "price": "12000"
+        },
+        {
+          "name": "애플망고 케이크(판매종료)",
+          "price": ""
+        },
+        {
+          "name": "바나나 케이크",
+          "price": "9000"
+        },
+        {
+          "name": "아메리카노",
+          "price": "6500"
+        }
+      ],
       "lat": 33.3391685,
       "lng": 126.1964635,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:39:30.693Z",
+      "fetchedAt": "2026-05-22T10:08:07.640Z",
       "source": "naver"
     },
     {
@@ -676,7 +1304,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T09:39:51.088Z",
+      "fetchedAt": "2026-05-22T10:08:12.584Z",
       "source": "naver"
     },
     {
@@ -752,7 +1380,7 @@
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T09:52:43.241Z",
+      "fetchedAt": "2026-05-22T10:08:17.249Z",
       "source": "naver"
     }
   ]
