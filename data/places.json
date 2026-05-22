@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T01:37:34.044Z",
+  "generatedAt": "2026-05-22T02:19:46.146Z",
   "places": [
     {
       "id": "1480142748",
@@ -288,27 +288,6 @@
       "schemaVersion": 2,
       "fetchedAt": "2026-05-21T17:32:46.777Z",
       "source": "naver"
-    },
-    {
-      "id": "pending:FlBcSkhi",
-      "shortUrl": "https://naver.me/FlBcSkhi",
-      "naverMapUrl": "https://naver.me/FlBcSkhi",
-      "name": "(데이터 갱신 필요)",
-      "category": "기타",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
-      "businessHours": null,
-      "rating": null,
-      "reviewCount": null,
-      "heroImageUrl": null,
-      "tags": [],
-      "images": [],
-      "menu": [],
-      "lat": null,
-      "lng": null,
-      "fetchedAt": "2026-05-22T01:37:33.008Z",
-      "source": "seed"
     }
   ]
 }
