@@ -45,6 +45,8 @@ export interface PlaceOverride {
   address?: string | null;
   lat?: number | null;
   lng?: number | null;
+  businessHours?: string | null;
+  menu?: MenuItem[];
   deleted?: boolean;
   updatedAt?: string;
 }
@@ -63,6 +65,8 @@ export interface PlaceEditPayload {
   address?: string | null;
   lat?: number | null;
   lng?: number | null;
+  businessHours?: string | null;
+  menu?: MenuItem[];
 }
 
 export interface PlaceComment {

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { mutateOverrides } from "@/lib/github-overrides";
-import type { Category, PlaceOverride } from "@/lib/types";
+import type { Category, MenuItem, PlaceOverride } from "@/lib/types";
 
 const REPO_OWNER = process.env.GITHUB_REPO_OWNER ?? "siksik-e0-0";
 const REPO_NAME = process.env.GITHUB_REPO_NAME ?? "local-bites";
@@ -19,6 +19,8 @@ interface AddPayload {
   lat?: unknown;
   lng?: unknown;
   description?: unknown;
+  businessHours?: unknown;
+  menu?: unknown;
 }
 
 function isValidShortUrl(u: string): boolean {
@@ -41,6 +43,31 @@ function buildOverridePatch(body: AddPayload): Partial<PlaceOverride> | null {
   if (typeof body.description === "string") {
     const d = body.description.trim();
     if (d) patch.description = d.slice(0, 500);
+  }
+
+  if (typeof body.businessHours === "string") {
+    const h = body.businessHours.trim();
+    if (h) patch.businessHours = h.slice(0, 500);
+  }
+
+  if (Array.isArray(body.menu)) {
+    const items: MenuItem[] = [];
+    for (const raw of body.menu) {
+      if (!raw || typeof raw !== "object") continue;
+      const m = raw as Record<string, unknown>;
+      const name = typeof m.name === "string" ? m.name.trim() : "";
+      if (!name) continue;
+      const price =
+        typeof m.price === "string" && m.price.trim() ? m.price.trim().slice(0, 40) : null;
+      items.push({
+        name: name.slice(0, 80),
+        price,
+        description: null,
+        imageUrl: null,
+      });
+      if (items.length >= 30) break;
+    }
+    if (items.length > 0) patch.menu = items;
   }
 
   if (body.lat !== undefined && body.lat !== null && body.lat !== "") {
