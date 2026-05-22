@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T08:43:05.424Z",
+  "generatedAt": "2026-05-22T09:39:52.151Z",
   "places": [
     {
       "id": "1480142748",
@@ -643,6 +643,74 @@
       "lng": 126.1964635,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T07:39:30.693Z",
+      "source": "naver"
+    },
+    {
+      "id": "1042054066",
+      "shortUrl": "https://naver.me/FgHDexvR",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1042054066",
+      "name": "애월 갈치 암행어사",
+      "category": "식당",
+      "naverCategory": "한식",
+      "address": "제주 제주시 애월읍 애월로11길 27 1층",
+      "phone": "0507-1420-5545",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260507_26%2F1778119758883EP157_JPEG%2FA0000881.jpeg",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260507_26%2F1778119758883EP157_JPEG%2FA0000881.jpeg",
+        "https://ldb-phinf.pstatic.net/20240327_187/1711469032500fBwzp_JPEG/B9F73C2A-6C3A-4D48-B9BB-80A134DD05C0.jpeg",
+        "https://ldb-phinf.pstatic.net/20240327_63/1711468913916qM1Ak_JPEG/0428005D-EDBF-4B19-A989-51EE02A839FB.jpeg",
+        "https://ldb-phinf.pstatic.net/20241021_142/1729478310591WFgcn_JPEG/3472591084517580888_20241021112654118.jpeg",
+        "https://ldb-phinf.pstatic.net/20260512_72/1778563685588auKAD_JPEG/4EFB9B2E-2FA7-464F-A01D-D53198392E87.jpg",
+        "https://ldb-phinf.pstatic.net/20240321_27/1710987216992d53Tu_JPEG/IMG_5440.jpeg",
+        "https://ldb-phinf.pstatic.net/20240321_61/1711000487325NKfam_JPEG/IMG_5449.jpeg",
+        "https://ldb-phinf.pstatic.net/20240321_149/1710987254373YBWmP_JPEG/IMG_5441.jpeg",
+        "https://ldb-phinf.pstatic.net/20240321_287/17109872999919uUB4_JPEG/IMG_5442.jpeg",
+        "https://ldb-phinf.pstatic.net/20260507_26/1778119758883EP157_JPEG/A0000881.jpeg"
+      ],
+      "menu": [
+        {
+          "name": "1미터 통갈치구이+순살은갈치조림 세트",
+          "price": "89000"
+        },
+        {
+          "name": "1미터 통갈치조림+은갈치구이 세트",
+          "price": "89000"
+        },
+        {
+          "name": "탐관오리 해물소갈비찜 + 갈치구이세트",
+          "price": "89000"
+        },
+        {
+          "name": "제주 순살 은갈치조림",
+          "price": "25000"
+        },
+        {
+          "name": "제주 은갈치구이",
+          "price": "25000"
+        },
+        {
+          "name": "고등어구이",
+          "price": "25000"
+        },
+        {
+          "name": "전복물회",
+          "price": "20000"
+        },
+        {
+          "name": "은갈치회",
+          "price": "10000"
+        }
+      ],
+      "lat": null,
+      "lng": null,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T09:39:51.088Z",
       "source": "naver"
     }
   ]
