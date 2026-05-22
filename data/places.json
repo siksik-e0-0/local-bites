@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T04:02:18.395Z",
+  "generatedAt": "2026-05-22T05:28:09.161Z",
   "places": [
     {
       "id": "1480142748",
@@ -383,6 +383,30 @@
       "lng": null,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T04:02:17.496Z",
+      "source": "naver"
+    },
+    {
+      "id": "1583780094",
+      "shortUrl": "https://naver.me/xF42nSGC",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1583780094",
+      "name": "제주돔베고기집",
+      "category": "식당",
+      "naverCategory": null,
+      "address": null,
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230118_108%2F16740134268979gclK_JPEG%2FKakaoTalk_20230118_122207932_07.jpg",
+      "tags": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230118_108%2F16740134268979gclK_JPEG%2FKakaoTalk_20230118_122207932_07.jpg"
+      ],
+      "menu": [],
+      "lat": 33.4877908,
+      "lng": 126.4782935,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T05:28:08.636Z",
       "source": "naver"
     }
   ]
