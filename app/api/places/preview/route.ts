@@ -48,12 +48,13 @@ export async function POST(req: Request) {
 
   try {
     const place = await fetchPlace(url, null, null);
-    const parserFailed = !place.name && !place.address;
+    const validName = place.name && place.name !== "(이름 없음)" ? place.name : null;
+    const parserFailed = !validName && !place.address && place.lat == null;
     return NextResponse.json({
       ok: true,
       placeId,
       resolvedUrl,
-      name: place.name || null,
+      name: validName,
       category: place.category,
       address: place.address,
       lat: place.lat ?? null,
