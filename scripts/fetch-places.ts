@@ -105,7 +105,7 @@ async function main() {
   });
   const cacheByShortUrl = new Map(existing.places.map((p) => [p.shortUrl, p]));
 
-  const force = process.env.FORCE_REFETCH === "1" || true; // one-time: force-refetch for address population
+  const force = process.env.FORCE_REFETCH === "1";
   const results: Place[] = [];
   let fresh = 0;
   let fromCache = 0;
