@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T22:39:06.107Z",
+  "generatedAt": "2026-05-22T22:40:08.164Z",
   "places": [
     {
       "id": "1480142748",
@@ -1601,6 +1601,58 @@
       "lng": 126.345047,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T22:39:04.898Z",
+      "source": "naver"
+    },
+    {
+      "id": "11583650",
+      "shortUrl": "https://naver.me/FwGjfW5U",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/11583650",
+      "name": "여미지식물원",
+      "category": "기타",
+      "naverCategory": "식물원,수목원",
+      "address": "제주 서귀포시 중문관광로 93",
+      "phone": "064-735-1100",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20240513_100%2F17155593804321fo6H_JPEG%2F4M8A2663_%25BA%25B9%25BB%25E7.jpg",
+      "tags": [
+        "서귀포시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20240513_100%2F17155593804321fo6H_JPEG%2F4M8A2663_%25BA%25B9%25BB%25E7.jpg",
+        "https://naverbooking-phinf.pstatic.net/20240513_100/17155593804321fo6H_JPEG/4M8A2663_%BA%B9%BB%E7.jpg",
+        "https://naverbooking-phinf.pstatic.net/20240513_95/1715559380775kUTrU_JPEG/4M8A2396_%BA%B9%BB%E7.jpg",
+        "https://naverbooking-phinf.pstatic.net/20240513_67/1715559381045vdHN1_JPEG/4M8A2454_%BA%B9%BB%E7.jpg",
+        "https://naverbooking-phinf.pstatic.net/20240513_55/1715559381449FvzIu_JPEG/4M8A2616_%BA%B9%BB%E7.jpg",
+        "https://naverbooking-phinf.pstatic.net/20240513_78/1715559381835qNhDz_JPEG/4M8A2511_%BA%B9%BB%E7.jpg",
+        "https://naverbooking-phinf.pstatic.net/20240513_186/1715559382166NeTSC_JPEG/4M8A2488_%BA%B9%BB%E7.jpg",
+        "https://naverbooking-phinf.pstatic.net/20240513_191/17155593825661mP5F_JPEG/4M8A2407_%BA%B9%BB%E7.jpg",
+        "https://ldb-phinf.pstatic.net/20221128_298/1669601347988gERtD_JPEG/KD5A8583.jpg",
+        "https://ldb-phinf.pstatic.net/20200407_154/15862473872401jqtM_JPEG/IMG_3726.jpg"
+      ],
+      "menu": [
+        {
+          "name": "어른(20세 이상~65세 이하)",
+          "price": "12000"
+        },
+        {
+          "name": "청소년(14세 이상~19세 이하)",
+          "price": "8000"
+        },
+        {
+          "name": "어린이(36개월 이상~13세 이하)",
+          "price": "7000"
+        },
+        {
+          "name": "경로(66세 이상)",
+          "price": "9000"
+        }
+      ],
+      "lat": 33.2526509,
+      "lng": 126.4142189,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T22:40:07.347Z",
       "source": "naver"
     }
   ]
