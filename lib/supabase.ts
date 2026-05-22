@@ -10,7 +10,12 @@ if (!url || !anonKey) {
 }
 
 /** 브라우저/서버 공통 read-only 클라이언트 (anon key) */
-export const supabase = createClient(url, anonKey);
+export const supabase = createClient(url, anonKey, {
+  global: {
+    // Next.js App Router fetch 캐시 우회 (force-dynamic 페이지용)
+    fetch: (input, init) => fetch(input, { ...init, cache: "no-store" }),
+  },
+});
 
 /**
  * 서버 전용 admin 클라이언트 (service_role key).

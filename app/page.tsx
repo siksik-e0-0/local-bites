@@ -1,5 +1,5 @@
 import { Board } from "@/components/board";
-import { createAdminClient } from "@/lib/supabase";
+import { supabase } from "@/lib/supabase";
 import type { Category, Place, PlaceComment, PlaceOverride } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -70,7 +70,7 @@ function applyOverrides(places: Place[], overrideMap: Record<string, PlaceOverri
 }
 
 export default async function Page() {
-  const sb = createAdminClient();
+  const sb = supabase;
 
   const [placesRes, overridesRes, likesRes, commentsRes] = await Promise.all([
     sb.from("lb_places").select("*").order("created_at", { ascending: true }),
