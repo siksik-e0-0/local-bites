@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T02:19:46.146Z",
+  "generatedAt": "2026-05-22T02:21:06.704Z",
   "places": [
     {
       "id": "1480142748",
@@ -287,6 +287,30 @@
       "lng": null,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-21T17:32:46.777Z",
+      "source": "naver"
+    },
+    {
+      "id": "20043113",
+      "shortUrl": "https://naver.me/FlBcSkhi",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/20043113",
+      "name": "제주교래자연휴양림",
+      "category": "기타",
+      "naverCategory": null,
+      "address": null,
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200712_272%2F1594556247933r5M30_JPEG%2FlvmDF3lOMJ3QS48r4S4iR6Wh.jpg",
+      "tags": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200712_272%2F1594556247933r5M30_JPEG%2FlvmDF3lOMJ3QS48r4S4iR6Wh.jpg"
+      ],
+      "menu": [],
+      "lat": 33.4415727,
+      "lng": 126.6605408,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T02:21:05.612Z",
       "source": "naver"
     }
   ]
