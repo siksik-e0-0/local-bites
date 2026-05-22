@@ -573,6 +573,12 @@ function titleFromUrl(url: string): string | null {
   }
 }
 
+function mercatorToLatLng(mx: number, my: number): { lat: number; lng: number } {
+  const lng = (mx / 20037508.34) * 180;
+  const lat = (Math.atan(Math.sinh((my * Math.PI) / 20037508.34)) * 180) / Math.PI;
+  return { lat, lng };
+}
+
 function coordsFromUrl(url: string): { lat: number | null; lng: number | null } {
   try {
     const u = new URL(url);
@@ -606,6 +612,19 @@ function coordsFromUrl(url: string): { lat: number | null; lng: number | null } 
           } else if (inKoreaLatLng(a, b)) {
             lat = a;
             lng = b;
+          } else {
+            // Naver map share URLs use c=x,y in Web Mercator (EPSG:3857) meters
+            const conv = mercatorToLatLng(a, b);
+            if (inKoreaLatLng(conv.lat, conv.lng)) {
+              lat = conv.lat;
+              lng = conv.lng;
+            } else {
+              const conv2 = mercatorToLatLng(b, a);
+              if (inKoreaLatLng(conv2.lat, conv2.lng)) {
+                lat = conv2.lat;
+                lng = conv2.lng;
+              }
+            }
           }
         }
       }
