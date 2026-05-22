@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T22:37:18.336Z",
+  "generatedAt": "2026-05-22T22:38:12.337Z",
   "places": [
     {
       "id": "1480142748",
@@ -1465,6 +1465,66 @@
       "lng": 126.5488629,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T22:37:16.913Z",
+      "source": "naver"
+    },
+    {
+      "id": "12200322",
+      "shortUrl": "https://naver.me/5re3BgjD",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/12200322",
+      "name": "제주해녀박물관",
+      "category": "기타",
+      "naverCategory": "박물관",
+      "address": "제주 제주시 구좌읍 해녀박물관길 26",
+      "phone": "064-782-9898",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20150831_106%2F1441014972134eihKj_JPEG%2F116069543774485_0.jpg",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20150831_106%2F1441014972134eihKj_JPEG%2F116069543774485_0.jpg",
+        "https://ldb-phinf.pstatic.net/20150831_106/1441014972134eihKj_JPEG/116069543774485_0.jpg",
+        "https://ldb-phinf.pstatic.net/20210618_25/1624018787258nVfCN_JPEG/qFDloii-q-QTb9zFzOjvRCcb.jpeg.jpg",
+        "https://ldb-phinf.pstatic.net/20171023_130/1508734343305melox_JPEG/1fScJRrRzn_8QqUaK_Y_Pm_e.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA5MDFfMjQ2/MDAxNzU2NzA0MjQ4MjA0.GnYyvdb7p35461Q8LvhTHjOMbRNq6xrGfIVf_biq6tog.yzvA7UtjvxA3kH8o7Zkxafx7AZS9o7l-4CyhB_4lqRkg.JPEG/1DDF39D3-216F-4A7F-9DB4-8B21160D8A81.jpeg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjA0MTNfOCAg/MDAxNzc2MDY5ODEwNTI1.11B9-__8wPh7k_BU3f8mCrG8KwfWuTbv2cvpahXSV9Mg.3cH_ofca2YfUVtYG4DgwpQkRE7PYpGTX6IbPStphJWAg.JPEG/20260315_092929.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTExMjNfMTc4/MDAxNzYzODY4MzAyNTIx.h9GVnWKqsJPVxeFhGP5BpIuNwLZOIN4uE3EJbYgh9QYg.uGaj7Un3ckrI0vVTl57xF1OuURCUAvlKk4aOsr4TwaIg.JPEG/20251121_165819.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTEyMjhfMjI5/MDAxNzY2OTA0Njg2NTcw.RM7qWqenrwbe_oKEKhlyrtVSwUokdx0RsbVx1zn12BMg.4AX11Q0Z20CyE-y-VZ1dJXGv_Xgq--28t4DEebyh6Y0g.JPEG/1000080179.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA5MjNfMjUx/MDAxNzU4NjI0NzQwNTc2.Hi5AWLDUXmFPwOLmPcodNret6Kc_8iaFRHFVWLfgWmAg.JYN_fjp1P-cYmMtg15dpb4nhejqJhlNFwmsBJXmqTk8g.JPEG/20250918_124903.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA4MDlfNDAg/MDAxNzU0NzQxOTQ3MTE3.XGN-VT71nnY7jreuYfpW11jOYvE2JfpJxXSimBt5M6Ag.-EJJm3XQTO548i2DEijnVcCSURYnrxRp-7afqUmSovcg.JPEG/CF7D93D9-24A4-4AB7-9D78-931621B3E91E.jpeg"
+      ],
+      "menu": [
+        {
+          "name": "어른(25~64세)",
+          "price": "1100"
+        },
+        {
+          "name": "청소년(13~24세)",
+          "price": "500"
+        },
+        {
+          "name": "어린이(12세이하)",
+          "price": "0"
+        },
+        {
+          "name": "성인 단체",
+          "price": "800"
+        },
+        {
+          "name": "청소년 단체",
+          "price": "300"
+        },
+        {
+          "name": "어린이 단체",
+          "price": "0"
+        }
+      ],
+      "lat": 33.5235989,
+      "lng": 126.8633983,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T22:38:11.004Z",
       "source": "naver"
     }
   ]
