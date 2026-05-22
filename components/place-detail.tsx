@@ -117,7 +117,6 @@ export function PlaceDetail({
   const images = place.images && place.images.length > 0
     ? place.images
     : (place.heroImageUrl ? [place.heroImageUrl] : []);
-  const menu = place.menu ?? [];
   const tags = place.tags ?? [];
   const rating = place.rating != null ? place.rating.toFixed(1) : null;
 
@@ -327,32 +326,6 @@ export function PlaceDetail({
                 </div>
               )}
             </dl>
-
-            {menu.length > 0 && (
-              <section>
-                <h3 className="mb-2 text-xs font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
-                  메뉴
-                </h3>
-                <ul className="divide-y rounded-lg border">
-                  {menu.slice(0, 18).map((m, i) => (
-                    <li
-                      key={`${m.name}-${i}`}
-                      className="flex items-baseline justify-between gap-3 px-3 py-2"
-                    >
-                      <div className="min-w-0">
-                        <p className="text-sm font-medium leading-snug">{m.name}</p>
-                        {m.description && (
-                          <p className="mt-0.5 text-[11px] text-[var(--muted)]">{m.description}</p>
-                        )}
-                      </div>
-                      {m.price && (
-                        <p className="shrink-0 font-mono text-xs text-[var(--muted)]">{m.price}</p>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            )}
 
             <section className="border-t pt-5">
               <div className="mb-3 flex items-center justify-between">

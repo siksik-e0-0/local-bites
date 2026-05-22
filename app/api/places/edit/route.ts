@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { verifyAdminRequest } from "@/lib/admin-auth";
 import { mutateOverrides } from "@/lib/github-overrides";
-import type { Category, MenuItem, PlaceEditPayload, PlaceOverride } from "@/lib/types";
+import type { Category, PlaceEditPayload, PlaceOverride } from "@/lib/types";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -107,27 +107,6 @@ function sanitizePatch(raw: unknown): PlaceEditPayload | { error: string } {
     } else {
       return { error: "businessHours 는 문자열 또는 null 이어야 합니다." };
     }
-  }
-
-  if ("menu" in obj) {
-    if (!Array.isArray(obj.menu)) return { error: "menu 는 배열이어야 합니다." };
-    const items: MenuItem[] = [];
-    for (const raw of obj.menu) {
-      if (!raw || typeof raw !== "object") continue;
-      const m = raw as Record<string, unknown>;
-      const name = typeof m.name === "string" ? m.name.trim() : "";
-      if (!name) continue;
-      const price = typeof m.price === "string" && m.price.trim() ? m.price.trim().slice(0, 40) : null;
-      const description =
-        typeof m.description === "string" && m.description.trim() ? m.description.trim().slice(0, 200) : null;
-      const imageUrl =
-        typeof m.imageUrl === "string" && /^(https?:\/\/|\/uploads\/)/i.test(m.imageUrl.trim())
-          ? m.imageUrl.trim()
-          : null;
-      items.push({ name: name.slice(0, 80), price, description, imageUrl });
-      if (items.length >= 30) break;
-    }
-    out.menu = items;
   }
 
   if (Object.keys(out).length === 0) return { error: "수정할 필드가 없습니다." };

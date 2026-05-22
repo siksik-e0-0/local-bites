@@ -143,7 +143,6 @@ export function Board({
         lng: patch.lng !== undefined ? patch.lng : p.lng ?? null,
         businessHours:
           patch.businessHours !== undefined ? patch.businessHours : p.businessHours,
-        menu: patch.menu ?? p.menu,
       };
     };
     setPlaces((prev) => prev.map((p) => (p.id === id ? applyTo(p) : p)));

@@ -24,7 +24,6 @@ export function applyOverrides(places: Place[], file: OverridesFile): Place[] {
       lat: ov.lat !== undefined ? ov.lat : (p.lat ?? null),
       lng: ov.lng !== undefined ? ov.lng : (p.lng ?? null),
       businessHours: ov.businessHours !== undefined ? ov.businessHours : p.businessHours,
-      menu: ov.menu ?? p.menu,
     });
   }
   return out;

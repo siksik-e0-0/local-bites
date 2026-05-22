@@ -140,7 +140,6 @@ async function main() {
           heroImageUrl: null,
           tags: [],
           images: [],
-          menu: [],
           lat: null,
           lng: null,
           fetchedAt: new Date().toISOString(),
