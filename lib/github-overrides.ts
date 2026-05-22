@@ -1,10 +1,20 @@
-import type { OverridesFile, PlaceOverride } from "./types";
+import type {
+  CommentsFile,
+  LikesFile,
+  OverridesFile,
+  PlaceComment,
+  PlaceOverride,
+  ScrapsFile,
+} from "./types";
 
 const REPO_OWNER = process.env.GITHUB_REPO_OWNER ?? "siksik-e0-0";
 const REPO_NAME = process.env.GITHUB_REPO_NAME ?? "local-bites";
 const BRANCH = process.env.GITHUB_BRANCH ?? "main";
 const OVERRIDES_PATH = "data/places.overrides.json";
 const SHARE_LINK_PATH = "share_link";
+const COMMENTS_PATH = "data/places.comments.json";
+const LIKES_PATH = "data/places.likes.json";
+const SCRAPS_PATH = "data/places.scraps.json";
 
 function ghHeaders(token: string) {
   return {
@@ -89,6 +99,105 @@ export async function mutateOverrides(
 
   const serialized = JSON.stringify(file, null, 2) + "\n";
   return putFile(token, OVERRIDES_PATH, serialized, got.sha, commitMessage);
+}
+
+function parseComments(text: string): CommentsFile {
+  if (!text.trim()) return { version: 1, comments: {} };
+  try {
+    const parsed = JSON.parse(text) as Partial<CommentsFile>;
+    return { version: parsed.version ?? 1, comments: parsed.comments ?? {} };
+  } catch {
+    return { version: 1, comments: {} };
+  }
+}
+
+function parseLikes(text: string): LikesFile {
+  if (!text.trim()) return { version: 1, likes: {} };
+  try {
+    const parsed = JSON.parse(text) as Partial<LikesFile>;
+    return { version: parsed.version ?? 1, likes: parsed.likes ?? {} };
+  } catch {
+    return { version: 1, likes: {} };
+  }
+}
+
+function parseScraps(text: string): ScrapsFile {
+  if (!text.trim()) return { version: 1, scrappedIds: [] };
+  try {
+    const parsed = JSON.parse(text) as Partial<ScrapsFile>;
+    return { version: parsed.version ?? 1, scrappedIds: parsed.scrappedIds ?? [] };
+  } catch {
+    return { version: 1, scrappedIds: [] };
+  }
+}
+
+export async function addComment(
+  token: string,
+  placeId: string,
+  comment: PlaceComment,
+): Promise<{ ok: true } | { ok: false; status: number; error: string }> {
+  const got = await getFile(token, COMMENTS_PATH);
+  if (!got.ok) return got;
+  const file = parseComments(got.text);
+  const list = file.comments[placeId] ?? [];
+  file.comments[placeId] = [...list, comment].slice(-200);
+  const serialized = JSON.stringify(file, null, 2) + "\n";
+  return putFile(token, COMMENTS_PATH, serialized, got.sha, `chore(comments): add ${placeId}/${comment.id}`);
+}
+
+export async function deleteComment(
+  token: string,
+  placeId: string,
+  commentId: string,
+): Promise<{ ok: true; removed: boolean } | { ok: false; status: number; error: string }> {
+  const got = await getFile(token, COMMENTS_PATH);
+  if (!got.ok) return got;
+  const file = parseComments(got.text);
+  const list = file.comments[placeId] ?? [];
+  const next = list.filter((c) => c.id !== commentId);
+  if (next.length === list.length) return { ok: true, removed: false };
+  if (next.length === 0) delete file.comments[placeId];
+  else file.comments[placeId] = next;
+  const serialized = JSON.stringify(file, null, 2) + "\n";
+  const put = await putFile(token, COMMENTS_PATH, serialized, got.sha, `chore(comments): remove ${placeId}/${commentId}`);
+  if (!put.ok) return put;
+  return { ok: true, removed: true };
+}
+
+export async function mutateLike(
+  token: string,
+  placeId: string,
+  delta: number,
+): Promise<{ ok: true; count: number } | { ok: false; status: number; error: string }> {
+  const got = await getFile(token, LIKES_PATH);
+  if (!got.ok) return got;
+  const file = parseLikes(got.text);
+  const cur = file.likes[placeId] ?? 0;
+  const next = Math.max(0, cur + delta);
+  if (next === 0) delete file.likes[placeId];
+  else file.likes[placeId] = next;
+  const serialized = JSON.stringify(file, null, 2) + "\n";
+  const put = await putFile(token, LIKES_PATH, serialized, got.sha, `chore(likes): ${delta > 0 ? "+" : ""}${delta} ${placeId}`);
+  if (!put.ok) return put;
+  return { ok: true, count: next };
+}
+
+export async function toggleScrap(
+  token: string,
+  placeId: string,
+  on: boolean,
+): Promise<{ ok: true; scrappedIds: string[] } | { ok: false; status: number; error: string }> {
+  const got = await getFile(token, SCRAPS_PATH);
+  if (!got.ok) return got;
+  const file = parseScraps(got.text);
+  const set = new Set(file.scrappedIds);
+  if (on) set.add(placeId);
+  else set.delete(placeId);
+  file.scrappedIds = Array.from(set);
+  const serialized = JSON.stringify(file, null, 2) + "\n";
+  const put = await putFile(token, SCRAPS_PATH, serialized, got.sha, `chore(scraps): ${on ? "add" : "remove"} ${placeId}`);
+  if (!put.ok) return put;
+  return { ok: true, scrappedIds: file.scrappedIds };
 }
 
 export async function removeFromShareLink(

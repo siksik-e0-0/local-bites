@@ -64,3 +64,25 @@ export interface PlaceEditPayload {
   lat?: number | null;
   lng?: number | null;
 }
+
+export interface PlaceComment {
+  id: string;
+  author: string;
+  text: string;
+  createdAt: string;
+}
+
+export interface CommentsFile {
+  version: number;
+  comments: Record<string, PlaceComment[]>;
+}
+
+export interface LikesFile {
+  version: number;
+  likes: Record<string, number>;
+}
+
+export interface ScrapsFile {
+  version: number;
+  scrappedIds: string[];
+}

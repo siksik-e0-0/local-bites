@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Bookmark,
   Clock,
   Coffee,
   ExternalLink,
@@ -39,17 +40,21 @@ export function PlaceCard({
   index,
   isAdmin,
   adminToken,
+  scrapped,
   onSelect,
   onEdit,
   onDeleted,
+  onToggleScrap,
 }: {
   place: Place;
   index: number;
   isAdmin: boolean;
   adminToken: string | null;
+  scrapped: boolean;
   onSelect: (place: Place) => void;
   onEdit: (place: Place) => void;
   onDeleted: (id: string) => void;
+  onToggleScrap: (id: string) => void;
 }) {
   const { Icon } = CATEGORY_META[place.category];
   const rating = place.rating != null ? place.rating.toFixed(1) : null;
@@ -124,6 +129,24 @@ export function PlaceCard({
             데이터 갱신 필요
           </div>
         )}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleScrap(place.id);
+          }}
+          aria-label={scrapped ? "스크랩 해제" : "스크랩"}
+          title={scrapped ? "스크랩 해제" : "스크랩"}
+          className={`absolute ${place.source !== "naver" ? "right-3 top-12" : "right-3 top-3"} grid size-8 place-items-center rounded-full border backdrop-blur-md transition ${
+            scrapped
+              ? "border-[var(--accent)]/60 bg-[var(--accent)] text-[var(--accent-fg)] hover:opacity-90"
+              : "border-white/40 bg-white/70 text-neutral-700 hover:bg-white dark:bg-black/40 dark:text-neutral-200 dark:hover:bg-black/60"
+          }`}
+        >
+          <Bookmark
+            className={`size-3.5 ${scrapped ? "fill-current" : ""}`}
+            strokeWidth={1.75}
+          />
+        </button>
         {isAdmin && (
           <div className="absolute bottom-3 right-3 flex gap-1.5">
             <button

@@ -1,9 +1,9 @@
 "use client";
 
-import { LogOut, Plus, RefreshCw, ShieldCheck, ShieldOff } from "lucide-react";
+import { Bookmark, LogOut, Plus, RefreshCw, ShieldCheck, ShieldOff } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { getAdminToken, setAdminToken } from "@/lib/admin-client";
-import type { Category, Place, PlaceEditPayload } from "@/lib/types";
+import type { Category, Place, PlaceComment, PlaceEditPayload } from "@/lib/types";
 import { AddDialog } from "./add-dialog";
 import { AdminDialog } from "./admin-dialog";
 import { CategoryFilter, type FilterValue } from "./category-filter";
@@ -13,8 +13,32 @@ import { NicknameOnboarding } from "./nickname-onboarding";
 import { PlaceCard } from "./place-card";
 import { PlaceDetail } from "./place-detail";
 import { PlaceMap } from "./place-map";
+import { TagFilter } from "./tag-filter";
 
 const NICK_KEY = "lb:nickname";
+const LIKED_KEY = "lb:liked"; // localStorage record of which placeIds this device has liked
+
+function readLikedSet(): Set<string> {
+  if (typeof window === "undefined") return new Set();
+  try {
+    const raw = window.localStorage.getItem(LIKED_KEY);
+    if (!raw) return new Set();
+    const arr = JSON.parse(raw) as unknown;
+    if (Array.isArray(arr)) return new Set(arr.filter((s): s is string => typeof s === "string"));
+  } catch {
+    // ignore
+  }
+  return new Set();
+}
+
+function writeLikedSet(set: Set<string>) {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(LIKED_KEY, JSON.stringify(Array.from(set)));
+  } catch {
+    // ignore
+  }
+}
 
 function formatKst(iso: string): string {
   try {
@@ -37,12 +61,20 @@ function formatKst(iso: string): string {
 export function Board({
   initialPlaces,
   generatedAt,
+  initialLikes,
+  initialComments,
+  initialScraps,
 }: {
   initialPlaces: Place[];
   generatedAt: string;
+  initialLikes: Record<string, number>;
+  initialComments: Record<string, PlaceComment[]>;
+  initialScraps: string[];
 }) {
   const [places, setPlaces] = useState<Place[]>(initialPlaces);
   const [filter, setFilter] = useState<FilterValue>("전체");
+  const [tagFilter, setTagFilter] = useState<string | null>(null);
+  const [scrapOnly, setScrapOnly] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [adminDialogOpen, setAdminDialogOpen] = useState(false);
   const [selected, setSelected] = useState<Place | null>(null);
@@ -51,6 +83,11 @@ export function Board({
   const [needsOnboarding, setNeedsOnboarding] = useState(false);
   const [editingNick, setEditingNick] = useState(false);
   const [adminToken, setAdminTokenState] = useState<string | null>(null);
+  const [likes, setLikes] = useState<Record<string, number>>(initialLikes);
+  const [likedSet, setLikedSet] = useState<Set<string>>(new Set());
+  const [comments, setComments] =
+    useState<Record<string, PlaceComment[]>>(initialComments);
+  const [scrappedIds, setScrappedIds] = useState<Set<string>>(new Set(initialScraps));
 
   useEffect(() => {
     setPlaces(initialPlaces);
@@ -65,6 +102,7 @@ export function Board({
       setNeedsOnboarding(true);
     }
     setAdminTokenState(getAdminToken());
+    setLikedSet(readLikedSet());
   }, []);
 
   function saveNick(v: string) {
@@ -115,6 +153,96 @@ export function Board({
     setEditing((cur) => (cur && cur.id === id ? null : cur));
   }
 
+  async function toggleLike(placeId: string) {
+    const alreadyLiked = likedSet.has(placeId);
+    const delta = alreadyLiked ? -1 : 1;
+    // optimistic
+    setLikes((prev) => ({ ...prev, [placeId]: Math.max(0, (prev[placeId] ?? 0) + delta) }));
+    setLikedSet((prev) => {
+      const next = new Set(prev);
+      if (alreadyLiked) next.delete(placeId);
+      else next.add(placeId);
+      writeLikedSet(next);
+      return next;
+    });
+    try {
+      const res = await fetch("/api/places/like", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: placeId, delta }),
+      });
+      const data = (await res.json()) as { ok: boolean; count?: number };
+      if (data.ok && typeof data.count === "number") {
+        setLikes((prev) => ({ ...prev, [placeId]: data.count! }));
+      }
+    } catch {
+      // optimistic stays
+    }
+  }
+
+  async function toggleScrap(placeId: string) {
+    const isOn = scrappedIds.has(placeId);
+    const target = !isOn;
+    setScrappedIds((prev) => {
+      const next = new Set(prev);
+      if (target) next.add(placeId);
+      else next.delete(placeId);
+      return next;
+    });
+    try {
+      const res = await fetch("/api/places/scrap", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: placeId, on: target }),
+      });
+      const data = (await res.json()) as { ok: boolean; scrappedIds?: string[] };
+      if (data.ok && Array.isArray(data.scrappedIds)) {
+        setScrappedIds(new Set(data.scrappedIds));
+      }
+    } catch {
+      // optimistic stays
+    }
+  }
+
+  async function addComment(placeId: string, text: string): Promise<string | null> {
+    const trimmed = text.trim();
+    if (!trimmed) return "댓글 내용이 비었습니다.";
+    try {
+      const res = await fetch("/api/places/comment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: placeId, author: nickname ?? "guest", text: trimmed }),
+      });
+      const data = (await res.json()) as { ok: boolean; comment?: PlaceComment; error?: string };
+      if (!data.ok || !data.comment) return data.error ?? "댓글 저장 실패";
+      const created = data.comment;
+      setComments((prev) => ({ ...prev, [placeId]: [...(prev[placeId] ?? []), created] }));
+      return null;
+    } catch (err) {
+      return `네트워크 오류: ${(err as Error).message}`;
+    }
+  }
+
+  async function removeComment(placeId: string, commentId: string): Promise<string | null> {
+    if (!adminToken) return "관리자 권한 필요";
+    try {
+      const res = await fetch("/api/places/comment", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json", "x-admin-token": adminToken },
+        body: JSON.stringify({ id: placeId, commentId }),
+      });
+      const data = (await res.json()) as { ok: boolean; error?: string };
+      if (!data.ok) return data.error ?? "삭제 실패";
+      setComments((prev) => ({
+        ...prev,
+        [placeId]: (prev[placeId] ?? []).filter((c) => c.id !== commentId),
+      }));
+      return null;
+    } catch (err) {
+      return `네트워크 오류: ${(err as Error).message}`;
+    }
+  }
+
   const isAdmin = adminToken !== null;
 
   const counts: Record<FilterValue, number> = useMemo(() => {
@@ -128,10 +256,22 @@ export function Board({
     return base;
   }, [places]);
 
+  const allTags = useMemo(() => {
+    const set = new Set<string>();
+    for (const p of places) for (const t of p.tags ?? []) set.add(t);
+    return Array.from(set).sort();
+  }, [places]);
+
   const visible = useMemo(() => {
-    if (filter === "전체") return places;
-    return places.filter((p) => p.category === filter);
-  }, [filter, places]);
+    return places.filter((p) => {
+      if (filter !== "전체" && p.category !== filter) return false;
+      if (tagFilter && !(p.tags ?? []).includes(tagFilter)) return false;
+      if (scrapOnly && !scrappedIds.has(p.id)) return false;
+      return true;
+    });
+  }, [filter, places, tagFilter, scrapOnly, scrappedIds]);
+
+  const scrapCount = scrappedIds.size;
 
   return (
     <div className="mx-auto w-full max-w-[1120px] px-5 pb-24 pt-12 sm:px-8">
@@ -204,15 +344,37 @@ export function Board({
         </div>
       </header>
 
-      <div className="sticky top-0 z-20 -mx-5 mt-10 flex flex-col gap-3 bg-[var(--bg)]/85 px-5 py-3 backdrop-blur-md sm:-mx-8 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-        <CategoryFilter value={filter} onChange={setFilter} counts={counts} />
-        <button
-          onClick={() => setDialogOpen(true)}
-          className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[var(--fg)] px-4 py-2 text-sm font-medium text-[var(--bg)] transition hover:opacity-90"
-        >
-          <Plus className="size-4" strokeWidth={2} />
-          후보 추가
-        </button>
+      <div className="sticky top-0 z-20 -mx-5 mt-10 flex flex-col gap-3 bg-[var(--bg)]/85 px-5 py-3 backdrop-blur-md sm:-mx-8 sm:px-8">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <CategoryFilter value={filter} onChange={setFilter} counts={counts} />
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={() => setScrapOnly((v) => !v)}
+              className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs transition ${
+                scrapOnly
+                  ? "border-[var(--accent)] bg-[var(--accent)] text-[var(--accent-fg)]"
+                  : "text-[var(--muted)] hover:border-[var(--fg)]/40 hover:text-[var(--fg)]"
+              }`}
+              title="스크랩만 보기"
+            >
+              <Bookmark
+                className={`size-3 ${scrapOnly ? "fill-current" : ""}`}
+                strokeWidth={2}
+              />
+              스크랩 {scrapCount > 0 && <span className="tabular-nums">{scrapCount}</span>}
+            </button>
+            <button
+              onClick={() => setDialogOpen(true)}
+              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[var(--fg)] px-4 py-1.5 text-sm font-medium text-[var(--bg)] transition hover:opacity-90"
+            >
+              <Plus className="size-4" strokeWidth={2} />
+              후보 추가
+            </button>
+          </div>
+        </div>
+        {allTags.length > 0 && (
+          <TagFilter tags={allTags} selected={tagFilter} onChange={setTagFilter} />
+        )}
       </div>
 
       <section className="mt-6">
@@ -227,9 +389,11 @@ export function Board({
                 index={i}
                 isAdmin={isAdmin}
                 adminToken={adminToken}
+                scrapped={scrappedIds.has(p.id)}
                 onSelect={setSelected}
                 onEdit={setEditing}
                 onDeleted={applyLocalDelete}
+                onToggleScrap={toggleScrap}
               />
             ))}
           </div>
@@ -257,8 +421,16 @@ export function Board({
       <PlaceDetail
         place={selected}
         isAdmin={isAdmin}
+        likeCount={selected ? likes[selected.id] ?? 0 : 0}
+        liked={selected ? likedSet.has(selected.id) : false}
+        scrapped={selected ? scrappedIds.has(selected.id) : false}
+        comments={selected ? comments[selected.id] ?? [] : []}
         onClose={() => setSelected(null)}
         onEdit={(p) => setEditing(p)}
+        onToggleLike={toggleLike}
+        onToggleScrap={toggleScrap}
+        onAddComment={addComment}
+        onRemoveComment={removeComment}
       />
       <EditPlaceDialog
         place={editing}
