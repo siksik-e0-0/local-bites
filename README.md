@@ -2,6 +2,8 @@
 
 가족여행 맛집 후보를 한 화면에서 함께 정하는 보드. Naver 지도 단축 링크를 추가하면 카드로 자동 표시됩니다. 현재 20건 운영 중.
 
+→ **[sik-dorak.vercel.app](https://sik-dorak.vercel.app)**
+
 ## 아키텍처
 
 **Dual-source 구조**: Supabase를 메인 데이터 레이어로 사용하고, `data/places.json` 은 빌드 캐시/fallback 역할을 합니다.
