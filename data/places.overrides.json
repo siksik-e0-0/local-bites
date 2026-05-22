@@ -52,6 +52,19 @@
         "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA4MDJfOTQg%2FMDAxNzIyNTc0NzE2MDkw.WUJQkgVx_ZMA-gwhnjFo94OodoguO1DyhSrrqtBJXZQg.FSV5ZLCcC_Tkrl77rT5HswtO5BlFA-uvWMRFOzSea2kg.JPEG%2F20240802_132242.jpg.jpg%3Ftype%3Dw1500_60_sharpen"
       ],
       "updatedAt": "2026-05-21T17:14:26.677Z"
+    },
+    "1480142748": {
+      "tags": [],
+      "description": null,
+      "category": "식당",
+      "name": "오선",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230525_121%2F1684968233004M5NQm_JPEG%2FIMG_3956.jpeg"
+      ],
+      "address": "선흘동1길 31 . 1층",
+      "lat": 33.514246,
+      "lng": 126.703688,
+      "updatedAt": "2026-05-22T01:28:28.259Z"
     }
   }
 }
