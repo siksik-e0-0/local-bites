@@ -141,6 +141,9 @@ export function Board({
         address: patch.address !== undefined ? patch.address : p.address,
         lat: patch.lat !== undefined ? patch.lat : p.lat ?? null,
         lng: patch.lng !== undefined ? patch.lng : p.lng ?? null,
+        businessHours:
+          patch.businessHours !== undefined ? patch.businessHours : p.businessHours,
+        menu: patch.menu ?? p.menu,
       };
     };
     setPlaces((prev) => prev.map((p) => (p.id === id ? applyTo(p) : p)));

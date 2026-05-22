@@ -2,8 +2,9 @@
 
 import { Check, Loader2, MapPin, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import type { Category } from "@/lib/types";
+import type { Category, MenuItem } from "@/lib/types";
 import { LocationPicker } from "./location-picker";
+import { MenuEditor } from "./menu-editor";
 
 const CATS: (Category | null)[] = [null, "식당", "카페", "기타"];
 
@@ -27,6 +28,8 @@ interface PreviewData {
   lng: number | null;
   heroImageUrl: string | null;
   description: string;
+  businessHours: string;
+  menu: MenuItem[];
 }
 
 const EMPTY_PREVIEW: PreviewData = {
@@ -37,6 +40,8 @@ const EMPTY_PREVIEW: PreviewData = {
   lng: null,
   heroImageUrl: null,
   description: "",
+  businessHours: "",
+  menu: [],
 };
 
 export function AddDialog({
@@ -120,6 +125,8 @@ export function AddDialog({
         lng: data.lng ?? null,
         heroImageUrl: data.heroImageUrl ?? null,
         description: prev.description,
+        businessHours: prev.businessHours,
+        menu: prev.menu,
       }));
       if (data.category && !cat) setCat(data.category);
       setPreviewStatus({ state: "ready", parserFailed: !!data.parserFailed });
@@ -153,6 +160,12 @@ export function AddDialog({
       if (preview.lng != null) payload.lng = preview.lng;
       const desc = preview.description.trim();
       if (desc) payload.description = desc;
+      const bh = preview.businessHours.trim();
+      if (bh) payload.businessHours = bh;
+      const cleanedMenu = preview.menu
+        .map((m) => ({ ...m, name: m.name.trim(), price: m.price?.trim() || null }))
+        .filter((m) => m.name);
+      if (cleanedMenu.length > 0) payload.menu = cleanedMenu;
 
       const res = await fetch("/api/places/add", {
         method: "POST",
@@ -292,6 +305,31 @@ export function AddDialog({
             <p className="mt-1 text-right text-[10px] text-[var(--muted)]">
               {preview.description.length}/500
             </p>
+          </div>
+
+          <div>
+            <label className="mb-1.5 block text-xs text-[var(--muted)]">영업시간 (선택)</label>
+            <textarea
+              value={preview.businessHours}
+              onChange={(e) => setPreview((p) => ({ ...p, businessHours: e.target.value }))}
+              disabled={saving}
+              rows={2}
+              maxLength={500}
+              placeholder="예) 매일 11:00 - 21:00 / 매주 화 휴무"
+              className="w-full resize-y rounded-lg border bg-[var(--bg)] px-3 py-2 text-sm outline-none focus:border-[var(--fg)]/50 disabled:opacity-60"
+            />
+          </div>
+
+          <div>
+            <div className="mb-1.5 flex items-center justify-between">
+              <label className="block text-xs text-[var(--muted)]">메뉴 (선택)</label>
+              <span className="text-[10px] text-[var(--muted)]">{preview.menu.length}/30</span>
+            </div>
+            <MenuEditor
+              items={preview.menu}
+              onChange={(menu) => setPreview((p) => ({ ...p, menu }))}
+              disabled={saving}
+            />
           </div>
 
           {previewStatus.state === "error" && (
