@@ -145,7 +145,6 @@ export async function POST(req: Request) {
   };
   if ("tags" in sanitized) overrideRow.tags = sanitized.tags;
   if ("description" in sanitized) overrideRow.description = sanitized.description;
-  if ("category" in sanitized) overrideRow.category = sanitized.category;
   if ("name" in sanitized) overrideRow.name = sanitized.name;
   if ("images" in sanitized) overrideRow.images = sanitized.images;
   if ("address" in sanitized) overrideRow.address = sanitized.address;
@@ -160,6 +159,15 @@ export async function POST(req: Request) {
   if (error) {
     console.error("[edit] lb_place_overrides upsert error:", error.message);
     return NextResponse.json({ ok: false, error: "수정 저장 실패" }, { status: 502 });
+  }
+
+  // lb_place_overrides에 category 컬럼이 없으므로 lb_places에 직접 업데이트
+  if ("category" in sanitized && sanitized.category) {
+    const { error: catErr } = await sb
+      .from("lb_places")
+      .update({ category: sanitized.category, updated_at: new Date().toISOString() })
+      .eq("id", id);
+    if (catErr) console.error("[edit] lb_places category update error:", catErr.message);
   }
 
   return NextResponse.json({ ok: true, message: "수정 완료." });
