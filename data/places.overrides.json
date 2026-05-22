@@ -1,12 +1,40 @@
 {
   "version": 1,
   "overrides": {
-    "38014906": {
+    "17030335": {
       "tags": [],
       "description": null,
       "category": "식당",
+      "name": "동복해녀해산물직판장",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231101_59%2F1698806746026sUnYY_JPEG%2FIMG_8577.jpeg"
+      ],
+      "address": "구좌해안로 35",
+      "lat": 33.55613,
+      "lng": 126.71876,
+      "updatedAt": "2026-05-22T01:31:56.629Z"
+    },
+    "36859834": {
+      "tags": [],
+      "description": null,
+      "category": "카페",
+      "name": "델문도",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250722_29%2F1753148469951AypHp_JPEG%2FUntitled-5-01.jpg"
+      ],
+      "address": "제주 제주시 조천읍 조함해안로 519-10",
+      "lat": 33.54371,
+      "lng": 126.668704,
+      "updatedAt": "2026-05-22T01:35:56.073Z"
+    },
+    "38014906": {
+      "tags": [
+        "함덕"
+      ],
+      "description": null,
+      "category": "식당",
       "name": "동복뚝배기 함덕",
-      "updatedAt": "2026-05-21T18:31:04.281Z",
+      "updatedAt": "2026-05-22T01:19:47.126Z",
       "images": [
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250811_159%2F1754897993855Vqy9d_JPEG%2F1.jpg"
       ],
@@ -40,6 +68,34 @@
       "lng": 126.679408,
       "updatedAt": "2026-05-21T18:55:13.765Z"
     },
+    "1271837768": {
+      "tags": [
+        "함덕"
+      ],
+      "description": null,
+      "category": "식당",
+      "name": "좀녀해녀촌",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240621_37%2F1718929923929yy4Tk_JPEG%2F1000020949.jpg"
+      ],
+      "address": "제주 제주시 조천읍 함덕5길 36 1층",
+      "lat": 33.546486,
+      "lng": 126.659489,
+      "updatedAt": "2026-05-22T01:33:39.278Z"
+    },
+    "1300963457": {
+      "tags": [],
+      "description": null,
+      "category": "식당",
+      "name": "아라찐빵",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200714_120%2F1594710093425P2TNf_JPEG%2F8yWy4rtiOZLlfryukQ5F_IJy.jpeg.jpg"
+      ],
+      "address": "남광로4길 19",
+      "lat": 33.491791,
+      "lng": 126.539963,
+      "updatedAt": "2026-05-22T01:34:18.270Z"
+    },
     "1455840441": {
       "tags": [],
       "description": null,
@@ -49,7 +105,77 @@
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20171201_138%2F1512086773534gflQ0_JPEG%2FHjlZynXEFvjUo3hSPYQ45EMF.jpg",
         "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA4MDJfOTQg%2FMDAxNzIyNTc0NzE2MDkw.WUJQkgVx_ZMA-gwhnjFo94OodoguO1DyhSrrqtBJXZQg.FSV5ZLCcC_Tkrl77rT5HswtO5BlFA-uvWMRFOzSea2kg.JPEG%2F20240802_132242.jpg.jpg%3Ftype%3Dw1500_60_sharpen"
       ],
-      "updatedAt": "2026-05-21T17:14:26.677Z"
+      "updatedAt": "2026-05-22T01:29:37.741Z",
+      "address": "남조로 2228",
+      "lat": 33.463956,
+      "lng": 126.66063
+    },
+    "1480142748": {
+      "tags": [],
+      "description": null,
+      "category": "식당",
+      "name": "오선",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230525_121%2F1684968233004M5NQm_JPEG%2FIMG_3956.jpeg"
+      ],
+      "address": "선흘동1길 31 . 1층",
+      "lat": 33.514246,
+      "lng": 126.703688,
+      "updatedAt": "2026-05-22T01:28:28.259Z"
+    },
+    "1680427154": {
+      "tags": [],
+      "description": null,
+      "category": "식당",
+      "name": "친밀 제주",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230420_150%2F16819621668228Ba0p_JPEG%2FEB1B4F69-41E2-4AF8-A825-B4B2EE53DBD8.jpeg"
+      ],
+      "address": "남조로 1781",
+      "lat": 33.426927,
+      "lng": 126.673666,
+      "updatedAt": "2026-05-22T01:30:28.726Z"
+    },
+    "1872411366": {
+      "tags": [],
+      "description": null,
+      "category": "카페",
+      "name": "아침미소목장",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250220_154%2F174001965280939i2y_JPEG%2F%25BE%25C6%25C4%25A7%25B9%25CC%25BC%25D2%25B8%25F1%25C0%25E5_%25C7%25B3%25B0%25E6_24.jpg"
+      ],
+      "address": "첨단동길 160-30 월평동",
+      "lat": 33.453285,
+      "lng": 126.587421,
+      "updatedAt": "2026-05-22T01:31:08.783Z"
+    },
+    "1944183169": {
+      "tags": [
+        "함덕"
+      ],
+      "description": null,
+      "category": "식당",
+      "name": "제주닭집",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201202_200%2F1606874035894MQeN0_JPEG%2FkoYKX7XMt83F8ALITl6sZZvU.jpg"
+      ],
+      "address": "함덕14길 3 버드나무칼국수뒷편",
+      "lat": 33.541042,
+      "lng": 126.667167,
+      "updatedAt": "2026-05-22T01:32:42.119Z"
+    },
+    "pending:FlBcSkhi": {
+      "tags": [],
+      "description": null,
+      "category": "기타",
+      "name": "교래자연휴양림",
+      "images": [
+        "/uploads/pendingFlBcSkhi/1779414028767-ytcf2w.jpg"
+      ],
+      "address": "제주 제주시 조천읍 남조로 2023 교래자연휴양림",
+      "lat": 33.441573,
+      "lng": 126.660541,
+      "updatedAt": "2026-05-22T01:40:33.318Z"
     }
   }
 }
