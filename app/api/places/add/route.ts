@@ -18,6 +18,7 @@ interface AddPayload {
   address?: unknown;
   lat?: unknown;
   lng?: unknown;
+  description?: unknown;
 }
 
 function isValidShortUrl(u: string): boolean {
@@ -35,6 +36,11 @@ function buildOverridePatch(body: AddPayload): Partial<PlaceOverride> | null {
   if (typeof body.address === "string") {
     const a = body.address.trim();
     if (a) patch.address = a.slice(0, 200);
+  }
+
+  if (typeof body.description === "string") {
+    const d = body.description.trim();
+    if (d) patch.description = d.slice(0, 500);
   }
 
   if (body.lat !== undefined && body.lat !== null && body.lat !== "") {
