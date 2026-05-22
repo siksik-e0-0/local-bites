@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T02:38:25.618Z",
+  "generatedAt": "2026-05-22T04:02:18.395Z",
   "places": [
     {
       "id": "1480142748",
@@ -359,6 +359,30 @@
       "lng": 126.5277074,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T02:38:24.164Z",
+      "source": "naver"
+    },
+    {
+      "id": "1043390483",
+      "shortUrl": "https://naver.me/G7V4vggR",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1043390483",
+      "name": "솔브레",
+      "category": "카페",
+      "naverCategory": null,
+      "address": null,
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250904_194%2F1756990432911UHy2M_PNG%2FR_solbre_c.png",
+      "tags": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250904_194%2F1756990432911UHy2M_PNG%2FR_solbre_c.png"
+      ],
+      "menu": [],
+      "lat": null,
+      "lng": null,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T04:02:17.496Z",
       "source": "naver"
     }
   ]

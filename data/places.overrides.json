@@ -119,16 +119,45 @@
     },
     "1480142748": {
       "tags": [],
-      "description": null,
+      "description": "0507-1359-4840",
       "category": "식당",
       "name": "오선",
       "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230525_121%2F1684968233004M5NQm_JPEG%2FIMG_3956.jpeg"
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230525_121%2F1684968233004M5NQm_JPEG%2FIMG_3956.jpeg",
+        "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230525_32%2F1684968550748PhH90_JPEG%2FIMG_3955.jpeg"
       ],
       "address": "선흘동1길 31 . 1층",
       "lat": 33.514246,
       "lng": 126.703688,
-      "updatedAt": "2026-05-22T01:28:28.259Z"
+      "updatedAt": "2026-05-22T04:28:44.318Z",
+      "businessHours": "09:30 - 16:00",
+      "menu": [
+        {
+          "name": "흑돼지간장불고기",
+          "price": "16000",
+          "description": null,
+          "imageUrl": null
+        },
+        {
+          "name": "흑돼지두루치기대표",
+          "price": "16000",
+          "description": null,
+          "imageUrl": null
+        },
+        {
+          "name": "어린이(4세-9세)",
+          "price": "10000",
+          "description": null,
+          "imageUrl": null
+        }
+      ]
+    },
+    "1583780094": {
+      "name": "제주돔베고기집",
+      "lat": 33.4877908,
+      "lng": 126.4782935,
+      "category": "식당",
+      "updatedAt": "2026-05-22T04:03:42.836Z"
     },
     "1635962925": {
       "name": "시소 카이막 애월점",

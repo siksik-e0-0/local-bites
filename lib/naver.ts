@@ -758,6 +758,7 @@ export async function fetchPlace(
     }
   }
 
+  // Last-ditch deep fetch when no home page returned anything usable:
   const hasData = raw.name || raw.address;
   if (!hasData && cached) {
     return { ...cached, source: "cache" };
