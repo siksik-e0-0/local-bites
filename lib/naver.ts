@@ -6,6 +6,12 @@ const UA_POOL = [
   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
 ];
 
+const MOBILE_UA_POOL = [
+  "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1",
+  "Mozilla/5.0 (Linux; Android 14; SM-S921N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Mobile Safari/537.36",
+  "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1",
+];
+
 const SEC_CH_UA_POOL = [
   '"Chromium";v="126", "Not.A/Brand";v="24", "Google Chrome";v="126"',
   '"Chromium";v="125", "Not.A/Brand";v="24", "Google Chrome";v="125"',
@@ -17,12 +23,17 @@ function pickUa(): { ua: string; secChUa: string } {
   return { ua: UA_POOL[i], secChUa: SEC_CH_UA_POOL[i] };
 }
 
+function pickMobileUa(): { ua: string; secChUa: string } {
+  const i = Math.floor(Math.random() * MOBILE_UA_POOL.length);
+  return { ua: MOBILE_UA_POOL[i], secChUa: SEC_CH_UA_POOL[i] };
+}
+
 function sleep(ms: number) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-function browserHeaders(referer?: string): HeadersInit {
-  const { ua, secChUa } = pickUa();
+function browserHeaders(referer?: string, mobile = false): HeadersInit {
+  const { ua, secChUa } = mobile ? pickMobileUa() : pickUa();
   return {
     "User-Agent": ua,
     Accept:
@@ -30,8 +41,8 @@ function browserHeaders(referer?: string): HeadersInit {
     "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
     "Accept-Encoding": "gzip, deflate, br",
     "sec-ch-ua": secChUa,
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": '"Windows"',
+    "sec-ch-ua-mobile": mobile ? "?1" : "?0",
+    "sec-ch-ua-platform": mobile ? '"iOS"' : '"Windows"',
     "sec-fetch-dest": "document",
     "sec-fetch-mode": "navigate",
     "sec-fetch-site": referer ? "same-site" : "none",
@@ -639,9 +650,10 @@ function mergeRaw(...parts: RawPlace[]): RawPlace {
 }
 
 async function fetchHtml(url: string, referer?: string): Promise<string | null> {
+  const isMobile = /^https:\/\/m\./i.test(url);
   try {
     const res = await fetchWithRetry(url, {
-      headers: browserHeaders(referer ?? "https://map.naver.com/"),
+      headers: browserHeaders(referer ?? "https://m.place.naver.com/", isMobile),
     });
     if (res.ok) return await res.text();
   } catch {

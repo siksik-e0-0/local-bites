@@ -63,8 +63,15 @@ export async function POST(req: Request) {
       businessHours: place.businessHours,
       menu: place.menu ?? [],
       parserFailed,
+      debug: {
+        source: place.source,
+        menuCount: (place.menu ?? []).length,
+        hasHours: !!place.businessHours,
+        hasAddress: !!place.address,
+        hasCoords: place.lat != null && place.lng != null,
+      },
     });
-  } catch {
+  } catch (err) {
     return NextResponse.json({
       ok: true,
       placeId,
@@ -78,6 +85,7 @@ export async function POST(req: Request) {
       businessHours: null,
       menu: [],
       parserFailed: true,
+      debug: { error: (err as Error).message },
     });
   }
 }
