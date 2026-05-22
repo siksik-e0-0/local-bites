@@ -1,5 +1,10 @@
 export type Category = "식당" | "카페" | "기타";
 
+export interface MenuItem {
+  name: string;
+  price: string | null;
+}
+
 export interface Place {
   id: string;
   shortUrl: string;
@@ -21,6 +26,7 @@ export interface Place {
   lat?: number | null;
   lng?: number | null;
   schemaVersion?: number;
+  menu?: MenuItem[];
 }
 
 export interface PlacesFile {

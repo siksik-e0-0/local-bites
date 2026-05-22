@@ -21,6 +21,7 @@ interface AddPayload {
   lng?: unknown;
   description?: unknown;
   businessHours?: unknown;
+  phone?: unknown;
 }
 
 function isValidShortUrl(u: string): boolean {
@@ -129,6 +130,7 @@ export async function POST(req: Request) {
     const address = typeof body.address === "string" && body.address.trim() ? body.address.trim().slice(0, 200) : null;
     const description = typeof body.description === "string" && body.description.trim() ? body.description.trim().slice(0, 500) : null;
     const businessHours = typeof body.businessHours === "string" && body.businessHours.trim() ? body.businessHours.trim().slice(0, 500) : null;
+    const phone = typeof body.phone === "string" && body.phone.trim() ? body.phone.trim().slice(0, 30) : null;
 
     const latRaw = typeof body.lat === "string" ? Number(body.lat) : body.lat;
     const lat = typeof latRaw === "number" && Number.isFinite(latRaw) && latRaw >= -90 && latRaw <= 90 ? latRaw : null;
@@ -144,6 +146,7 @@ export async function POST(req: Request) {
         name: name ?? "(이름 없음)",
         category: category ?? "식당",
         address,
+        phone,
         lat,
         lng,
         source: "add",
