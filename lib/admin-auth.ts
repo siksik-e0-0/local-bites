@@ -1,3 +1,5 @@
+import { timingSafeEqual } from "node:crypto";
+
 export function verifyAdminRequest(req: Request): { ok: true } | { ok: false; status: number; error: string } {
   const expected = process.env.ADMIN_PASSWORD;
   if (!expected) {
@@ -8,7 +10,10 @@ export function verifyAdminRequest(req: Request): { ok: true } | { ok: false; st
     };
   }
   const header = req.headers.get("x-admin-token") ?? "";
-  if (header !== expected) {
+  const a = Buffer.from(header);
+  const b = Buffer.from(expected);
+  const match = a.byteLength === b.byteLength && timingSafeEqual(a, b);
+  if (!match) {
     return { ok: false, status: 401, error: "관리자 인증 실패." };
   }
   return { ok: true };

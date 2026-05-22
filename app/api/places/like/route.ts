@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { mutateLike } from "@/lib/github-overrides";
+import { createAdminClient } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -10,14 +10,6 @@ interface Body {
 }
 
 export async function POST(req: Request) {
-  const token = process.env.GITHUB_TOKEN;
-  if (!token) {
-    return NextResponse.json(
-      { ok: false, error: "서버 설정 누락: GITHUB_TOKEN" },
-      { status: 500 },
-    );
-  }
-
   let body: Body;
   try {
     body = (await req.json()) as Body;
@@ -34,9 +26,16 @@ export async function POST(req: Request) {
     );
   }
 
-  const res = await mutateLike(token, id, delta);
-  if (!res.ok) {
-    return NextResponse.json({ ok: false, error: res.error }, { status: 502 });
+  const sb = createAdminClient();
+  const { data, error } = await sb.rpc("lb_toggle_like", {
+    p_place_id: id,
+    p_delta: delta,
+  });
+
+  if (error) {
+    console.error("[like] lb_toggle_like error:", error.message);
+    return NextResponse.json({ ok: false, error: "좋아요 처리 실패" }, { status: 502 });
   }
-  return NextResponse.json({ ok: true, count: res.count });
+
+  return NextResponse.json({ ok: true, count: data as number });
 }

@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { verifyAdminRequest } from "@/lib/admin-auth";
-import { addComment, deleteComment } from "@/lib/github-overrides";
-import type { PlaceComment } from "@/lib/types";
+import { createAdminClient } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -18,14 +17,6 @@ interface DelBody {
 }
 
 export async function POST(req: Request) {
-  const token = process.env.GITHUB_TOKEN;
-  if (!token) {
-    return NextResponse.json(
-      { ok: false, error: "서버 설정 누락: GITHUB_TOKEN" },
-      { status: 500 },
-    );
-  }
-
   let body: AddBody;
   try {
     body = (await req.json()) as AddBody;
@@ -37,6 +28,7 @@ export async function POST(req: Request) {
   const author =
     (typeof body.author === "string" ? body.author.trim() : "").slice(0, 24) || "익명";
   const text = (typeof body.text === "string" ? body.text.trim() : "").slice(0, 500);
+
   if (!id) {
     return NextResponse.json({ ok: false, error: "id 가 필요합니다." }, { status: 400 });
   }
@@ -44,16 +36,25 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "댓글 내용이 비었습니다." }, { status: 400 });
   }
 
-  const comment: PlaceComment = {
-    id: `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`,
-    author,
-    text,
-    createdAt: new Date().toISOString(),
-  };
-  const res = await addComment(token, id, comment);
-  if (!res.ok) {
-    return NextResponse.json({ ok: false, error: res.error }, { status: 502 });
+  const sb = createAdminClient();
+  const { data, error } = await sb
+    .from("lb_place_comments")
+    .insert({ place_id: id, author, body: text })
+    .select("id, author, body, created_at")
+    .single();
+
+  if (error) {
+    console.error("[comment] insert error:", error.message);
+    return NextResponse.json({ ok: false, error: "댓글 저장 실패" }, { status: 502 });
   }
+
+  // Return in the shape the frontend expects
+  const comment = {
+    id: data.id,
+    author: data.author,
+    text: data.body,
+    createdAt: data.created_at,
+  };
   return NextResponse.json({ ok: true, comment });
 }
 
@@ -61,13 +62,6 @@ export async function DELETE(req: Request) {
   const auth = verifyAdminRequest(req);
   if (!auth.ok) {
     return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
-  }
-  const token = process.env.GITHUB_TOKEN;
-  if (!token) {
-    return NextResponse.json(
-      { ok: false, error: "서버 설정 누락: GITHUB_TOKEN" },
-      { status: 500 },
-    );
   }
 
   let body: DelBody;
@@ -86,9 +80,17 @@ export async function DELETE(req: Request) {
     );
   }
 
-  const res = await deleteComment(token, id, commentId);
-  if (!res.ok) {
-    return NextResponse.json({ ok: false, error: res.error }, { status: 502 });
+  const sb = createAdminClient();
+  const { count, error } = await sb
+    .from("lb_place_comments")
+    .delete({ count: "exact" })
+    .eq("id", commentId)
+    .eq("place_id", id);
+
+  if (error) {
+    console.error("[comment] delete error:", error.message);
+    return NextResponse.json({ ok: false, error: "댓글 삭제 실패" }, { status: 502 });
   }
-  return NextResponse.json({ ok: true, removed: res.removed });
+
+  return NextResponse.json({ ok: true, removed: (count ?? 0) > 0 });
 }

@@ -172,10 +172,12 @@ export function deriveTags(address: string | null | undefined): string[] {
 }
 
 function extractApolloState(html: string): unknown | null {
+  // Naver HTML format: __APOLLO_STATE__ = {...}};  (</script> NOT immediately after)
+  // Regex must NOT require </script> — just find the assignment ending in };
   const markers = [
-    /window\.__APOLLO_STATE__\s*=\s*(\{[\s\S]*?\});\s*<\/script>/,
-    /__APOLLO_STATE__\s*=\s*(\{[\s\S]*?\});\s*<\/script>/,
-    /window\.__PRELOADED_STATE__\s*=\s*(\{[\s\S]*?\});\s*<\/script>/,
+    /window\.__APOLLO_STATE__\s*=\s*(\{[\s\S]*?\});/,
+    /__APOLLO_STATE__\s*=\s*(\{[\s\S]*?\});/,
+    /window\.__PRELOADED_STATE__\s*=\s*(\{[\s\S]*?\});/,
   ];
   for (const re of markers) {
     const m = html.match(re);

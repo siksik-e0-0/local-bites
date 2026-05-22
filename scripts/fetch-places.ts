@@ -16,6 +16,29 @@ import path from "node:path";
 import { fetchPlace, parseShareLink, sleep } from "../lib/naver";
 import type { Place, PlacesFile } from "../lib/types";
 
+async function supabaseUpsert(
+  url: string,
+  key: string,
+  table: string,
+  rows: unknown[],
+): Promise<void> {
+  if (!rows.length) return;
+  const res = await fetch(`${url}/rest/v1/${table}`, {
+    method: "POST",
+    headers: {
+      apikey: key,
+      Authorization: `Bearer ${key}`,
+      "Content-Type": "application/json",
+      Prefer: "resolution=merge-duplicates,return=minimal",
+    },
+    body: JSON.stringify(rows),
+  });
+  if (!res.ok) {
+    const txt = await res.text().catch(() => "");
+    console.warn(`[fetch-places] Supabase ${table} upsert 실패 (${res.status}): ${txt.slice(0, 200)}`);
+  }
+}
+
 const ROOT = path.resolve(__dirname, "..");
 const SHARE_LINK_PATH = path.join(ROOT, "share_link");
 const DATA_DIR = path.join(ROOT, "data");
@@ -157,6 +180,40 @@ async function main() {
     places: results,
   };
   await writeFile(PLACES_PATH, JSON.stringify(out, null, 2), "utf8");
+
+  // Supabase UPSERT — sync fetched places to lb_places
+  const sbUrl = process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const sbKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (sbUrl && sbKey) {
+    const placeRows = results
+      .filter((p) => !/^pending:/.test(p.id))
+      .map((p) => ({
+        id: p.id,
+        short_url: p.shortUrl,
+        naver_map_url: p.naverMapUrl,
+        name: p.name,
+        category: p.category,
+        naver_category: p.naverCategory ?? null,
+        address: p.address ?? null,
+        phone: p.phone ?? null,
+        business_hours: p.businessHours ?? null,
+        rating: p.rating ?? null,
+        review_count: p.reviewCount ?? null,
+        hero_image_url: p.heroImageUrl ?? null,
+        tags: p.tags ?? [],
+        images: p.images ?? [],
+        lat: p.lat ?? null,
+        lng: p.lng ?? null,
+        schema_version: p.schemaVersion ?? 2,
+        fetched_at: p.fetchedAt,
+        source: p.source,
+        updated_at: new Date().toISOString(),
+      }));
+    await supabaseUpsert(sbUrl, sbKey, "lb_places", placeRows);
+    console.log(`[fetch-places] Supabase lb_places UPSERT — ${placeRows.length}건`);
+  } else {
+    console.log("[fetch-places] SUPABASE_URL/SUPABASE_SERVICE_ROLE_KEY 미설정, Supabase 업데이트 생략");
+  }
 
   console.log(
     `[fetch-places] 완료 — fresh: ${fresh}, cache: ${fromCache}, failed: ${failed}, total: ${results.length}`,

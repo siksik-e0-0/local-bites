@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { verifyAdminRequest } from "@/lib/admin-auth";
-import { mutateOverrides } from "@/lib/github-overrides";
-import type { Category, PlaceEditPayload, PlaceOverride } from "@/lib/types";
+import { createAdminClient } from "@/lib/supabase";
+import type { Category, PlaceEditPayload } from "@/lib/types";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -58,7 +58,7 @@ function sanitizePatch(raw: unknown): PlaceEditPayload | { error: string } {
     const urls = obj.images
       .filter((u): u is string => typeof u === "string")
       .map((u) => u.trim())
-      .filter((u) => /^(https?:\/\/|\/uploads\/)/i.test(u))
+      .filter((u) => /^(https?:\/\/|\/uploads\/)/i.test(u) && u.length <= 2048)
       .slice(0, 12);
     out.images = Array.from(new Set(urls));
   }
@@ -119,14 +119,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
   }
 
-  const token = process.env.GITHUB_TOKEN;
-  if (!token) {
-    return NextResponse.json(
-      { ok: false, error: "서버 설정 누락: GITHUB_TOKEN 환경 변수가 설정되지 않았습니다." },
-      { status: 500 },
-    );
-  }
-
   let body: EditBody;
   try {
     body = (await req.json()) as EditBody;
@@ -144,11 +136,31 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: sanitized.error }, { status: 400 });
   }
 
-  const patch: Partial<PlaceOverride> = { ...sanitized };
-  const result = await mutateOverrides(token, id, patch, `chore(overrides): edit ${id}`);
-  if (!result.ok) {
-    return NextResponse.json({ ok: false, error: result.error }, { status: 502 });
+  const sb = createAdminClient();
+
+  // Map camelCase to snake_case for Supabase columns
+  const overrideRow: Record<string, unknown> = {
+    place_id: id,
+    updated_at: new Date().toISOString(),
+  };
+  if ("tags" in sanitized) overrideRow.tags = sanitized.tags;
+  if ("description" in sanitized) overrideRow.description = sanitized.description;
+  if ("category" in sanitized) overrideRow.category = sanitized.category;
+  if ("name" in sanitized) overrideRow.name = sanitized.name;
+  if ("images" in sanitized) overrideRow.images = sanitized.images;
+  if ("address" in sanitized) overrideRow.address = sanitized.address;
+  if ("lat" in sanitized) overrideRow.lat = sanitized.lat;
+  if ("lng" in sanitized) overrideRow.lng = sanitized.lng;
+  if ("businessHours" in sanitized) overrideRow.business_hours = sanitized.businessHours;
+
+  const { error } = await sb
+    .from("lb_place_overrides")
+    .upsert(overrideRow, { onConflict: "place_id" });
+
+  if (error) {
+    console.error("[edit] lb_place_overrides upsert error:", error.message);
+    return NextResponse.json({ ok: false, error: "수정 저장 실패" }, { status: 502 });
   }
 
-  return NextResponse.json({ ok: true, message: "수정 완료. 잠시 후 새 빌드가 반영됩니다." });
+  return NextResponse.json({ ok: true, message: "수정 완료." });
 }
