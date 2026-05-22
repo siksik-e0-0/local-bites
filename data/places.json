@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T22:36:27.095Z",
+  "generatedAt": "2026-05-22T22:37:18.336Z",
   "places": [
     {
       "id": "1480142748",
@@ -1425,6 +1425,46 @@
       "lng": 126.2898551,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T22:36:25.865Z",
+      "source": "naver"
+    },
+    {
+      "id": "11621150",
+      "shortUrl": "https://naver.me/5ajsKlPi",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/11621150",
+      "name": "국립제주박물관",
+      "category": "기타",
+      "naverCategory": "박물관",
+      "address": "제주 제주시 일주동로 17 국립제주박물관",
+      "phone": "064-720-8000",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230321_77%2F1679358194881cnQu7_JPEG%2F%25C5%25A9%25B1%25E2%25BA%25AF%25C8%25AFDSC09448.JPG",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230321_77%2F1679358194881cnQu7_JPEG%2F%25C5%25A9%25B1%25E2%25BA%25AF%25C8%25AFDSC09448.JPG",
+        "https://ldb-phinf.pstatic.net/20230321_77/1679358194881cnQu7_JPEG/%C5%A9%B1%E2%BA%AF%C8%AFDSC09448.JPG",
+        "https://ldb-phinf.pstatic.net/20230321_99/1679358195165sd80o_JPEG/%C5%A9%B1%E2%BA%AF%C8%AFDSC09496.JPG",
+        "https://ldb-phinf.pstatic.net/20150831_102/1441006900811uOBBM_JPEG/11621150_0.jpg",
+        "https://ldb-phinf.pstatic.net/20230321_67/1679358195792nhU02_JPEG/%C5%A9%B1%E2%BA%AF%C8%AFDSC09577.JPG",
+        "https://ldb-phinf.pstatic.net/20230321_173/1679358194666HkN4w_JPEG/%C5%A9%B1%E2%BA%AF%C8%AFDSC00008.JPG",
+        "https://ldb-phinf.pstatic.net/20230321_23/1679358194727RBigx_JPEG/%C5%A9%B1%E2%BA%AF%C8%AFDSC00023.JPG",
+        "https://ldb-phinf.pstatic.net/20230321_41/1679358194631HMTG9_JPEG/%C5%A9%B1%E2%BA%AF%C8%AFDSC00119.JPG",
+        "https://ldb-phinf.pstatic.net/20230321_1/1679358194471cniGo_JPEG/%C5%A9%B1%E2%BA%AF%C8%AFDSC00205.JPG",
+        "https://ldb-phinf.pstatic.net/20230321_227/1679358194337DmeRu_JPEG/%C5%A9%B1%E2%BA%AF%C8%AFDSC00237.JPG"
+      ],
+      "menu": [
+        {
+          "name": "관람료",
+          "price": "0"
+        }
+      ],
+      "lat": 33.5134249,
+      "lng": 126.5488629,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T22:37:16.913Z",
       "source": "naver"
     }
   ]
