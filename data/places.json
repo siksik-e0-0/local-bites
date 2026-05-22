@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T22:38:12.337Z",
+  "generatedAt": "2026-05-22T22:39:06.107Z",
   "places": [
     {
       "id": "1480142748",
@@ -1525,6 +1525,82 @@
       "lng": 126.8633983,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T22:38:11.004Z",
+      "source": "naver"
+    },
+    {
+      "id": "1669734880",
+      "shortUrl": "https://naver.me/5AugQC6A",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1669734880",
+      "name": "아르떼뮤지엄 제주",
+      "category": "기타",
+      "naverCategory": "미술관",
+      "address": "제주 제주시 애월읍 어림비로 478",
+      "phone": "1899-5008",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260214_18%2F1771047914472YP45O_JPEG%2F7R506355_4k.jpg",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260214_18%2F1771047914472YP45O_JPEG%2F7R506355_4k.jpg",
+        "https://ldb-phinf.pstatic.net/20260214_18/1771047914472YP45O_JPEG/7R506355_4k.jpg",
+        "https://ldb-phinf.pstatic.net/20260214_27/17710478909111FFAp_JPEG/7R505460_4k.jpg",
+        "https://ldb-phinf.pstatic.net/20260213_34/17709652018399kwko_PNG/002.png",
+        "https://ldb-phinf.pstatic.net/20230818_153/16923241905369GEE4_JPEG/230818_3.jpg",
+        "https://ldb-phinf.pstatic.net/20240502_111/1714640360454v3D1D_JPEG/ID_A2483_c2s_re.jpg",
+        "https://ldb-phinf.pstatic.net/20201203_206/1606960877824kbU7j_JPEG/05_STAR_1.jpg",
+        "https://ldb-phinf.pstatic.net/20250630_243/1751250504537aRjuO_JPEG/%C7%CE%C5%A9%BD%C3%C1%F0-1.jpg",
+        "https://ldb-phinf.pstatic.net/20250507_117/1746606337305V0DoC_JPEG/flower_%C0%AF%C3%A44.jpg",
+        "https://ldb-phinf.pstatic.net/20240502_67/1714640360768hLldc_JPEG/22%27arteMIV%B0%AD%B8%AAII07ST_017-SP_%28flower%2Cwide%2C%C3%D6%C8%AB%B1%E2%C0%FC%BC%D2%C1%A4%29_%BE%C6%B8%A3%B6%BC%B9%C2%C1%F6%BE%F6%2C%B0%AD%B8%AA_1r_re.jpg"
+      ],
+      "menu": [
+        {
+          "name": "입장권 성인(1963~2007년생)",
+          "price": "18000"
+        },
+        {
+          "name": "입장권 청소년(2008~2013년생)",
+          "price": "14000"
+        },
+        {
+          "name": "입장권 어린이(2014~2020년생)",
+          "price": "11000"
+        },
+        {
+          "name": "입장권 유아(2020~2022년생)",
+          "price": "8000"
+        },
+        {
+          "name": "입장권 경로(1962년 이전 출생)",
+          "price": "10000"
+        },
+        {
+          "name": "입장권 장애인, 유공자, 군인",
+          "price": "10000"
+        },
+        {
+          "name": "패키지 성인(1963~2007년생)",
+          "price": "20000"
+        },
+        {
+          "name": "패키지 청소년(2008~2013년생)",
+          "price": "16000"
+        },
+        {
+          "name": "패키지 어린이(2014~2019년생)",
+          "price": "13000"
+        },
+        {
+          "name": "패키지 유아(2020~2022년생)",
+          "price": "10000"
+        }
+      ],
+      "lat": 33.3967678,
+      "lng": 126.345047,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-22T22:39:04.898Z",
       "source": "naver"
     }
   ]
