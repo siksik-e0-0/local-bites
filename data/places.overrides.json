@@ -1,4 +1,55 @@
 {
   "version": 1,
-  "overrides": {}
+  "overrides": {
+    "38014906": {
+      "tags": [],
+      "description": null,
+      "category": "식당",
+      "name": "동복뚝배기 함덕",
+      "updatedAt": "2026-05-21T18:31:04.281Z",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250811_159%2F1754897993855Vqy9d_JPEG%2F1.jpg"
+      ],
+      "address": "제주 제주시 구좌읍 동복로 30-2 1층",
+      "lat": 33.553267,
+      "lng": 126.709285
+    },
+    "68336236": {
+      "tags": [],
+      "description": null,
+      "category": "식당",
+      "name": "형돈",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240722_179%2F1721622224623hDr41_JPEG%2FKakaoTalk_20240719_233607103_02.jpg"
+      ],
+      "address": "제주특별자치도 제주시 구남로 22",
+      "lat": 33.489358,
+      "lng": 126.532932,
+      "updatedAt": "2026-05-21T17:57:40.681Z"
+    },
+    "1066096453": {
+      "tags": [],
+      "description": null,
+      "category": "식당",
+      "name": "우동카덴",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMDZfMTI3%2FMDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504%2FIMG_3080.jpg%233024x4032"
+      ],
+      "address": "제주 제주시 조천읍 교래3길 23",
+      "lat": 33.435874,
+      "lng": 126.679408,
+      "updatedAt": "2026-05-21T18:55:13.765Z"
+    },
+    "1455840441": {
+      "tags": [],
+      "description": null,
+      "category": "식당",
+      "name": "와흘밥상",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20171201_138%2F1512086773534gflQ0_JPEG%2FHjlZynXEFvjUo3hSPYQ45EMF.jpg",
+        "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA4MDJfOTQg%2FMDAxNzIyNTc0NzE2MDkw.WUJQkgVx_ZMA-gwhnjFo94OodoguO1DyhSrrqtBJXZQg.FSV5ZLCcC_Tkrl77rT5HswtO5BlFA-uvWMRFOzSea2kg.JPEG%2F20240802_132242.jpg.jpg%3Ftype%3Dw1500_60_sharpen"
+      ],
+      "updatedAt": "2026-05-21T17:14:26.677Z"
+    }
+  }
 }
