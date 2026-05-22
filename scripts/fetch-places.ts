@@ -43,7 +43,6 @@ const ROOT = path.resolve(__dirname, "..");
 const SHARE_LINK_PATH = path.join(ROOT, "share_link");
 const DATA_DIR = path.join(ROOT, "data");
 const PLACES_PATH = path.join(DATA_DIR, "places.json");
-const SEED_PATH = path.join(DATA_DIR, "places.seed.json");
 
 const CACHE_TTL_HOURS = Number(process.env.CACHE_TTL_HOURS ?? "24");
 const MAX_FETCHES = Number(process.env.MAX_FETCHES_PER_BUILD ?? "50");
@@ -229,5 +228,3 @@ main().catch((err) => {
   process.exit(0);
 });
 
-// 알 수 없는 IDE를 위한 SEED_PATH 참조 (linter)
-void SEED_PATH;
