@@ -17,6 +17,20 @@ import { TagFilter } from "./tag-filter";
 
 const NICK_KEY = "lb:nickname";
 const LIKED_KEY = "lb:liked"; // localStorage record of which placeIds this device has liked
+const SESSION_KEY = "lb:session-id";
+
+function readSessionId(): string {
+  if (typeof window === "undefined") return "";
+  try {
+    const existing = window.localStorage.getItem(SESSION_KEY);
+    if (existing) return existing;
+    const id = crypto.randomUUID();
+    window.localStorage.setItem(SESSION_KEY, id);
+    return id;
+  } catch {
+    return "";
+  }
+}
 
 function readLikedSet(): Set<string> {
   if (typeof window === "undefined") return new Set();
@@ -88,6 +102,7 @@ export function Board({
   const [comments, setComments] =
     useState<Record<string, PlaceComment[]>>(initialComments);
   const [scrappedIds, setScrappedIds] = useState<Set<string>>(new Set(initialScraps));
+  const [sessionId, setSessionId] = useState<string>("");
 
   useEffect(() => {
     setPlaces(initialPlaces);
@@ -103,6 +118,7 @@ export function Board({
     }
     setAdminTokenState(getAdminToken());
     setLikedSet(readLikedSet());
+    setSessionId(readSessionId());
   }, []);
 
   function saveNick(v: string) {
@@ -195,7 +211,7 @@ export function Board({
       const res = await fetch("/api/places/scrap", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id: placeId, on: target }),
+        body: JSON.stringify({ id: placeId, on: target, sessionId }),
       });
       const data = (await res.json()) as { ok: boolean; scrappedIds?: string[] };
       if (data.ok && Array.isArray(data.scrappedIds)) {
