@@ -53,29 +53,66 @@ type NaverPoint = object;
 
 const SCRIPT_ID = "lb-naver-maps-script";
 
-type Loaded = "idle" | "loading" | "ready" | "error";
+type Loaded = "idle" | "loading" | "ready" | "auth-error" | "script-error";
 
-function loadNaverScript(clientId: string): Promise<void> {
-  if (typeof window === "undefined") return Promise.reject(new Error("no window"));
-  if (window.naver?.maps) return Promise.resolve();
+const KEY_PARAM_PRIORITY = ["ncpKeyId", "ncpClientId"] as const;
+type KeyParam = (typeof KEY_PARAM_PRIORITY)[number];
 
-  const existing = document.getElementById(SCRIPT_ID) as HTMLScriptElement | null;
-  if (existing) {
-    return new Promise((resolve, reject) => {
-      existing.addEventListener("load", () => resolve(), { once: true });
-      existing.addEventListener("error", () => reject(new Error("script error")), { once: true });
-    });
-  }
-
+function injectScript(clientId: string, param: KeyParam): Promise<void> {
   return new Promise((resolve, reject) => {
     const s = document.createElement("script");
     s.id = SCRIPT_ID;
-    s.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${encodeURIComponent(clientId)}`;
+    s.src = `https://oapi.map.naver.com/openapi/v3/maps.js?${param}=${encodeURIComponent(clientId)}`;
     s.async = true;
     s.onload = () => resolve();
-    s.onerror = () => reject(new Error("Naver Maps 스크립트 로드 실패"));
+    s.onerror = () => reject(new Error("script error"));
     document.head.appendChild(s);
   });
+}
+
+function isAuthFailed(): boolean {
+  if (typeof document === "undefined") return false;
+  const text = document.body?.innerText ?? "";
+  if (/지도 Open API 인증이 실패/i.test(text)) return true;
+  if (/Open API authentication failed/i.test(text)) return true;
+  return false;
+}
+
+async function loadNaverScript(
+  clientId: string,
+  paramOverride?: KeyParam,
+): Promise<{ ok: true } | { ok: false; reason: "auth" | "script" }> {
+  if (typeof window === "undefined") return { ok: false, reason: "script" };
+  if (window.naver?.maps && !isAuthFailed()) return { ok: true };
+
+  const existing = document.getElementById(SCRIPT_ID);
+  if (existing) existing.remove();
+  // Reset window.naver between attempts
+  try {
+    (window as unknown as { naver?: unknown }).naver = undefined;
+  } catch {
+    // ignore
+  }
+
+  const tries: KeyParam[] = paramOverride
+    ? [paramOverride]
+    : [...KEY_PARAM_PRIORITY];
+
+  for (const param of tries) {
+    const stale = document.getElementById(SCRIPT_ID);
+    if (stale) stale.remove();
+    try {
+      await injectScript(clientId, param);
+    } catch {
+      return { ok: false, reason: "script" };
+    }
+    // Wait a tick + ~500ms for naver.maps to attach and any auth fail warning to render.
+    await new Promise((r) => setTimeout(r, 600));
+    if (window.naver?.maps && !isAuthFailed()) {
+      return { ok: true };
+    }
+  }
+  return { ok: false, reason: "auth" };
 }
 
 export function PlaceMap({
@@ -98,13 +135,23 @@ export function PlaceMap({
 
   useEffect(() => {
     if (!clientId) {
-      setLoaded("error");
+      setLoaded("auth-error");
       return;
     }
+    let cancelled = false;
     setLoaded("loading");
-    loadNaverScript(clientId)
-      .then(() => setLoaded("ready"))
-      .catch(() => setLoaded("error"));
+    const paramOverride = process.env.NEXT_PUBLIC_NAVER_MAP_KEY_PARAM as
+      | "ncpKeyId"
+      | "ncpClientId"
+      | undefined;
+    loadNaverScript(clientId, paramOverride).then((res) => {
+      if (cancelled) return;
+      if (res.ok) setLoaded("ready");
+      else setLoaded(res.reason === "auth" ? "auth-error" : "script-error");
+    });
+    return () => {
+      cancelled = true;
+    };
   }, [clientId]);
 
   useEffect(() => {
@@ -169,7 +216,7 @@ export function PlaceMap({
     }
   }, [loaded, withGeo, onSelect]);
 
-  if (loaded === "error" && !clientId) {
+  if (!clientId) {
     return (
       <div className="grid h-[40vh] place-items-center rounded-2xl border bg-[var(--subtle)]/40 p-6 text-center text-sm text-[var(--muted)]">
         <div className="space-y-1.5">
@@ -183,13 +230,29 @@ export function PlaceMap({
     );
   }
 
-  if (loaded === "error") {
+  if (loaded === "auth-error") {
+    return (
+      <div className="grid h-[40vh] place-items-center rounded-2xl border border-amber-400/40 bg-amber-50/60 p-6 text-center text-sm dark:bg-amber-950/30">
+        <div className="space-y-2 text-amber-900 dark:text-amber-200">
+          <MapPin className="mx-auto size-5" strokeWidth={1.5} />
+          <p className="font-medium">네이버 지도 인증 실패</p>
+          <ul className="mx-auto max-w-md list-disc space-y-1 text-left text-xs opacity-90">
+            <li>NAVER Cloud Platform → Maps Application → <b>서비스 URL</b> 에 현재 도메인 등록 (예: <code className="font-mono">http://localhost:3000</code>, <code className="font-mono">https://&lt;your-vercel&gt;.vercel.app</code>)</li>
+            <li>해당 Application 의 <b>Web Dynamic Map</b> 서비스가 활성화되어 있는지 확인</li>
+            <li>키 종류가 신규(<code className="font-mono">ncpKeyId</code>) vs 구버전(<code className="font-mono">ncpClientId</code>) — 환경변수 <code className="font-mono">NEXT_PUBLIC_NAVER_MAP_KEY_PARAM</code> 로 강제 지정 가능 (양쪽 자동 시도 중)</li>
+          </ul>
+        </div>
+      </div>
+    );
+  }
+
+  if (loaded === "script-error") {
     return (
       <div className="grid h-[40vh] place-items-center rounded-2xl border bg-[var(--subtle)]/40 p-6 text-center text-sm text-[var(--muted)]">
         <div className="space-y-1.5">
           <MapPin className="mx-auto size-5" strokeWidth={1.5} />
           <p>지도 스크립트를 불러오지 못했습니다.</p>
-          <p className="text-xs">Naver Maps 도메인 등록 또는 키 유효성을 확인해 주세요.</p>
+          <p className="text-xs">네트워크 또는 차단 정책을 확인해 주세요.</p>
         </div>
       </div>
     );

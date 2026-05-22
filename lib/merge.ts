@@ -20,6 +20,9 @@ export function applyOverrides(places: Place[], file: OverridesFile): Place[] {
       description: ov.description !== undefined ? ov.description : (p.description ?? null),
       images,
       heroImageUrl,
+      address: ov.address !== undefined ? ov.address : p.address,
+      lat: ov.lat !== undefined ? ov.lat : (p.lat ?? null),
+      lng: ov.lng !== undefined ? ov.lng : (p.lng ?? null),
     });
   }
   return out;

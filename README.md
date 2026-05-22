@@ -31,7 +31,8 @@ npm run dev            # http://localhost:3000
 | `GITHUB_REPO_NAME` | `local-bites` | 저장소 이름 |
 | `GITHUB_BRANCH` | `main` | 저장 대상 브랜치 |
 | `ADMIN_PASSWORD` | — | **(필수)** 헤더의 "관리자" 버튼 인증에 사용. 일치 시 카드 편집/삭제 기능 활성화. |
-| `NEXT_PUBLIC_NAVER_MAP_CLIENT_ID` | — | **(필수)** 페이지 하단 지도 렌더링에 사용하는 Naver Maps v3 Client ID. Naver Cloud Platform → Maps → Application 등록 → Web 서비스 URL 에 배포 도메인 등록 후 발급. |
+| `NEXT_PUBLIC_NAVER_MAP_CLIENT_ID` | — | **(필수)** 페이지 하단 지도 렌더링에 사용하는 Naver Maps v3 Client ID. Naver Cloud Platform → Maps → Application 등록 → Web 서비스 URL 에 배포 도메인 (+ 로컬은 `http://localhost:3000`) 등록 후 발급. Application 의 **Web Dynamic Map** 서비스 활성화 필수. |
+| `NEXT_PUBLIC_NAVER_MAP_KEY_PARAM` | (자동) | 지도 스크립트 쿼리 파라미터 이름. 미지정 시 `ncpKeyId` → `ncpClientId` 순으로 자동 시도. 명시적으로 강제하려면 `ncpKeyId` 또는 `ncpClientId`. |
 
 ### Vercel에 GITHUB_TOKEN 설정하기
 

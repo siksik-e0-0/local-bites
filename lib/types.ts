@@ -42,6 +42,9 @@ export interface PlaceOverride {
   category?: Category;
   name?: string;
   images?: string[];
+  address?: string | null;
+  lat?: number | null;
+  lng?: number | null;
   deleted?: boolean;
   updatedAt?: string;
 }
@@ -57,4 +60,7 @@ export interface PlaceEditPayload {
   category?: Category;
   name?: string;
   images?: string[];
+  address?: string | null;
+  lat?: number | null;
+  lng?: number | null;
 }
