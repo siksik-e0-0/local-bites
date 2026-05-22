@@ -106,8 +106,10 @@
     "1307448582": {
       "name": "콜린 제주점",
       "category": "카페",
-      "updatedAt": "2026-05-22T05:44:27.385Z",
-      "tags": [],
+      "updatedAt": "2026-05-22T05:45:06.337Z",
+      "tags": [
+        "애월"
+      ],
       "description": null,
       "images": [
         "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231007_163%2F1696671648430YyuBz_JPEG%2F03.jpg",
