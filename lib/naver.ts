@@ -100,6 +100,8 @@ export function extractPlaceId(url: string): string | null {
     /\/restaurant\/(\d+)/,
     /\/entry\/place\/(\d+)/,
     /[?&]id=(\d+)/,
+    /[?&]pinId=(\d+)/,
+    /[?&]placeId=(\d+)/,
   ];
   for (const p of patterns) {
     const m = url.match(p);
@@ -559,6 +561,18 @@ function fromMeta(html: string): RawPlace {
   };
 }
 
+function titleFromUrl(url: string): string | null {
+  try {
+    const u = new URL(url);
+    const t = u.searchParams.get("title");
+    if (!t) return null;
+    const decoded = decodeURIComponent(t).trim();
+    return decoded.length > 0 && decoded.length <= 100 ? decoded : null;
+  } catch {
+    return null;
+  }
+}
+
 function coordsFromUrl(url: string): { lat: number | null; lng: number | null } {
   try {
     const u = new URL(url);
@@ -779,7 +793,7 @@ export async function fetchPlace(
     id: placeId,
     shortUrl,
     naverMapUrl,
-    name: raw.name ?? cached?.name ?? "(이름 없음)",
+    name: raw.name ?? cached?.name ?? titleFromUrl(finalUrl) ?? "(이름 없음)",
     category,
     naverCategory: raw.category ?? cached?.naverCategory ?? null,
     address: finalAddress,
