@@ -330,38 +330,24 @@ export function PlaceDetail({
 
             {menu.length > 0 && (
               <section>
-                <h3 className="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
+                <h3 className="mb-2 text-xs font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
                   메뉴
                 </h3>
-                <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                <ul className="divide-y rounded-lg border">
                   {menu.slice(0, 18).map((m, i) => (
                     <li
                       key={`${m.name}-${i}`}
-                      className="overflow-hidden rounded-lg border bg-[var(--bg)]"
+                      className="flex items-baseline justify-between gap-3 px-3 py-2"
                     >
-                      {m.imageUrl ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={m.imageUrl}
-                          alt={m.name}
-                          referrerPolicy="no-referrer"
-                          loading="lazy"
-                          className="aspect-square w-full object-cover"
-                        />
-                      ) : (
-                        <div className="grid aspect-square w-full place-items-center bg-[var(--subtle)]">
-                          <UtensilsCrossed
-                            className="size-6 text-[var(--muted)]"
-                            strokeWidth={1.25}
-                          />
-                        </div>
-                      )}
-                      <div className="space-y-0.5 p-2">
-                        <p className="line-clamp-2 text-xs font-medium">{m.name}</p>
-                        {m.price && (
-                          <p className="font-mono text-[11px] text-[var(--muted)]">{m.price}</p>
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium leading-snug">{m.name}</p>
+                        {m.description && (
+                          <p className="mt-0.5 text-[11px] text-[var(--muted)]">{m.description}</p>
                         )}
                       </div>
+                      {m.price && (
+                        <p className="shrink-0 font-mono text-xs text-[var(--muted)]">{m.price}</p>
+                      )}
                     </li>
                   ))}
                 </ul>
