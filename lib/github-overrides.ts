@@ -61,7 +61,8 @@ async function putFile(
   });
   if (!res.ok) {
     const txt = await res.text().catch(() => "");
-    return { ok: false, status: res.status, error: `GitHub PUT ${path} 실패 (${res.status}) ${txt.slice(0, 160)}` };
+    console.error(`[GitHub PUT] ${path} 실패 (${res.status}):`, txt);
+    return { ok: false, status: res.status, error: `파일 저장 실패 (${res.status})` };
   }
   return { ok: true };
 }

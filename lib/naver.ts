@@ -83,9 +83,11 @@ async function fetchWithRetry(
   throw new Error(`fetch failed after ${attempts} attempts: ${url}`);
 }
 
+const MAX_REDIRECT_HOPS = 5;
+
 export async function resolveShortUrl(shortUrl: string): Promise<string> {
   let current = shortUrl;
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < MAX_REDIRECT_HOPS; i++) {
     const res = await fetchWithRetry(current, {
       method: "GET",
       redirect: "manual",
@@ -766,9 +768,11 @@ export async function fetchPlace(
     if (finalLng == null && fromUrl.lng != null) finalLng = fromUrl.lng;
   }
 
-  console.log(
-    `  [${shortUrl}] placeId=${placeId} layer=${layer} images=${mergedImages.length} hours=${finalHours ? "y" : "n"} geo=${finalLat != null && finalLng != null ? "y" : "n"} via=${usedUrl ?? "n/a"}`,
-  );
+  if (process.env.DEBUG === "1") {
+    console.log(
+      `  [${shortUrl}] placeId=${placeId} layer=${layer} images=${mergedImages.length} hours=${finalHours ? "y" : "n"} geo=${finalLat != null && finalLng != null ? "y" : "n"} via=${usedUrl ?? "n/a"}`,
+    );
+  }
 
   return {
     id: placeId,
