@@ -22,6 +22,7 @@ interface AddPayload {
   description?: unknown;
   businessHours?: unknown;
   phone?: unknown;
+  menu?: unknown;
 }
 
 function isValidShortUrl(u: string): boolean {
@@ -131,6 +132,7 @@ export async function POST(req: Request) {
     const description = typeof body.description === "string" && body.description.trim() ? body.description.trim().slice(0, 500) : null;
     const businessHours = typeof body.businessHours === "string" && body.businessHours.trim() ? body.businessHours.trim().slice(0, 500) : null;
     const phone = typeof body.phone === "string" && body.phone.trim() ? body.phone.trim().slice(0, 30) : null;
+    const menu = Array.isArray(body.menu) ? (body.menu as { name: string; price: string | null }[]).slice(0, 10) : null;
 
     const latRaw = typeof body.lat === "string" ? Number(body.lat) : body.lat;
     const lat = typeof latRaw === "number" && Number.isFinite(latRaw) && latRaw >= -90 && latRaw <= 90 ? latRaw : null;
@@ -147,6 +149,7 @@ export async function POST(req: Request) {
         category: category ?? "식당",
         address,
         phone,
+        menu: menu ?? [],
         lat,
         lng,
         source: "add",

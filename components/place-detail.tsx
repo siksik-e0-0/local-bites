@@ -327,6 +327,36 @@ export function PlaceDetail({
               )}
             </dl>
 
+            {place.menu && place.menu.length > 0 && (
+              <div>
+                <p className="mb-2 text-xs font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
+                  대표 메뉴
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {place.menu.slice(0, 5).map((item, i) => (
+                    <span
+                      key={i}
+                      className="inline-flex items-center gap-1 rounded-full border bg-[var(--subtle)] px-2.5 py-0.5 text-xs text-[var(--fg)]/80"
+                    >
+                      {item.name}
+                      {item.price && (
+                        <span className="text-[var(--muted)]">
+                          {isNaN(Number(item.price))
+                            ? item.price
+                            : `${Number(item.price).toLocaleString()}원`}
+                        </span>
+                      )}
+                    </span>
+                  ))}
+                  {place.menu.length > 5 && (
+                    <span className="inline-flex items-center rounded-full border bg-[var(--subtle)] px-2.5 py-0.5 text-xs text-[var(--muted)]">
+                      +{place.menu.length - 5}개
+                    </span>
+                  )}
+                </div>
+              </div>
+            )}
+
             <section className="border-t pt-5">
               <div className="mb-3 flex items-center justify-between">
                 <h3 className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
