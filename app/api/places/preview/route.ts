@@ -60,6 +60,8 @@ export async function POST(req: Request) {
       lat: place.lat ?? null,
       lng: place.lng ?? null,
       heroImageUrl: place.heroImageUrl,
+      businessHours: place.businessHours,
+      menu: place.menu ?? [],
       parserFailed,
     });
   } catch {
@@ -73,6 +75,8 @@ export async function POST(req: Request) {
       lat: null,
       lng: null,
       heroImageUrl: null,
+      businessHours: null,
+      menu: [],
       parserFailed: true,
     });
   }
