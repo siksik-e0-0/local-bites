@@ -26,6 +26,7 @@ function rowToPlace(row: Record<string, unknown>): Place {
     fetchedAt: (row.fetched_at as string) ?? new Date().toISOString(),
     source: (["naver","cache","seed"].includes(row.source as string) ? row.source : "naver") as "naver" | "cache" | "seed",
     description: (row.description as string | null) ?? null,
+    menu: Array.isArray(row.menu) ? row.menu as import("@/lib/types").MenuItem[] : undefined,
   };
 }
 

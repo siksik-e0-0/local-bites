@@ -212,6 +212,7 @@ export function AddDialog({
       if (bh) payload.businessHours = bh;
       const ph = preview.phone.trim();
       if (ph) payload.phone = ph;
+      if (preview.menu.length > 0) payload.menu = preview.menu;
 
       const res = await fetch("/api/places/add", {
         method: "POST",

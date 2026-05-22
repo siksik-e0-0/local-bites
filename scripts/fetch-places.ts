@@ -201,6 +201,7 @@ async function main() {
         hero_image_url: p.heroImageUrl ?? null,
         tags: p.tags ?? [],
         images: p.images ?? [],
+        menu: p.menu && p.menu.length > 0 ? p.menu : [],
         lat: p.lat ?? null,
         lng: p.lng ?? null,
         schema_version: p.schemaVersion ?? 2,
