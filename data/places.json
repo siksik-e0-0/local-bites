@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T07:18:30.778Z",
+  "generatedAt": "2026-05-22T07:39:32.092Z",
   "places": [
     {
       "id": "1480142748",
@@ -7,22 +7,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1480142748",
       "name": "오선",
       "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "한식",
+      "address": "제주 제주시 조천읍 선흘동1길 31 . 1층",
+      "phone": "0507-1359-4840",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230525_121%2F1684968233004M5NQm_JPEG%2FIMG_3956.jpeg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230525_121%2F1684968233004M5NQm_JPEG%2FIMG_3956.jpeg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230525_121%2F1684968233004M5NQm_JPEG%2FIMG_3956.jpeg",
+        "https://ldb-phinf.pstatic.net/20230525_13/1684968350532XnWPR_JPEG/IMG_3955.jpeg",
+        "https://ldb-phinf.pstatic.net/20230525_115/1684968324585X2AR7_JPEG/IMG_3956.jpeg",
+        "https://ldb-phinf.pstatic.net/20230525_32/1684968550748PhH90_JPEG/IMG_3955.jpeg",
+        "https://ldb-phinf.pstatic.net/20230525_89/1684968540210lTkOw_JPEG/IMG_3956.jpeg",
+        "https://ldb-phinf.pstatic.net/20250222_240/1740233593987ACwof_JPEG/IMG_6151.jpeg",
+        "https://ldb-phinf.pstatic.net/20250222_177/174023389190720qs1_JPEG/IMG_6154.jpeg",
+        "https://ldb-phinf.pstatic.net/20251225_162/1766666291545mth9z_PNG/IMG_6884.png",
+        "https://ldb-phinf.pstatic.net/20230525_121/1684968233004M5NQm_JPEG/IMG_3956.jpeg",
+        "https://ldb-phinf.pstatic.net/20230525_217/16849682329177Dgon_JPEG/IMG_3955.jpeg"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:31.201Z",
+      "fetchedAt": "2026-05-22T07:38:40.915Z",
       "source": "naver"
     },
     {
@@ -31,22 +41,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/38014906",
       "name": "동복뚝배기 함덕",
       "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "향토음식",
+      "address": "제주 제주시 구좌읍 동복로 30-2 1층",
+      "phone": "064-782-7200",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250811_159%2F1754897993855Vqy9d_JPEG%2F1.jpg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250811_159%2F1754897993855Vqy9d_JPEG%2F1.jpg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250811_159%2F1754897993855Vqy9d_JPEG%2F1.jpg",
+        "https://ldb-phinf.pstatic.net/20250811_200/17548968807132j62n_JPEG/%B0%A5%C4%A1%C1%B6%B8%B2_1%C0%CE.jpg",
+        "https://ldb-phinf.pstatic.net/20250811_220/1754897116072dKp5P_JPEG/%B5%BF%BA%B9%B6%D2%B9%E8%B1%E2_%B8%DE%C0%CE1.jpg",
+        "https://ldb-phinf.pstatic.net/20250808_132/1754647877172IVVw1_JPEG/KakaoTalk_20250808_180009150.jpg",
+        "https://ldb-phinf.pstatic.net/20250811_19/17548970193775yXF6_JPEG/%B8%F0%B5%EB%B9%B0%C8%B8_.jpg",
+        "https://ldb-phinf.pstatic.net/20250811_217/1754897209632DNHGY_JPEG/%B0%A5%C4%A1%B9%B0%C8%B8_.jpg",
+        "https://ldb-phinf.pstatic.net/20250808_300/17546477462480I3b0_JPEG/KakaoTalk_20250808_180009150_01.jpg",
+        "https://ldb-phinf.pstatic.net/20250811_87/1754897376483ku29f_JPEG/%B5%BF%BA%B9%B6%D2%B9%E8%B1%E2_%B8%DE%C0%CE1.jpg",
+        "https://ldb-phinf.pstatic.net/20231029_136/1698563440620i7Kib_JPEG/%B6%D2-%C7%D8%B9%B0.jpg",
+        "https://ldb-phinf.pstatic.net/20231029_178/1698563454231iEuFN_JPEG/%BC%BA%B0%D4.jpg"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:32.970Z",
+      "fetchedAt": "2026-05-22T07:38:43.524Z",
       "source": "naver"
     },
     {
@@ -55,22 +75,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1455840441",
       "name": "와흘밥상",
       "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "한식",
+      "address": "제주 제주시 조천읍 남조로 2228",
+      "phone": "070-7724-1113",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20171201_138%2F1512086773534gflQ0_JPEG%2FHjlZynXEFvjUo3hSPYQ45EMF.jpg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20171201_138%2F1512086773534gflQ0_JPEG%2FHjlZynXEFvjUo3hSPYQ45EMF.jpg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20171201_138%2F1512086773534gflQ0_JPEG%2FHjlZynXEFvjUo3hSPYQ45EMF.jpg",
+        "https://ldb-phinf.pstatic.net/20190920_168/1568962941699aGVWw_JPEG/ec0iOfKJ4lLZvjkaPyGh-Ql-.JPG.jpg",
+        "https://ldb-phinf.pstatic.net/20190920_66/1568963535370F0V0x_JPEG/ndvAmupdovMGSqU1GPom5cK4.JPG.jpg",
+        "https://ldb-phinf.pstatic.net/20190920_131/1568962992486K7gjj_JPEG/6zGqnzNq5jFXu5m96cfAMeOG.JPG.jpg",
+        "https://ldb-phinf.pstatic.net/20250605_299/1749090598638xTNV3_JPEG/IMG_2225.jpeg",
+        "https://ldb-phinf.pstatic.net/20250605_159/1749090563778bHksG_JPEG/IMG_2207.jpeg",
+        "https://ldb-phinf.pstatic.net/20190920_67/1568963018860zfVM1_JPEG/MZelJxFiigzV5V72rIpb3vkV.JPG.jpg",
+        "https://ldb-phinf.pstatic.net/20190920_190/1568963344647NM9qY_JPEG/SYeo6fnFhctESLp4ssrUDhoA.JPG.jpg",
+        "https://ldb-phinf.pstatic.net/20190920_207/1568963461318a1a1R_JPEG/Wxsft7c6kdby-mxIx9rn9o7p.JPG.jpg",
+        "https://ldb-phinf.pstatic.net/20171201_138/1512086773534gflQ0_JPEG/HjlZynXEFvjUo3hSPYQ45EMF.jpg"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:34.157Z",
+      "fetchedAt": "2026-05-22T07:38:46.295Z",
       "source": "naver"
     },
     {
@@ -79,22 +109,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/68336236",
       "name": "형돈",
       "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "한식",
+      "address": "제주 제주시 구남로 22",
+      "phone": "0507-1406-2073",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240722_179%2F1721622224623hDr41_JPEG%2FKakaoTalk_20240719_233607103_02.jpg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240722_179%2F1721622224623hDr41_JPEG%2FKakaoTalk_20240719_233607103_02.jpg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240722_179%2F1721622224623hDr41_JPEG%2FKakaoTalk_20240719_233607103_02.jpg",
+        "https://ldb-phinf.pstatic.net/20251121_287/1763708425718zSNdn_PNG/%C7%FC%B5%B7.png",
+        "https://ldb-phinf.pstatic.net/20251121_125/1763709719621oVXlW_PNG/%C7%FC%B5%B7.png",
+        "https://ldb-phinf.pstatic.net/20240722_179/1721622224623hDr41_JPEG/KakaoTalk_20240719_233607103_02.jpg",
+        "https://ldb-phinf.pstatic.net/20240722_20/1721622184518pSoHn_JPEG/KakaoTalk_20240719_233611893_02.jpg",
+        "https://ldb-phinf.pstatic.net/20240722_208/1721622300801aIObH_JPEG/KakaoTalk_20240720_171835705.jpg",
+        "https://ldb-phinf.pstatic.net/20240717_192/1721179553319szhUY_JPEG/1000011533.jpg",
+        "https://ldb-phinf.pstatic.net/20240717_106/1721179648927SauV5_JPEG/1000007980.jpg",
+        "https://ldb-phinf.pstatic.net/20240717_237/1721179553840H2HAB_JPEG/1000011523.jpg",
+        "https://ldb-phinf.pstatic.net/20240717_172/1721179547335a7R8E_JPEG/1000011566.jpg"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:35.384Z",
+      "fetchedAt": "2026-05-22T07:38:48.882Z",
       "source": "naver"
     },
     {
@@ -103,22 +143,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1066096453",
       "name": "우동카덴",
       "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "일식당",
+      "address": "제주 제주시 조천읍 교래3길 23",
+      "phone": "0507-1346-6263",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMDZfMTI3%2FMDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504%2FIMG_3080.jpg%233024x4032",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMDZfMTI3%2FMDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504%2FIMG_3080.jpg%233024x4032"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=95&amp;type=f640_380&amp;src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMDZfMTI3%2FMDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504%2FIMG_3080.jpg%233024x4032",
+        "https://ldb-phinf.pstatic.net/20210929_66/1632876683653pnxWq_JPEG/YbcNib3p7UZbC0C0fKXD9V8N.jpg",
+        "http://blogfiles.naver.net/MjAyMzEyMDZfMTI3/MDAxNzAxODYyMzI2ODAz.TISaoWvg4S-a22TpCela5_SlNynKaWC1RnW62F0fEAog.0MvnS6EYicv3h2or5Semed4OW_i5aOD4Gl3M6CnT9f4g.JPEG.zizo0504/IMG_3080.jpg#3024x4032",
+        "http://blogfiles.naver.net/MjAyMzEyMDZfMjgg/MDAxNzAxODYyMzI2OTU5.D2qMJpwt8ggv48Hs2epWzEpXpZ-yk5ErgO7_uAGyxqwg.JLOLNkTG1JyNTrHgHFs7P_z_-GlGnMPQgQN7LC9SMtAg.JPEG.zizo0504/IMG_3077.jpg#3024x4032",
+        "http://blogfiles.naver.net/MjAyNDAxMjJfMjYz/MDAxNzA1OTEyMTc5Mzk4.d0oSMUroF8r9pmYMDLqXj6VKceN5U4OLKmIzg6LgR5wg.5XDdb4R5iB1-bqluvU0zfo_x_v3HOblYl9Rrip6VzjUg.JPEG.na000117/output_2217676516.jpg#828x828",
+        "http://blogfiles.naver.net/MjAyMzA4MjBfMTUg/MDAxNjkyNTQyMzk2MDE3.RxPbO275zXVoG6wGuE3J7JpnrBEEHy6Oa-6N2AnFuWYg.DeT-pQYjW8aofDvKvxfeKtv_AbA0UVqRrCfPpQkmSKwg.JPEG.01698774078/IMG_8144.JPG#3024x4032",
+        "http://blogfiles.naver.net/MjAyMzA4MDFfMTIw/MDAxNjkwODgwOTUxMDMw.tqdxW1vIvLiqnGkuxe8yQ8g9LimW3pVdXy5OSUkBUPwg.VZ_nWBXvy23EvfQz48N3c_fAWhkXSuyZ6wNagJGy49Qg.JPEG.hoy1980326/output_1973771284.jpg#2048x1365",
+        "https://pup-review-phinf.pstatic.net/MjAyNjA0MTNfMTQ3/MDAxNzc2MDc4MTA2NzI0.CUimwT_KRzUXamP7Avt2xyemFdLkpbFA480XmNRfdq8g.txnvgmG4hhfpLjEX-SpIwwf23Z0IBNUG9OYV1aG975cg.JPEG/1776077921860.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTEwMDVfMjI1/MDAxNzU5NjU0ODUyMzIy.KZn-2sU0eF9W-hdw-0Tv-6WAOIP0NJPq3xLfqpiIicUg.mSiJ1nKzeoVAGrI__Nlzxd2DCC8PrnZ3uLLYVsxo7vIg.JPEG/20251004_122822.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA1MzFfMjI1/MDAxNzQ4Njc0MDU5NTUx.JFVsVZVKVtPwfuOU_rwiHc0jJChwAZkTdT7OR2YsFY8g.WtrK5BQ_eCfMHF03yfzLA-BdZkvN2GTIWVRR6RYfvfEg.JPEG/1000015243.jpg.jpg"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:36.398Z",
+      "fetchedAt": "2026-05-22T07:38:51.851Z",
       "source": "naver"
     },
     {
@@ -127,22 +177,30 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1680427154",
       "name": "친밀 제주",
       "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "양식",
+      "address": "제주 제주시 조천읍 남조로 1781",
+      "phone": "0507-1394-0387",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230420_150%2F16819621668228Ba0p_JPEG%2FEB1B4F69-41E2-4AF8-A825-B4B2EE53DBD8.jpeg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230420_150%2F16819621668228Ba0p_JPEG%2FEB1B4F69-41E2-4AF8-A825-B4B2EE53DBD8.jpeg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230420_150%2F16819621668228Ba0p_JPEG%2FEB1B4F69-41E2-4AF8-A825-B4B2EE53DBD8.jpeg",
+        "https://ldb-phinf.pstatic.net/20230420_150/16819621668228Ba0p_JPEG/EB1B4F69-41E2-4AF8-A825-B4B2EE53DBD8.jpeg",
+        "https://ldb-phinf.pstatic.net/20230420_6/1681962128378QPvEe_JPEG/0B53AD56-CC29-46FD-818B-36C8A25862DC.jpeg",
+        "http://blogfiles.naver.net/MjAyMzA3MDZfMjMx/MDAxNjg4NjU0Mzc4NzM1.K5_C-nIX6z2c_6nQpG1rtEOIm0884Gt-uHl2YiWhkqsg.jNvGG54PnrQgBvqMXuhliBMPeYyuKlwhe3ac3p-x8Osg.JPEG.luisant_bb/output_3360624469.jpg#900x900",
+        "http://blogfiles.naver.net/MjAyMzA3MDRfMTIz/MDAxNjg4NDc4ODI0MTM3.hqDjXxNZJuIwkFNFFzQ1zFJ3AJ4r0wwMKf7U1zk-LScg.vnPv-8LPczuG0XYSFbluuiKZ-gYq4GEPi2a0HfCCAeIg.JPEG.mjay331/batch_IMG_2440.JPG#3024x4032",
+        "http://blogfiles.naver.net/MjAyMzA4MjdfMjg0/MDAxNjkzMTQ1OTY3NzU3.y8is-51BgbBz_bSAI003yTsxlkXtKIsQxtd7cmfwIW8g.CWkBjMDTn80VoADty1iGKYmqQfQHPkeDulKkcZD_ZJIg.JPEG.sunlovely09/20230818_125709.jpg#3668x2751",
+        "http://blogfiles.naver.net/MjAyMzA4MjdfMTA1/MDAxNjkzMTQ1OTY3Nzg2.w7Na85qlkBpNYGJZk1mUDoVgbuZhY-0lFjbXakSd1y4g.oALJdkz9otguTM1WjNsyFX5n0tYkwGuMqcMjRgyHW1Ug.JPEG.sunlovely09/20230818_125718.jpg#4000x3000",
+        "http://blogfiles.naver.net/MjAyMzA1MjJfOSAg/MDAxNjg0Njg2NzY5MDA3.fEgzxk6Az-5BBMsa_OPG3E2E8eD02Aqax3OIuaqnxQgg.uDmAcwiSg8m78NiC4BXEbD-ozxq4SwLCCEeHT5MtkTIg.JPEG.7633974/IMG_2532.jpg#900x900"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:37.741Z",
+      "fetchedAt": "2026-05-22T07:38:55.073Z",
       "source": "naver"
     },
     {
@@ -151,22 +209,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1872411366",
       "name": "아침미소목장",
       "category": "카페",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "카페,디저트",
+      "address": "제주 제주시 첨단동길 160-30 월평동",
+      "phone": "0507-1469-2545",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250220_154%2F174001965280939i2y_JPEG%2F%25BE%25C6%25C4%25A7%25B9%25CC%25BC%25D2%25B8%25F1%25C0%25E5_%25C7%25B3%25B0%25E6_24.jpg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250220_154%2F174001965280939i2y_JPEG%2F%25BE%25C6%25C4%25A7%25B9%25CC%25BC%25D2%25B8%25F1%25C0%25E5_%25C7%25B3%25B0%25E6_24.jpg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250220_154%2F174001965280939i2y_JPEG%2F%25BE%25C6%25C4%25A7%25B9%25CC%25BC%25D2%25B8%25F1%25C0%25E5_%25C7%25B3%25B0%25E6_24.jpg",
+        "https://ldb-phinf.pstatic.net/20260413_44/1776067313270VsCEX_JPEG/%C3%D6%C1%BE%C4%AB%C0%CC%B8%B7_%C6%F7%BD%BA%C5%CD.jpg",
+        "https://ldb-phinf.pstatic.net/20241212_42/1733966735922Ma2GA_PNG/%B9%D0%C5%A9%C6%BC_icehot.png",
+        "https://ldb-phinf.pstatic.net/20260430_150/1777539515392hwP6Q_JPEG/%C5%B0%BF%C0%BD%BA%C5%A9%C1%A4%BB%E7%B0%A2.jpg",
+        "https://ldb-phinf.pstatic.net/20251217_256/1765950932678jQ6BE_PNG/DSC_7938.png",
+        "https://ldb-phinf.pstatic.net/20251217_270/17659509449157xAYS_PNG/DSC_7937.png",
+        "https://ldb-phinf.pstatic.net/20251217_109/17659509498047YiLj_PNG/DSC_7939.png",
+        "https://ldb-phinf.pstatic.net/20250605_278/1749102524455AxS0H_PNG/%BF%EC%C0%AF%BB%F7%B5%E5%28%B4%EB%29_%C7%F6%C0%E5%C7%D2%C0%CE.png",
+        "https://ldb-phinf.pstatic.net/20250605_293/17491025437013QOXw_PNG/%BF%EC%C0%AF%BB%F7%B5%E5%28%BC%D2%29_%C7%F6%C0%E5%C7%D2%C0%CE.png",
+        "https://ldb-phinf.pstatic.net/20250605_50/1749102491652VYdtQ_PNG/%BE%DF%C3%A4%BB%F7%B5%E5%28%B4%EB%29_%C7%F6%C0%E5%C7%D2%C0%CE.png"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:39.026Z",
+      "fetchedAt": "2026-05-22T07:38:57.417Z",
       "source": "naver"
     },
     {
@@ -174,23 +242,33 @@
       "shortUrl": "https://naver.me/xa5R8RKC",
       "naverMapUrl": "https://map.naver.com/p/entry/place/17030335",
       "name": "동복해녀해산물직판장",
-      "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "category": "기타",
+      "naverCategory": "해물,생선요리",
+      "address": "제주 제주시 구좌읍 구좌해안로 35",
+      "phone": "064-783-7447",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231101_59%2F1698806746026sUnYY_JPEG%2FIMG_8577.jpeg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231101_59%2F1698806746026sUnYY_JPEG%2FIMG_8577.jpeg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231101_59%2F1698806746026sUnYY_JPEG%2FIMG_8577.jpeg",
+        "https://ldb-phinf.pstatic.net/20231104_214/1699095274529CJmOU_JPEG/IMG_8617.jpeg",
+        "https://ldb-phinf.pstatic.net/20231104_141/1699072599906OvGgL_JPEG/IMG_8610.jpeg",
+        "https://ldb-phinf.pstatic.net/20231103_56/1698993581773mzmrr_JPEG/IMG_8586.jpeg",
+        "https://ldb-phinf.pstatic.net/20231103_190/16989935917638xc5o_JPEG/IMG_8600.jpeg",
+        "https://ldb-phinf.pstatic.net/20231104_32/1699072585512VS0DC_JPEG/IMG_8613.jpeg",
+        "https://ldb-phinf.pstatic.net/20231103_174/1698993600471vT65c_JPEG/IMG_8603.jpeg",
+        "https://ldb-phinf.pstatic.net/20231103_242/1698993612887tMTnf_JPEG/IMG_8587.jpeg",
+        "https://ldb-phinf.pstatic.net/20250814_289/1755150465611t8RXV_JPEG/IMG_1799.jpeg",
+        "https://ldb-phinf.pstatic.net/20251113_82/1763010622341JJS9G_JPEG/IMG_1923.jpeg"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:40.842Z",
+      "fetchedAt": "2026-05-22T07:39:00.003Z",
       "source": "naver"
     },
     {
@@ -199,22 +277,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1944183169",
       "name": "제주닭집",
       "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "치킨,닭강정",
+      "address": "제주 제주시 조천읍 함덕14길 3 버드나무칼국수뒷편",
+      "phone": "0507-1498-9333",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201202_200%2F1606874035894MQeN0_JPEG%2FkoYKX7XMt83F8ALITl6sZZvU.jpg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201202_200%2F1606874035894MQeN0_JPEG%2FkoYKX7XMt83F8ALITl6sZZvU.jpg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201202_200%2F1606874035894MQeN0_JPEG%2FkoYKX7XMt83F8ALITl6sZZvU.jpg",
+        "https://ldb-phinf.pstatic.net/20260115_65/1768448116023lGGfq_JPEG/1768448102738.jpg",
+        "https://ldb-phinf.pstatic.net/20201202_200/1606874035894MQeN0_JPEG/koYKX7XMt83F8ALITl6sZZvU.jpg",
+        "https://ldb-phinf.pstatic.net/20201202_69/1606879868431VDu93_JPEG/c3066n4g4KASptzoqMKsQw9W.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA1MjhfMjI0/MDAxNzQ4Mzk4MzA1MzUx.y_NI-gmjucgc1NAyiHtX3Ztzj8P2SQQuRpouOMKYOHYg.qZFplxg2t9oYD4EM9ZkTYeKEZR1jPjFlM_lfI9BOuAMg.JPEG/1000047028.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA5MTFfMjU2/MDAxNzU3NTkxMDQ3NDcx.umz4VxGWDPev41kxnaiJgIWzOIZIUYtmnVxc0y22QHcg.SSNXOxpdZi-XBy2M5hTaZMBzLZ21RMAYbhPDt5zF6EEg.JPEG/20250911_164444.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA5MTFfMTU3/MDAxNzU3NTkwMTI4MTgx.kx-r5siCmiAYsRIMXuZdj_b5Gl2eRL3XPa5AFwIePSsg.QeSXGjl6zPc7Wpi_yC7QplmwKBtu-o1mLgRBBea7ZTog.JPEG/1757579789076.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTEwMzBfMTc5/MDAxNzYxODE5MzgxNjIx.Vokf-nP-CPGujlCaD3fVvoq1eqk2gncSMhyixOpgRxgg.iAX_QZZFlcF7oYu5GvFbsT_rhSto7Xtk-D773-J9GRcg.JPEG/17CF45B5-EDDD-4DAF-8DCF-228A8E05CF76.jpeg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA1MjhfMTMw/MDAxNzQ4Mzk4MzA1NTYz.dhL0ICeQVAPLYh9Q7BjEtsJItGlz5Otp3yBpTjDYpqEg.nFO661d918sJXGfTupCdLBS3VcTNNm2d8ZxOr9VEAr8g.JPEG/1000047026.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTExMTdfNzQg/MDAxNzYzMzg2OTc3OTI3.Rm_vwEvoRmIXsdrCPrJmlMfjV4QmRoIK5hqJ9rZpflQg.fn9w2x9S9mQWDKvXc83sCZ1R2eSGo1TvbHl2kq3iSvog.JPEG/397D3C5E-9448-4703-BCD8-86BF93373138.jpeg"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:42.620Z",
+      "fetchedAt": "2026-05-22T07:39:02.162Z",
       "source": "naver"
     },
     {
@@ -223,22 +311,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1271837768",
       "name": "좀녀해녀촌",
       "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "한식",
+      "address": "제주 제주시 조천읍 함덕5길 36 1층",
+      "phone": "064-782-6769",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240621_37%2F1718929923929yy4Tk_JPEG%2F1000020949.jpg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240621_37%2F1718929923929yy4Tk_JPEG%2F1000020949.jpg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240621_37%2F1718929923929yy4Tk_JPEG%2F1000020949.jpg",
+        "https://ldb-phinf.pstatic.net/20221121_214/16690341795033nF7p_JPEG/20221116_133845.jpg",
+        "https://ldb-phinf.pstatic.net/20221121_159/1669033355038TzbxT_JPEG/20221116_135401.jpg",
+        "https://ldb-phinf.pstatic.net/20221121_103/1669033296489R5LjP_JPEG/20221116_135435.jpg",
+        "https://ldb-phinf.pstatic.net/20221121_265/1669033238934DAvNl_JPEG/20221116_133852.jpg",
+        "https://ldb-phinf.pstatic.net/20221121_114/1669034764679irSeU_JPEG/20221116_143127.jpg",
+        "https://ldb-phinf.pstatic.net/20221121_168/1669034723748t0KBJ_JPEG/20221116_135258.jpg",
+        "https://ldb-phinf.pstatic.net/20221121_52/1669034641822F7nxg_JPEG/20221116_133730.jpg",
+        "https://ldb-phinf.pstatic.net/20221121_288/1669034606755O36PL_JPEG/20221116_133741.jpg",
+        "https://ldb-phinf.pstatic.net/20221121_89/166903451669895A7C_JPEG/20221116_133716.jpg"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:43.619Z",
+      "fetchedAt": "2026-05-22T07:39:05.327Z",
       "source": "naver"
     },
     {
@@ -246,23 +344,33 @@
       "shortUrl": "https://naver.me/FCAptXEe",
       "naverMapUrl": "https://map.naver.com/p/entry/place/1300963457",
       "name": "아라찐빵",
-      "category": "식당",
-      "naverCategory": null,
-      "address": null,
+      "category": "기타",
+      "naverCategory": "찐빵",
+      "address": "제주 제주시 남광로4길 19",
       "phone": null,
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200714_120%2F1594710093425P2TNf_JPEG%2F8yWy4rtiOZLlfryukQ5F_IJy.jpeg.jpg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200714_120%2F1594710093425P2TNf_JPEG%2F8yWy4rtiOZLlfryukQ5F_IJy.jpeg.jpg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200714_120%2F1594710093425P2TNf_JPEG%2F8yWy4rtiOZLlfryukQ5F_IJy.jpeg.jpg",
+        "https://ldb-phinf.pstatic.net/20260224_2/1771880372990tMe4O_JPEG/1000019770.jpg",
+        "https://ldb-phinf.pstatic.net/20200714_120/1594710093425P2TNf_JPEG/8yWy4rtiOZLlfryukQ5F_IJy.jpeg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjAzMTdfMTIz/MDAxNzczNzE4NzMzOTM4.SQwqtHw4OHbAtJeYnYc4DjA6mWPjSaUuNQPHWgUeeEEg.SWtcu6acksj2NgeQtvnRgHs09tFby55iHhfeem-W_n4g.JPEG/20260317_111456.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjA0MDhfMjg1/MDAxNzc1NjUzODIwMzgy.63_H8wP29yP-hU8Qd5P-DU7cHrsQa9GmFpIl_UDqbQEg.7Z1C6u48LqlsQ4uMvU7sQm40pnDfRCP0IGIXpq6O_E0g.JPEG/FD342A71-33D9-4E95-8A8B-B7EDF2A21F4E.jpeg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjAyMjJfMSAg/MDAxNzcxNzYxNjQ2NDg2.1XFZbCBxUAwpjNaQjIrKrKI8AAq70aObKzp6yNB8fnwg.xeG9ulcVzaxrfWNa6jjrS6ftskibmvR5mjp4OovvrD4g.JPEG/20250722_122101.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTEyMjZfMTE2/MDAxNzY2NzIyMjgzMDE4.TPBdUMqX93bMTpzX2gz7QBhoLaVeZ-WkVeQiz5uqxWcg.Nq3ZcvFTxMuJ2Xxq_4ndnX2rQmjo7NavNe3DHmKcW3og.JPEG/0EC14C05-EF3A-40E4-9DBA-EDB792A6EAA7.jpeg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjAzMTFfMjU2/MDAxNzczMjQwMzc5MjE0.A-nsCl4F1suL8E8Lqr2lKPCrIbQlpy9qiaNVJMbFrOkg.BmhUcXQoCjQuqY0iAVC-VVFqc3gxVz7gmLyoIx_UgJYg.JPEG/20260306_090126.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA3MzFfMTQ2/MDAxNzUzOTUwNjA1NzIz.bMnapYv5p9NrYK5l7TRpbdEYi1_YwkQRM2Oe7kxfxzwg.8kvns_sWJYV0ftydPSMQJswXMt4r7G56f3crSHJfg8sg.JPEG/20250730_074521.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA3MTdfMjQx/MDAxNzUyNzI2MzMxMDIz.H8xrK6rD7BeWkXPZfdE1I9cDJbIPhx7Dnno5XACmfN8g.wJSomT_fOvoNqP_03oCXJWswGKJgJKGf4lSwZu_-ACQg.JPEG/20250708_103714.jpg"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:45.251Z",
+      "fetchedAt": "2026-05-22T07:39:08.345Z",
       "source": "naver"
     },
     {
@@ -271,22 +379,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/36859834",
       "name": "델문도",
       "category": "카페",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "카페,디저트",
+      "address": "제주 제주시 조천읍 조함해안로 519-10",
+      "phone": "064-702-0007",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250722_29%2F1753148469951AypHp_JPEG%2FUntitled-5-01.jpg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250722_29%2F1753148469951AypHp_JPEG%2FUntitled-5-01.jpg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250722_29%2F1753148469951AypHp_JPEG%2FUntitled-5-01.jpg",
+        "https://ldb-phinf.pstatic.net/20260324_225/1774330870242dCTVO_JPEG/%BC%D2%B1%DD%BB%A7.jpg",
+        "https://ldb-phinf.pstatic.net/20260324_192/17743308319976iev5_JPEG/%BF%EC%B5%B5%B6%A5%C4%E1%BB%A7.jpg",
+        "https://ldb-phinf.pstatic.net/20260324_258/1774330927608DGVif_JPEG/%B4%E7%B1%D9%BB%A7.jpg",
+        "https://ldb-phinf.pstatic.net/20260325_24/17743994599237jg98_JPEG/%B6%F3%BA%C0%BD%B4.jpg",
+        "https://ldb-phinf.pstatic.net/20260324_65/1774331437071QwwM4_JPEG/%BC%AD%BF%EC%BA%C0.jpg",
+        "https://ldb-phinf.pstatic.net/20260324_220/1774318887257sanAC_JPEG/%B5%A8%B9%AE%B5%B5_%BE%C6%B8%DE.jpg",
+        "https://ldb-phinf.pstatic.net/20260324_113/1774318852591rOw8U_JPEG/%BE%C6%C0%CC%BD%BA%BE%C6%B8%DE%B8%AE%C4%AB%B3%EB.jpg",
+        "https://ldb-phinf.pstatic.net/20260324_80/1774320045868XHEku_JPEG/%B5%A8%B9%AE%B5%B5_%BE%C6%C0%CC%BD%BA%B6%F3%B6%BC.jpg",
+        "https://ldb-phinf.pstatic.net/20260324_169/1774328767133dOS1K_JPEG/%B5%A8%B9%AE%B5%B5_%BD%B4%C6%E4%B3%CA.jpg"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-21T17:32:46.777Z",
+      "fetchedAt": "2026-05-22T07:39:11.333Z",
       "source": "naver"
     },
     {
@@ -295,22 +413,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/20043113",
       "name": "제주교래자연휴양림",
       "category": "기타",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "휴양림,산림욕장",
+      "address": "제주 제주시 조천읍 남조로 2023 교래자연휴양림",
+      "phone": "064-710-7475",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200712_272%2F1594556247933r5M30_JPEG%2FlvmDF3lOMJ3QS48r4S4iR6Wh.jpg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200712_272%2F1594556247933r5M30_JPEG%2FlvmDF3lOMJ3QS48r4S4iR6Wh.jpg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200712_272%2F1594556247933r5M30_JPEG%2FlvmDF3lOMJ3QS48r4S4iR6Wh.jpg",
+        "https://ldb-phinf.pstatic.net/20200712_272/1594556247933r5M30_JPEG/lvmDF3lOMJ3QS48r4S4iR6Wh.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTEwMDZfMTA4/MDAxNzU5NzAwMzk3MTU5.kqALQbBNoXDtf1g790WasQcnkpRxfJrHle0zQGIOEVsg.4EVuJJEjFdnwRHEPYo3hjRPmJwoQXIwZ1mCDKlnVmBAg.JPEG/20251005_171012.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjAxMDdfNTgg/MDAxNzY3NzYxNzcyMTI5.qMdgMmRd_2GBpM00MePHhuVtzWP7cCHjs042847Xs60g.o_96dIHdb8I09DOxloRtJeJ9RDoUP6-kqvi-dqehU3Ug.JPEG/698584C6-6FF2-4C68-A7F5-EADB712D4C2D.jpeg",
+        "https://pup-review-phinf.pstatic.net/MjAyNjAzMDFfMjkz/MDAxNzcyMzMyMzYzMjYw.hrgHQp4HYNXd3ug7hgvR8jNQRgmnYPrJ6OUg3v4e1tUg.F7VG7Yy51GAqBjjUMd0VnOz11w_uI25DWJ-QRDmMIywg.JPEG/20260124_120158.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTEwMDZfNTgg/MDAxNzU5NzAwMzkzMDMy.aDfRrFhrIVr77PiyQHa2WDAcDJqfdXA0qTCcm7-ecYAg.hY3NfhvF5JI2iNCoD3Top4hzh0PUj4SHWvNcOAEIZ6Ig.JPEG/20251005_153427.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTEwMDZfNDAg/MDAxNzU5NzAwMzk1ODA1.2fCmtXw86F4iMXkR12zj6otbS_lZ9DveoFaIHFsyxC0g.tTFCQutgIszM2pBClE5xRw5OBlyY0MV1gWQcGSBnG2Qg.JPEG/20251005_164819.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTA4MDVfMjM3/MDAxNzU0Mzg2MDQ3NDI2.wcO8A5C7Hz9Z40i-Hds1KvtfKn8OMpJu3YPwvfMxc_kg.mtbHFaAk75uK-4JTH37Yqs1LyLuOVM7Gu_Ab0gWNbeQg.JPEG/20250805_123946.heic.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTEwMDZfNTAg/MDAxNzU5NzAwMzk2MTAw.gL-4Gor67QFwCevFYqpNQFJMBk9EgRk7sM2N2a_4_kUg.6w9ZomNC_29q2V4BEtb9umZ4HGAz7lpZhGKJWbUKmUcg.JPEG/20251005_165221.jpg.jpg",
+        "https://pup-review-phinf.pstatic.net/MjAyNTEwMTdfOTEg/MDAxNzYwNzAyMTMwMzYy.EQZ3DiDgPDXfL61FyfAVeV5ddS1FTp4Z5m07ZiCsfnAg.4Mf8tcTtZ_qnOGeep8e39eTtFBETk_ux-mHM1axIr5Eg.JPEG/20251017_105139.jpg.jpg"
+      ],
       "lat": 33.4415727,
       "lng": 126.6605408,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T02:21:05.612Z",
+      "fetchedAt": "2026-05-22T07:39:13.994Z",
       "source": "naver"
     },
     {
@@ -319,22 +447,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1635962925",
       "name": "시소 카이막 애월점",
       "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "카페,디저트",
+      "address": "제주 제주시 애월읍 애월해안로 566 1층",
+      "phone": "0507-1327-0865",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240625_83%2F1719252773107JVjBv_JPEG%2FIMG_2482.jpeg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240625_83%2F1719252773107JVjBv_JPEG%2FIMG_2482.jpeg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240625_83%2F1719252773107JVjBv_JPEG%2FIMG_2482.jpeg",
+        "https://ldb-phinf.pstatic.net/20251017_142/1760638915344FRjG3_JPEG/0-%C3%CA%C4%DA%C4%AB%C0%CC%B8%B7.jpg",
+        "https://ldb-phinf.pstatic.net/20240715_244/1721034128477J6Jo3_JPEG/%C4%AB%C0%CC%B8%B7.jpg",
+        "https://ldb-phinf.pstatic.net/20251017_65/1760639246327b7B2n_JPEG/5_%B5%CE%B9%D9%C0%CC%C4%AB%C0%CC%B8%B7%C3%CA%C4%DD%B8%B4.jpg",
+        "https://ldb-phinf.pstatic.net/20240715_181/1721034152419jeBCI_JPEG/%B9%DF%B8%A3%BD%B4%C6%AE.jpg",
+        "https://ldb-phinf.pstatic.net/20240715_80/1721034137783LpA1E_JPEG/%B2%DC.jpg",
+        "https://ldb-phinf.pstatic.net/20240715_143/17210341456145duj5_JPEG/%BF%A1%C5%A9%B8%C6.jpg",
+        "https://ldb-phinf.pstatic.net/20240715_163/1721034173437BGwr4_JPEG/%BC%B1%B9%B0%B9%DA%BD%BA.jpg",
+        "https://ldb-phinf.pstatic.net/20240715_189/1721034238272YL8Aw_JPEG/%B4%F5%C4%A1%C4%BF%C7%C7.jpg",
+        "https://ldb-phinf.pstatic.net/20240715_33/17210341919358nMPc_JPEG/%B4%F5%C4%A1%B6%F3%B6%BC.jpg"
+      ],
       "lat": 33.4780326,
       "lng": 126.3641827,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T02:38:22.468Z",
+      "fetchedAt": "2026-05-22T07:39:16.754Z",
       "source": "naver"
     },
     {
@@ -343,22 +481,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1214681781",
       "name": "하라케케",
       "category": "카페",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "카페,디저트",
+      "address": "제주 서귀포시 속골로 29-10 16호",
+      "phone": "0507-1311-0878",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260424_81%2F1777012663747eIf11_JPEG%2FKakaoTalk_20240920_212241606_02.jpg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260424_81%2F1777012663747eIf11_JPEG%2FKakaoTalk_20240920_212241606_02.jpg"
+      "tags": [
+        "서귀포시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260424_81%2F1777012663747eIf11_JPEG%2FKakaoTalk_20240920_212241606_02.jpg",
+        "https://ldb-phinf.pstatic.net/20250602_4/17488482390195uA5Y_JPEG/1000060711.jpg",
+        "https://ldb-phinf.pstatic.net/20250602_299/1748847142524tKaEF_JPEG/1000060710.jpg",
+        "https://ldb-phinf.pstatic.net/20250602_287/1748845980464xNC6G_JPEG/1000060704.jpg",
+        "https://ldb-phinf.pstatic.net/20250602_64/1748845178724O0VHQ_JPEG/1000060702.jpg",
+        "https://ldb-phinf.pstatic.net/20250602_85/1748844788433G893T_JPEG/1000060695.jpg",
+        "https://ldb-phinf.pstatic.net/20250602_86/17488446159232cfDA_JPEG/1000060696.jpg",
+        "https://ldb-phinf.pstatic.net/20250526_22/1748230092066YMJWW_JPEG/1000060089.jpg",
+        "https://ldb-phinf.pstatic.net/20250526_205/1748230089505az9B5_JPEG/1000060087.jpg",
+        "https://ldb-phinf.pstatic.net/20250526_83/1748230089784TTcIF_JPEG/1000060051.jpg"
+      ],
       "lat": 33.2428676,
       "lng": 126.5277074,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T02:38:24.164Z",
+      "fetchedAt": "2026-05-22T07:39:19.602Z",
       "source": "naver"
     },
     {
@@ -367,22 +515,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1043390483",
       "name": "솔브레",
       "category": "카페",
-      "naverCategory": null,
-      "address": null,
+      "naverCategory": "베이커리",
+      "address": "제주 제주시 동문로 10 1층 솔브레",
       "phone": null,
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250904_194%2F1756990432911UHy2M_PNG%2FR_solbre_c.png",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250904_194%2F1756990432911UHy2M_PNG%2FR_solbre_c.png"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250904_194%2F1756990432911UHy2M_PNG%2FR_solbre_c.png",
+        "https://ldb-phinf.pstatic.net/20220917_170/1663405442754uXPxR_JPEG/KakaoTalk_20220917_175748184_02.jpg",
+        "https://ldb-phinf.pstatic.net/20240702_136/1719906641525a4vSg_JPEG/%BB%FD%C5%A9%B8%B2_%BC%D2%B1%DD%BB%A7.jpg",
+        "https://ldb-phinf.pstatic.net/20240702_111/1719906660353JBFLE_JPEG/%BE%D3%B9%F6%C5%CD_%BC%D2%B1%DD%BB%A7.jpg",
+        "https://ldb-phinf.pstatic.net/20240702_143/1719906678429gaDzO_JPEG/%BF%A1%B1%D7%B8%B6%BF%E4_%BC%D2%B1%DD%BB%A7.jpg",
+        "https://ldb-phinf.pstatic.net/20240702_169/171990671242149I81_JPEG/%B8%B6%B4%C3_%BC%D2%B1%DD%BB%A7.jpg",
+        "https://ldb-phinf.pstatic.net/20240702_170/1719906701138lRPcs_JPEG/%C2%CA%C6%C4%BA%A3%C0%CC%C4%C1_%C5%A9%B8%B2%C4%A1%C1%EE_%BC%D2%B1%DD%BB%A7.jpg",
+        "https://ldb-phinf.pstatic.net/20240702_195/1719906691010ygdJA_JPEG/%C7%DC%C4%A1%C1%EE_%BC%D2%B1%DD%BB%A7.jpg",
+        "https://ldb-phinf.pstatic.net/20250904_194/1756990432911UHy2M_PNG/R_solbre_c.png",
+        "https://ldb-phinf.pstatic.net/20240702_181/1719906443008mRr3U_JPEG/2.jpg"
+      ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T04:02:17.496Z",
+      "fetchedAt": "2026-05-22T07:39:22.623Z",
       "source": "naver"
     },
     {
@@ -391,22 +549,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1583780094",
       "name": "제주돔베고기집",
       "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "육류,고기요리",
+      "address": "제주 제주시 월랑로4길 6",
+      "phone": "064-713-9949",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230118_108%2F16740134268979gclK_JPEG%2FKakaoTalk_20230118_122207932_07.jpg",
-      "tags": [],
-      "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230118_108%2F16740134268979gclK_JPEG%2FKakaoTalk_20230118_122207932_07.jpg"
+      "tags": [
+        "제주시"
       ],
-      "menu": [],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230118_108%2F16740134268979gclK_JPEG%2FKakaoTalk_20230118_122207932_07.jpg",
+        "https://ldb-phinf.pstatic.net/20251211_184/1765434213097q6IY8_JPEG/%B5%BC%BA%A3%B0%ED%B1%E2%BC%BC%C6%AE%28%C1%A1%BD%C9%C7%D1%C1%A4%29.2%C0%CE%C0%CC%BB%F3%C1%D6%B9%AE.jpg",
+        "https://ldb-phinf.pstatic.net/20251211_121/1765434252431RQD4C_JPEG/%B5%BC%BA%A3%B1%B9%BC%F6%BC%BC%C6%AE%28%C1%A1%BD%C9%C7%D1%C1%A4%29.2%C0%CE%C0%CC%BB%F3%C1%D6%B9%AE.jpg",
+        "https://ldb-phinf.pstatic.net/20221103_9/16674537501779EqGI_JPEG/1667453729460.jpg",
+        "https://ldb-phinf.pstatic.net/20250924_75/1758680118380jo1DS_JPEG/KakaoTalk_20230118_122207932_06.jpg",
+        "https://ldb-phinf.pstatic.net/20230118_103/1674013212123NYdmb_JPEG/KakaoTalk_20230118_122207932_06.jpg",
+        "https://ldb-phinf.pstatic.net/20170919_100/1505754847071a0sEW_JPEG/4DsSmH2LaKqnHcTlVOin7rs_.JPG.jpg",
+        "https://ldb-phinf.pstatic.net/20170919_219/1505754856128LFqeo_JPEG/Dl5YIGn8PfBLSQW1nRIAUVLq.JPG.jpg",
+        "https://ldb-phinf.pstatic.net/20170919_32/1505754860043MTMCN_JPEG/UDw8ThbxGdpTeGO-XAQbiPwS.JPG.jpg",
+        "https://ldb-phinf.pstatic.net/20190122_155/1548126351660Uk8r6_JPEG/0E7KE7bQSLgC9nhnhb7sO3If.jpg"
+      ],
       "lat": 33.4877908,
       "lng": 126.4782935,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T05:28:08.636Z",
+      "fetchedAt": "2026-05-22T07:39:25.054Z",
       "source": "naver"
     },
     {
@@ -415,21 +583,32 @@
       "naverMapUrl": "https://map.naver.com/p/entry/place/1307448582",
       "name": "콜린 제주점",
       "category": "식당",
-      "naverCategory": null,
-      "address": null,
-      "phone": null,
+      "naverCategory": "카페,디저트",
+      "address": "제주 제주시 애월읍 애월로1길 24-8 1-3층",
+      "phone": "064-799-3111",
       "businessHours": null,
       "rating": null,
       "reviewCount": null,
       "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231007_163%2F1696671648430YyuBz_JPEG%2F03.jpg",
-      "tags": [],
+      "tags": [
+        "제주시"
+      ],
       "images": [
-        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231007_163%2F1696671648430YyuBz_JPEG%2F03.jpg"
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231007_163%2F1696671648430YyuBz_JPEG%2F03.jpg",
+        "https://ldb-phinf.pstatic.net/20231023_202/1698059048694kyVWl_JPEG/04.jpg",
+        "https://ldb-phinf.pstatic.net/20250106_40/17361578536638YBFY_JPEG/1736157741246.jpg",
+        "https://ldb-phinf.pstatic.net/20250318_227/1742280238913aup9A_JPEG/20250318_151531.jpg",
+        "https://ldb-phinf.pstatic.net/20220519_107/16529518915331kBa8_JPEG/%C7%C1%B7%BB%C4%A1%C5%E4%BD%BA%C6%AE%BB%E7%C1%F8.jpg",
+        "https://ldb-phinf.pstatic.net/20231023_12/1698059734347jSLbJ_JPEG/17.jpg",
+        "https://ldb-phinf.pstatic.net/20220606_211/16544953472505BcgF_JPEG/%BF%C0%B9%C9%B7%BF.jpg",
+        "https://ldb-phinf.pstatic.net/20220606_142/1654495278745z0Uf8_JPEG/%B4%A2%B3%A2.jpg",
+        "https://ldb-phinf.pstatic.net/20250106_282/1736155945224Y0Jzb_JPEG/1736155906400.jpg",
+        "https://ldb-phinf.pstatic.net/20231112_186/1699765230421fbR1O_JPEG/%C7%C3%B7%B9%C0%CC%BD%BA_%BE%F7%C3%BC%BB%E7%C1%F83.jpg"
       ],
       "lat": null,
       "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T05:55:45.468Z",
+      "fetchedAt": "2026-05-22T07:39:27.987Z",
       "source": "naver"
     },
     {
@@ -463,7 +642,7 @@
       "lat": 33.3391685,
       "lng": 126.1964635,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T07:06:11.871Z",
+      "fetchedAt": "2026-05-22T07:39:30.693Z",
       "source": "naver"
     }
   ]
