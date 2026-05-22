@@ -14,6 +14,19 @@
       "lng": 126.71876,
       "updatedAt": "2026-05-22T01:31:56.629Z"
     },
+    "36859834": {
+      "tags": [],
+      "description": null,
+      "category": "카페",
+      "name": "델문도",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250722_29%2F1753148469951AypHp_JPEG%2FUntitled-5-01.jpg"
+      ],
+      "address": "제주 제주시 조천읍 조함해안로 519-10",
+      "lat": 33.54371,
+      "lng": 126.668704,
+      "updatedAt": "2026-05-22T01:35:56.073Z"
+    },
     "38014906": {
       "tags": [
         "함덕"
