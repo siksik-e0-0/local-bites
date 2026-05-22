@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T10:36:25.386Z",
+  "generatedAt": "2026-05-22T11:31:15.891Z",
   "places": [
     {
       "id": "1480142748",
@@ -1309,7 +1309,7 @@
     },
     {
       "id": "36859834",
-      "shortUrl": "https://naver.me/5HkCYBUT",
+      "shortUrl": "https://naver.me/FsRsun6L",
       "naverMapUrl": "https://map.naver.com/p/entry/place/36859834",
       "name": "델문도",
       "category": "카페",
@@ -1377,10 +1377,10 @@
           "price": "9000"
         }
       ],
-      "lat": 33.543731,
-      "lng": 126.6686961,
+      "lat": null,
+      "lng": null,
       "schemaVersion": 2,
-      "fetchedAt": "2026-05-22T10:36:23.971Z",
+      "fetchedAt": "2026-05-22T11:31:14.436Z",
       "source": "naver"
     }
   ]
