@@ -81,6 +81,19 @@
       "lat": 33.426927,
       "lng": 126.673666,
       "updatedAt": "2026-05-22T01:30:28.726Z"
+    },
+    "1872411366": {
+      "tags": [],
+      "description": null,
+      "category": "카페",
+      "name": "아침미소목장",
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250220_154%2F174001965280939i2y_JPEG%2F%25BE%25C6%25C4%25A7%25B9%25CC%25BC%25D2%25B8%25F1%25C0%25E5_%25C7%25B3%25B0%25E6_24.jpg"
+      ],
+      "address": "첨단동길 160-30 월평동",
+      "lat": 33.453285,
+      "lng": 126.587421,
+      "updatedAt": "2026-05-22T01:31:08.783Z"
     }
   }
 }
