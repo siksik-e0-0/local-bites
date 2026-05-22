@@ -25,6 +25,14 @@
 `data/places.json` 충돌은 보통 양쪽이 v2 스키마로 다른 시점에 refetch 된 결과
 → 더 최근 `generatedAt` 타임스탬프 가진 쪽 채택
 
+## data/places.json 은 main 에서만 갱신됨
+
+`.github/workflows/fetch-places.yml` 는 `branches: [main]` 으로 제한되어 있음.
+feature branch (claude/dreamy-volta-GayKF) 에서는 **절대로** `data/places.json`
+을 직접 commit 하지 말 것. 갱신이 필요하면 PR 머지 후 main 에서 자동 실행되는
+워크플로우에 맡길 것. 이 규칙을 어기면 양쪽 브랜치가 places.json 을 동시
+수정해서 PR 머지 시 충돌 발생.
+
 ## 환경
 
 - production URL: `https://local-bites-pied.vercel.app`
