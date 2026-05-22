@@ -110,6 +110,8 @@ export function AddDialog({
         lat?: number | null;
         lng?: number | null;
         heroImageUrl?: string | null;
+        businessHours?: string | null;
+        menu?: MenuItem[];
         parserFailed?: boolean;
         error?: string;
       };
@@ -125,8 +127,8 @@ export function AddDialog({
         lng: data.lng ?? null,
         heroImageUrl: data.heroImageUrl ?? null,
         description: prev.description,
-        businessHours: prev.businessHours,
-        menu: prev.menu,
+        businessHours: data.businessHours ?? prev.businessHours,
+        menu: data.menu && data.menu.length > 0 ? data.menu : prev.menu,
       }));
       if (data.category && !cat) setCat(data.category);
       setPreviewStatus({ state: "ready", parserFailed: !!data.parserFailed });
