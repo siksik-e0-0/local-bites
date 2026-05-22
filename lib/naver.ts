@@ -1,4 +1,4 @@
-import type { Category, Place } from "./types";
+import type { Category, MenuItem, Place } from "./types";
 
 const UA_POOL = [
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
@@ -222,6 +222,36 @@ function walkApolloForEntity(
     }
   }
   return nameOnlyFallback;
+}
+
+function walkApolloForMenu(state: unknown): MenuItem[] {
+  if (!state || typeof state !== "object") return [];
+  const visited = new Set<unknown>();
+  const queue: unknown[] = [state];
+  const out: MenuItem[] = [];
+  const seen = new Set<string>();
+  while (queue.length) {
+    const node = queue.shift();
+    if (!node || typeof node !== "object" || visited.has(node)) continue;
+    visited.add(node);
+    const rec = node as Record<string, unknown>;
+    const typename = typeof rec.__typename === "string" ? rec.__typename.toLowerCase() : "";
+    const isMenu =
+      (typename.includes("menu") && !typename.includes("menucategory") && !typename.includes("menufilter") && typeof rec.name === "string") ||
+      (typeof rec.name === "string" && (rec.price != null || rec.menuUrl != null));
+    if (isMenu) {
+      const name = String(rec.name).trim();
+      if (name && !seen.has(name) && name.length <= 60) {
+        const priceRaw = rec.price ?? rec.priceText ?? rec.priceNumber;
+        out.push({ name, price: priceRaw != null ? String(priceRaw).trim() : null });
+        seen.add(name);
+      }
+    }
+    for (const v of Object.values(rec)) {
+      if (v && typeof v === "object") queue.push(v);
+    }
+  }
+  return out.slice(0, 10);
 }
 
 function walkApolloForHours(state: unknown): string | null {
@@ -661,6 +691,7 @@ export async function fetchPlace(
 
   let raw: RawPlace = {};
   let images: string[] = [];
+  let menu: MenuItem[] = [];
   let hours: string | null = null;
   let layer: string = "none";
   if (homeHtml) {
@@ -684,6 +715,21 @@ export async function fetchPlace(
 
   const tryDeepFetch = homeType != null;
   if (tryDeepFetch && homeType) {
+    if (menu.length < 1) {
+      await sleep(400 + Math.floor(Math.random() * 500));
+      const menuHtml = await fetchHtml(
+        `https://m.place.naver.com/${homeType}/${placeId}/menu/list`,
+        usedUrl ?? undefined,
+      );
+      if (menuHtml) {
+        const a = extractApolloState(menuHtml);
+        if (a) {
+          const m = walkApolloForMenu(a);
+          if (m.length > 0) menu = m;
+        }
+      }
+    }
+
     if (!hours && !raw.businessHours) {
       await sleep(400 + Math.floor(Math.random() * 500));
       const infoHtml = await fetchHtml(
@@ -789,6 +835,7 @@ export async function fetchPlace(
     heroImageUrl: finalHero,
     tags: deriveTags(finalAddress),
     images: mergedImages,
+    menu: menu.length > 0 ? menu : undefined,
     lat: finalLat,
     lng: finalLng,
     schemaVersion: 2,

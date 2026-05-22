@@ -293,8 +293,8 @@ export function Board({
 
   return (
     <div className="mx-auto w-full max-w-[1120px] px-5 pb-24 pt-12 sm:px-8">
-      <header className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-        <div>
+      <header className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div className="order-2 sm:order-1">
           <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">
             Local Bites · 가족여행
           </p>
@@ -307,7 +307,7 @@ export function Board({
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-1.5 text-xs">
+        <div className="order-1 flex flex-wrap items-center justify-end gap-1.5 text-xs sm:order-2">
           {isAdmin ? (
             <button
               onClick={logoutAdmin}

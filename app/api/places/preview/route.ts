@@ -60,7 +60,9 @@ export async function POST(req: Request) {
       lat: place.lat ?? null,
       lng: place.lng ?? null,
       heroImageUrl: place.heroImageUrl,
+      phone: place.phone,
       businessHours: place.businessHours,
+      menu: (place.menu ?? []).slice(0, 3),
       parserFailed,
       debug: {
         source: place.source,

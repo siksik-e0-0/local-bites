@@ -28,6 +28,8 @@ interface PreviewData {
   heroImageUrl: string | null;
   description: string;
   businessHours: string;
+  phone: string;
+  menu: { name: string; price: string | null }[];
 }
 
 const EMPTY_PREVIEW: PreviewData = {
@@ -39,6 +41,8 @@ const EMPTY_PREVIEW: PreviewData = {
   heroImageUrl: null,
   description: "",
   businessHours: "",
+  phone: "",
+  menu: [],
 };
 
 export function AddDialog({
@@ -108,6 +112,8 @@ export function AddDialog({
         lng?: number | null;
         heroImageUrl?: string | null;
         businessHours?: string | null;
+        phone?: string | null;
+        menu?: { name: string; price: string | null }[];
         parserFailed?: boolean;
         error?: string;
       };
@@ -124,6 +130,8 @@ export function AddDialog({
         heroImageUrl: data.heroImageUrl ?? null,
         description: prev.description,
         businessHours: data.businessHours ?? prev.businessHours,
+        phone: data.phone ?? prev.phone,
+        menu: data.menu ?? prev.menu,
       }));
       if (data.category && !cat) setCat(data.category);
       setPreviewStatus({ state: "ready", parserFailed: !!data.parserFailed });
@@ -159,6 +167,8 @@ export function AddDialog({
       if (desc) payload.description = desc;
       const bh = preview.businessHours.trim();
       if (bh) payload.businessHours = bh;
+      const ph = preview.phone.trim();
+      if (ph) payload.phone = ph;
 
       const res = await fetch("/api/places/add", {
         method: "POST",
@@ -312,6 +322,44 @@ export function AddDialog({
               className="w-full resize-y rounded-lg border bg-[var(--bg)] px-3 py-2 text-sm outline-none focus:border-[var(--fg)]/50 disabled:opacity-60"
             />
           </div>
+
+          {(preview.phone || preview.menu.length > 0) && (
+            <div className="space-y-2">
+              {preview.phone && (
+                <div>
+                  <label className="mb-1.5 block text-xs text-[var(--muted)]">전화번호</label>
+                  <input
+                    value={preview.phone}
+                    onChange={(e) => setPreview((p) => ({ ...p, phone: e.target.value }))}
+                    disabled={saving}
+                    className="w-full rounded-lg border bg-[var(--bg)] px-3 py-2 text-sm outline-none focus:border-[var(--fg)]/50 disabled:opacity-60"
+                  />
+                </div>
+              )}
+              {preview.menu.length > 0 && (
+                <div>
+                  <label className="mb-1.5 block text-xs text-[var(--muted)]">
+                    대표 메뉴 (상위 {preview.menu.length}개)
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {preview.menu.map((item, i) => (
+                      <span
+                        key={i}
+                        className="inline-flex items-center gap-1 rounded-full border bg-[var(--subtle)] px-2.5 py-0.5 text-xs text-[var(--fg)]/80"
+                      >
+                        {item.name}
+                        {item.price && (
+                          <span className="text-[var(--muted)]">
+                            {Number(item.price).toLocaleString()}원
+                          </span>
+                        )}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
 
           {previewStatus.state === "error" && (
             <div className="rounded-lg border border-orange-300/50 bg-orange-50/60 px-3 py-2 text-xs text-orange-800 dark:border-orange-700/50 dark:bg-orange-950/40 dark:text-orange-200">
