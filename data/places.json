@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T09:25:20.153Z",
+  "generatedAt": "2026-05-23T09:27:11.818Z",
   "places": [
     {
       "id": "1480142748",
@@ -1865,6 +1865,70 @@
       "lng": 126.6773495,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-23T09:25:19.206Z",
+      "source": "naver"
+    },
+    {
+      "id": "1531243212",
+      "shortUrl": "https://naver.me/Gjy7mrFO",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1531243212",
+      "name": "제주바솔트",
+      "category": "카페",
+      "naverCategory": "카페,디저트",
+      "address": "제주 제주시 중앙로13길 6 1층",
+      "phone": "064-721-7625",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250922_175%2F17585084137747jLpE_JPEG%2F0M0A5849.jpg",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250922_175%2F17585084137747jLpE_JPEG%2F0M0A5849.jpg",
+        "https://ldb-phinf.pstatic.net/20251125_65/1764040777570GjFOz_PNG/%B5%B9%BB%A7.png",
+        "https://ldb-phinf.pstatic.net/20250927_209/1758972742011ioVLU_PNG/1758972682532.png",
+        "https://ldb-phinf.pstatic.net/20251125_220/1764065140336pRnnO_PNG/%B5%B9%C4%ED%BE%C6%C1%EE.png",
+        "https://ldb-phinf.pstatic.net/20250325_39/1742891843759DX2kr_JPEG/KakaoTalk_20250325_173056001.jpg",
+        "https://ldb-phinf.pstatic.net/20251125_7/1764065146909RsrR5_PNG/%B5%B9%BE%C6%BF%EC%B4%CF.png",
+        "https://ldb-phinf.pstatic.net/20250325_113/17428916498105Q929_JPEG/KakaoTalk_20250325_173056001_03.jpg",
+        "https://ldb-phinf.pstatic.net/20221109_32/1668001257453mBogz_JPEG/%B5%B9%BE%C6%BF%EC%B4%CF1.jpg",
+        "https://ldb-phinf.pstatic.net/20251125_235/17640651569529Wv0K_PNG/%B5%B9%C5%D7%B6%F3.png",
+        "https://ldb-phinf.pstatic.net/20250927_183/17589727229860UGWh_PNG/1758972686579.png"
+      ],
+      "menu": [
+        {
+          "name": "제주돌빵 (5개입)",
+          "price": "15000"
+        },
+        {
+          "name": "돌쿠아즈 (5개입)",
+          "price": "17500"
+        },
+        {
+          "name": "돌아우니 (6개입)",
+          "price": "17500"
+        },
+        {
+          "name": "돌테라 (1롤)",
+          "price": "17500"
+        },
+        {
+          "name": "메밀쿠키 (9개입)",
+          "price": "13500"
+        },
+        {
+          "name": "메밀쿠키 (18개입)",
+          "price": "25000"
+        },
+        {
+          "name": "감귤드립커피 (5개입)",
+          "price": "15000"
+        }
+      ],
+      "lat": 33.5111887,
+      "lng": 126.5247706,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-23T09:27:11.129Z",
       "source": "naver"
     }
   ]
