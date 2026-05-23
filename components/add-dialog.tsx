@@ -516,7 +516,7 @@ export function AddDialog({
           </button>
 
           <p className="text-center text-[10px] leading-relaxed text-[var(--muted)]">
-            URL 만 저장해도 가능 — 주소/좌표 미리 입력하면 빌드 후 즉시 지도에 표시됩니다.
+            URL 만 저장해도 가능 — 주소/좌표 미리 입력하면 지도에 바로 표시됩니다.
           </p>
         </div>
       </div>
