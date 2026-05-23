@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T09:20:53.517Z",
+  "generatedAt": "2026-05-23T09:25:20.153Z",
   "places": [
     {
       "id": "1480142748",
@@ -1789,6 +1789,82 @@
       "lng": 126.7943672,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-23T09:20:52.755Z",
+      "source": "naver"
+    },
+    {
+      "id": "37766370",
+      "shortUrl": "https://naver.me/xdMjgSnt",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/37766370",
+      "name": "손맛촌 에코랜드 사려니 조천 본점",
+      "category": "기타",
+      "naverCategory": "해물,생선요리",
+      "address": "제주 제주시 조천읍 비자림로 661 1층",
+      "phone": "0507-1447-3386",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241030_39%2F1730255851582UdotR_JPEG%2F%25BC%25D5%25B8%25C0%25C3%25CC_742.jpg",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241030_39%2F1730255851582UdotR_JPEG%2F%25BC%25D5%25B8%25C0%25C3%25CC_742.jpg",
+        "https://ldb-phinf.pstatic.net/20250206_2/1738826792619tuB9e_JPEG/KakaoTalk_20250206_161407578.jpg",
+        "https://ldb-phinf.pstatic.net/20230711_65/1689057431514JM8ef_JPEG/1688722715015.jpg",
+        "https://ldb-phinf.pstatic.net/20250206_28/1738826809884IgNyo_JPEG/%B4%D9%BF%EE%B7%CE%B5%E5_%283%29.jpg",
+        "https://ldb-phinf.pstatic.net/20231030_280/1698633807088RcBfd_JPEG/1698633647738.jpg",
+        "https://ldb-phinf.pstatic.net/20241030_187/17302691413608eUnV_JPEG/%BC%D5%B8%C0%C3%CC_820.jpg",
+        "https://ldb-phinf.pstatic.net/20250206_100/1738828807887v0kdb_JPEG/%B4%D9%BF%EE%B7%CE%B5%E5.jpg",
+        "https://ldb-phinf.pstatic.net/20241030_183/1730269245993JnsNl_JPEG/%BC%D5%B8%C0%C3%CC_1159.jpg",
+        "https://ldb-phinf.pstatic.net/20230712_75/16891567891776dReX_JPEG/%BC%BA%B0%D4%B9%CC%BF%AA%B1%B9_%BA%B8%C1%A4.jpg",
+        "https://ldb-phinf.pstatic.net/20241030_248/1730269271192X4s30_JPEG/%BC%D5%B8%C0%C3%CC_1238.jpg"
+      ],
+      "menu": [
+        {
+          "name": "고사리 갈치조림 (4인)",
+          "price": "85000"
+        },
+        {
+          "name": "통갈치구이 (4인)",
+          "price": "80000"
+        },
+        {
+          "name": "고사리 갈치조림 (2인)",
+          "price": "50000"
+        },
+        {
+          "name": "통갈치구이 (2인)",
+          "price": "50000"
+        },
+        {
+          "name": "성게미역국",
+          "price": "16000"
+        },
+        {
+          "name": "전복뚝배기",
+          "price": "16000"
+        },
+        {
+          "name": "전복물회",
+          "price": "16000"
+        },
+        {
+          "name": "산굼부리 한치물회",
+          "price": "16000"
+        },
+        {
+          "name": "고사리 갈치조림 (3인)",
+          "price": "68000"
+        },
+        {
+          "name": "통갈치구이 (3인)",
+          "price": "70000"
+        }
+      ],
+      "lat": 33.4373223,
+      "lng": 126.6773495,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-23T09:25:19.206Z",
       "source": "naver"
     }
   ]
