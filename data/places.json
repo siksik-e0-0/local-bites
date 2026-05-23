@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T09:19:58.183Z",
+  "generatedAt": "2026-05-23T09:20:53.517Z",
   "places": [
     {
       "id": "1480142748",
@@ -1713,6 +1713,82 @@
       "lng": 126.3109735,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-23T09:19:57.028Z",
+      "source": "naver"
+    },
+    {
+      "id": "1225879429",
+      "shortUrl": "https://naver.me/5jXB9Nr4",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1225879429",
+      "name": "정민이네갈치 월정리본점",
+      "category": "기타",
+      "naverCategory": "해물,생선요리",
+      "address": "제주 제주시 구좌읍 월정3길 53-17 2층",
+      "phone": null,
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250408_74%2F17440773812641WjNg_JPEG%2FKakaoTalk_20250408_103837000_01_%25281%2529.jpg",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250408_74%2F17440773812641WjNg_JPEG%2FKakaoTalk_20250408_103837000_01_%25281%2529.jpg",
+        "https://ldb-phinf.pstatic.net/20240726_25/1721976106432zvDmz_JPEG/J-1.jpg",
+        "https://ldb-phinf.pstatic.net/20240806_279/1722932985877l4cow_JPEG/J-9.jpg",
+        "https://ldb-phinf.pstatic.net/20240726_212/1721976096176USpUO_JPEG/B-1.jpg",
+        "https://ldb-phinf.pstatic.net/20240806_117/1722933099449r0yJo_JPEG/J-10.jpg",
+        "https://ldb-phinf.pstatic.net/20240726_288/1721976160242CDR5R_JPEG/J-3.jpg",
+        "https://ldb-phinf.pstatic.net/20240726_299/1721976155658kyXY3_JPEG/D-1.jpg",
+        "https://ldb-phinf.pstatic.net/20241216_287/17343180774996PKE2_JPEG/KakaoTalk_20241216_120039432.jpg",
+        "https://ldb-phinf.pstatic.net/20250718_260/1752816505054Q25pD_JPEG/KakaoTalk_20250718_142532871.jpg",
+        "https://ldb-phinf.pstatic.net/20240726_66/1721976277198xPgyc_JPEG/J-5.jpg"
+      ],
+      "menu": [
+        {
+          "name": "순살갈치조림",
+          "price": "40000"
+        },
+        {
+          "name": "노릇한 전복솥밥",
+          "price": "15000"
+        },
+        {
+          "name": "제주 통갈치구이 순살조림세트",
+          "price": "89000"
+        },
+        {
+          "name": "구수한 전복죽",
+          "price": "15000"
+        },
+        {
+          "name": "노릇한 갈치솥밥",
+          "price": "15000"
+        },
+        {
+          "name": "몸국",
+          "price": "7000"
+        },
+        {
+          "name": "정민이네 전복물회",
+          "price": "15000"
+        },
+        {
+          "name": "전복구이 6마리",
+          "price": "15000"
+        },
+        {
+          "name": "탕수육",
+          "price": "7000"
+        },
+        {
+          "name": "순살 갈치조림",
+          "price": null
+        }
+      ],
+      "lat": 33.5564969,
+      "lng": 126.7943672,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-23T09:20:52.755Z",
       "source": "naver"
     }
   ]
