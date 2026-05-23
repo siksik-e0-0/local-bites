@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T09:35:52.587Z",
+  "generatedAt": "2026-05-23T09:41:05.689Z",
   "places": [
     {
       "id": "1480142748",
@@ -1993,6 +1993,82 @@
       "lng": 126.5247706,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-23T09:35:51.759Z",
+      "source": "naver"
+    },
+    {
+      "id": "1553005087",
+      "shortUrl": "https://naver.me/5NeMoZ4m",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1553005087",
+      "name": "우정원베이커리 제주삼나무점",
+      "category": "카페",
+      "naverCategory": "베이커리",
+      "address": "제주 제주시 구좌읍 송당동2길 7-39",
+      "phone": "0507-1338-7271",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260516_43%2F1778910402015fLXhh_JPEG%2F26-0515_%25BF%25EC%25C1%25A4%25BF%25F8%25BA%25A3%25C0%25CC%25C4%25BF%25B8%25AE%2528%25B5%25A5%25C0%25CC%25C1%25F6%2529_14.jpg",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260516_43%2F1778910402015fLXhh_JPEG%2F26-0515_%25BF%25EC%25C1%25A4%25BF%25F8%25BA%25A3%25C0%25CC%25C4%25BF%25B8%25AE%2528%25B5%25A5%25C0%25CC%25C1%25F6%2529_14.jpg",
+        "https://ldb-phinf.pstatic.net/20240912_43/1726095287776cw72t_JPEG/%BB%EF%B3%AA%B9%AB%BD%A3.JPG",
+        "https://ldb-phinf.pstatic.net/20240912_271/1726095322678M48xs_JPEG/%BB%EF%B3%AA%B9%AB%BD%A3_%C5%A9%B8%B2%B6%F3%B6%BC.JPG",
+        "https://ldb-phinf.pstatic.net/20260317_98/1773735227226fhzY1_PNG/3865.png",
+        "https://ldb-phinf.pstatic.net/20260317_128/1773735107872PLM17_PNG/3862.png",
+        "https://ldb-phinf.pstatic.net/20260523_113/1779502867266LddvN_JPEG/6796.jpg",
+        "https://ldb-phinf.pstatic.net/20240912_218/1726094298128BQhzp_JPEG/KakaoTalk_20240910_213217245_23.jpg",
+        "http://imagefarm.baemin.com/smartmenuimage/upload/image/2024/9/19/xdmA5DvbJMbH6iU4Aq1iMcebwwr3QyoVX9H81_4Y6CwQiIk08Rpi7SeiilkqoM-mcedSqVfCV2BWd7Om3BHHYc5SwwQKZgi5ERwUiz60PvU=.jpg",
+        "http://imagefarm.baemin.com/smartmenuimage/upload/image/2024/9/19/JDoDN_4kMaykuHZx4k8BKl0rLukXmmSrrUTvQFmF8h2c3FWXyo7TOHaGfBeuHMx6WbUtQwO8UBla4hsr_DLfVlN7H3ocim3P2zK6aTjl-kY=.jpg",
+        "http://imagefarm.baemin.com/smartmenuimage/upload/image/2020/4/24/Americano1_110050_870.jpg"
+      ],
+      "menu": [
+        {
+          "name": "삼나무 숲 라떼",
+          "price": "7000"
+        },
+        {
+          "name": "삼나무 숲 크림라떼",
+          "price": "7300"
+        },
+        {
+          "name": "우정원 버터떡",
+          "price": "1700"
+        },
+        {
+          "name": "아메리카노",
+          "price": "5300"
+        },
+        {
+          "name": "오픈 진열대 베이커리",
+          "price": ""
+        },
+        {
+          "name": "대표메뉴",
+          "price": null
+        },
+        {
+          "name": "SIGNATURE",
+          "price": null
+        },
+        {
+          "name": "디카페인 아메리카노",
+          "price": "5400"
+        },
+        {
+          "name": "라떼",
+          "price": "6300"
+        },
+        {
+          "name": "바닐라 라떼",
+          "price": "6800"
+        }
+      ],
+      "lat": 33.4674013,
+      "lng": 126.7813449,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-23T09:41:04.994Z",
       "source": "naver"
     }
   ]
