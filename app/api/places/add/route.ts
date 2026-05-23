@@ -65,7 +65,6 @@ export async function POST(req: Request) {
       : extractPlaceId(url);
 
   // ── share_link write (GitHub Contents API) ──────────────────────────────
-  // Keeps GHA pipeline running for full Naver data enrichment.
   const apiBase = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`;
   const ghHeaders = {
     Authorization: `Bearer ${token}`,
