@@ -1,14 +1,6 @@
 name: Fetch places
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "share_link"
-      - "scripts/fetch-places.ts"
-      - "lib/naver.ts"
-      - ".github/workflows/fetch-places.yml"
   workflow_dispatch:
     inputs:
       force_refetch:
