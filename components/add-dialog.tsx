@@ -213,6 +213,7 @@ export function AddDialog({
       const ph = preview.phone.trim();
       if (ph) payload.phone = ph;
       if (preview.menu.length > 0) payload.menu = preview.menu;
+      if (preview.heroImageUrl) payload.heroImageUrl = preview.heroImageUrl;
 
       const res = await fetch("/api/places/add", {
         method: "POST",

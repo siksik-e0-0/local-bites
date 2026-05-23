@@ -23,6 +23,7 @@ interface AddPayload {
   businessHours?: unknown;
   phone?: unknown;
   menu?: unknown;
+  heroImageUrl?: unknown;
 }
 
 function isValidShortUrl(u: string): boolean {
@@ -132,6 +133,7 @@ export async function POST(req: Request) {
     const businessHours = typeof body.businessHours === "string" && body.businessHours.trim() ? body.businessHours.trim().slice(0, 500) : null;
     const phone = typeof body.phone === "string" && body.phone.trim() ? body.phone.trim().slice(0, 30) : null;
     const menu = Array.isArray(body.menu) ? (body.menu as { name: string; price: string | null }[]).slice(0, 10) : null;
+    const heroImageUrl = typeof body.heroImageUrl === "string" && body.heroImageUrl.trim() ? body.heroImageUrl.trim() : null;
 
     const latRaw = typeof body.lat === "string" ? Number(body.lat) : body.lat;
     const lat = typeof latRaw === "number" && Number.isFinite(latRaw) && latRaw >= -90 && latRaw <= 90 ? latRaw : null;
@@ -151,6 +153,7 @@ export async function POST(req: Request) {
         menu: menu ?? [],
         lat,
         lng,
+        hero_image_url: heroImageUrl,
         source: "add",
         fetched_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
