@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T22:47:39.680Z",
+  "generatedAt": "2026-05-23T09:19:58.183Z",
   "places": [
     {
       "id": "1480142748",
@@ -1653,6 +1653,66 @@
       "lng": 126.2898551,
       "schemaVersion": 2,
       "fetchedAt": "2026-05-22T22:47:38.480Z",
+      "source": "naver"
+    },
+    {
+      "id": "1954564721",
+      "shortUrl": "https://naver.me/xHEmRd2Q",
+      "naverMapUrl": "https://map.naver.com/p/entry/place/1954564721",
+      "name": "갈치바다 제주 애월점",
+      "category": "식당",
+      "naverCategory": "한식",
+      "address": "제주 제주시 애월읍 애월로 15-1 1, 2층 갈치바다 애월",
+      "phone": "0507-1490-0734",
+      "businessHours": null,
+      "rating": null,
+      "reviewCount": null,
+      "heroImageUrl": "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240808_128%2F1723108033735PONf4_JPEG%2F%25B0%25A5%25C4%25A1%25B9%25D9%25B4%25D9_536.jpg",
+      "tags": [
+        "제주시"
+      ],
+      "images": [
+        "https://search.pstatic.net/common/?autoRotate=true&amp;quality=100&amp;type=f640_380&amp;src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240808_128%2F1723108033735PONf4_JPEG%2F%25B0%25A5%25C4%25A1%25B9%25D9%25B4%25D9_536.jpg",
+        "https://ldb-phinf.pstatic.net/20240808_299/1723108819811LG6jf_JPEG/%B0%A5%C4%A1%B9%D9%B4%D9_488.jpg",
+        "https://ldb-phinf.pstatic.net/20240430_232/1714441733325SRcCg_JPEG/%B0%A5%C4%A1%B9%D9%B4%D9__659.jpg",
+        "https://ldb-phinf.pstatic.net/20240808_247/17231088356740m92S_JPEG/%B0%A5%C4%A1%B9%D9%B4%D9_536.jpg",
+        "https://ldb-phinf.pstatic.net/20240430_119/1714441757067oxY74_JPEG/%B0%A5%C4%A1%B9%D9%B4%D9__659.jpg",
+        "https://ldb-phinf.pstatic.net/20241115_257/1731657658176AT0WX_JPEG/223654.jpg",
+        "https://ldb-phinf.pstatic.net/20240808_181/1723108974708shVrT_JPEG/%B0%A5%C4%A1%B9%D9%B4%D9_1823.jpg",
+        "https://ldb-phinf.pstatic.net/20240808_218/1723108856929dcGar_JPEG/%B0%A5%C4%A1%B9%D9%B4%D9_1546.jpg",
+        "https://ldb-phinf.pstatic.net/20240430_251/1714441870294lKLnK_JPEG/%B0%A5%C4%A1%B9%D9%B4%D9__640.jpg",
+        "https://ldb-phinf.pstatic.net/20250916_149/1757983083559zoQRu_JPEG/%B0%A5%C4%A1%B9%D9%B4%D9_986.jpg"
+      ],
+      "menu": [
+        {
+          "name": "갈치조림,통갈치구이 2인세트",
+          "price": "79000"
+        },
+        {
+          "name": "갈치조림,통갈치구이 3인세트",
+          "price": "104000"
+        },
+        {
+          "name": "갈치조림,통갈치구이 4인세트",
+          "price": "139000"
+        },
+        {
+          "name": "톳밥 (추가주문 가능메뉴입니다)",
+          "price": "2000"
+        },
+        {
+          "name": "전복미역국 (추가주문 가능)",
+          "price": "15000"
+        },
+        {
+          "name": "제주 전복버터구이 (추가메뉴)",
+          "price": "18000~30000"
+        }
+      ],
+      "lat": 33.4604152,
+      "lng": 126.3109735,
+      "schemaVersion": 2,
+      "fetchedAt": "2026-05-23T09:19:57.028Z",
       "source": "naver"
     }
   ]
